@@ -1,36 +1,9 @@
-/api/categories - список категорий. Будет загружаться при запуске приложения и кешироваться.
-[
-    {
-        "id": 1,
-        "name": "Appetizer",
-        "image": "full_url_to_image"
-    },
-    {
-        "id": 2,
-        "name": "Basics",
-        "image": "full_url_to_image"
-    }
-]
-
-/api/ranking - список фильтров книг и экрана Ranking. Будет загружаться при запуске приложения и кешироваться.
-[
-    {
-        "id": 1,
-        "name": "Top reads of 2021"
-    },
-    {
-        "id": 2,
-        "name": "Top new releases"
-    }
-]
-
 /api/users/set - установка параметров пользователя
 -> {
     "goal": 1,
     "categories": [1, 2],
-    "quantity": 1,
     "pace": 2,
-    "time": 10,
+    "time": 0,
     "notification_key": "adadoasdosfvdjvnewve",
     "notification_options": [1]
 }
@@ -43,259 +16,278 @@
 {
     "goal": 1,
     "categories": [1, 2],
-    "quantity": 1,
     "pace": 2,
-    "time": 10,
+    "time": 0,
     "notification_key": "adadoasdosfvdjvnewve",
     "notification_options": [1]
 }
 
-/api/foryou - контент для экрана For you
+/api/categories - список категорий. Будет загружаться при запуске приложения и кешироваться.
+[
+    {
+        "id": 1,
+        "name": "Appetizer"
+    },
+    {
+        "id": 2,
+        "name": "Basics"
+    }
+]
+
+/api/ranking - список фильтров книг и экрана Ranking. Будет загружаться при запуске приложения и кешироваться.
+[
+    {
+        "id": 1,
+        "name": "Recommendations"
+    },
+    {
+        "id": 2,
+        "name": "Daily updates"
+    }
+]
+
+/api/home - контент для экрана Home
 {
-    "free_book": {
+    "free": {
         "id": 1,
         "name": "Thinking Fast and Slow",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
         "image": "full_url_to_image",
-        "ranking_id": 1,
+        "ranking_ids": [1],
+        "categories_ids": [1],
         "link": "ссылка для шаринга",
-        "paid": true
+        "paid": true,
+        "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+        "top5": true,
+        "up": false
     },
-    "todays_hot_summaries": [
-        {
-            "id": 2,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        },
-        {
-            "id": 3,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true,
-            "time_min": 10
-        }
-    ],
-    "challenges": [
-        {
+    "recommendations": {
+        "ranking": {
             "id": 1,
-            "name": "40 day challenge",
-            "title": "Self-confidence",
-            "image": "full_url_to_image",,
-            "paid": true
+            "name": "Recommendations"
         },
-        {
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    },
+    "daily_updates": {
+        "ranking": {
             "id": 2,
-            "name": "40 day challenge",
-            "title": "Self-confidence",
-            "image": "full_url_to_image",,
-            "paid": true
+            "name": "Daily updates"
         },
-    ]
-    "you_may_like": [
-        {
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    },
+    "some_category": {
+        "category": {
+            "id": 2,
+            "name": "Romantic"
+        },
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    },
+    "top5": {
+        "ranking": {
+            "id": 3,
+            "name": "Top 5"
+        },
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    },
+    "new_releases": {
+        "ranking": {
             "id": 4,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
+            "name": "New Releases"
         },
-        {
-            "id": 5,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        }
-    ],
-    "ranking": [
-        {
-            "ranking_id": 1,
-            "books": [
-                {
-                    "id": 8,
-                    "name": "Unlimited Memory",
-                    "author": {
-                        "name": "Daniel Kahneman",
-                        "photo_url": "full_url_to_image"
-                    },
-                    "image": "full_url_to_image",
-                    "ranking_id": 1,
-                    "link": "ссылка для шаринга",,
-                    "paid": true
-                },
-                {
-                    "id": 9,
-                    "name": "The Law of Success",
-                    "author": {
-                        "name": "Daniel Kahneman",
-                        "photo_url": "full_url_to_image"
-                    },
-                    "image": "full_url_to_image",
-                    "ranking_id": 1,
-                    "link": "ссылка для шаринга",,
-                    "paid": true
-                }
-            ]
-        },
-        {
-            "ranking_id": 2,
-            "books": [
-                {
-                    "id": 8,
-                    "name": "Unlimited Memory",
-                    "author": {
-                        "name": "Daniel Kahneman",
-                        "photo_url": "full_url_to_image"
-                    },
-                    "image": "full_url_to_image",
-                    "ranking_id": 1,
-                    "link": "ссылка для шаринга",,
-                    "paid": true
-                },
-                {
-                    "id": 9,
-                    "name": "The Law of Success",
-                    "author": {
-                        "name": "Daniel Kahneman",
-                        "photo_url": "full_url_to_image"
-                    },
-                    "image": "full_url_to_image",
-                    "ranking_id": 1,
-                    "link": "ссылка для шаринга",,
-                    "paid": true
-                }
-            ]
-        }
-    ]
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    }
 }
 
-/api/book - контент для экрана с детальной информацией о книге
+/api/comic - контент для экрана с детальной информацией о комиксе
 -> {
-    "book_id": 7
+    "comic_id": 7
 }
 
 <- {
     "id": 7,
-    "name": "The Law of Success",
-    "author": {
-        "name": "Daniel Kahneman",
-        "photo_url": "full_url_to_image"
-    },
+    "name": "Futari De Koi Wo Suru Riyuu",
     "image": "full_url_to_image",
-    "ranking_id": 1,
-    "time_min": 13,
-    "audio": "full_url_to_audio",
+    "ranking_ids": [1],
+    "categories_ids": [1],
     "link": "ссылка для шаринга",
+    "paid": true,
+    "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+    "top5": true,
+    "up": false,
     "saved": true,
-    "introduction": {
-        "title": "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
-        "text": "What most of the self-help advice we get on life does is help us fivate on what we lack. They pinpoint the things we see as our personal pailures and shortcomings and emphasize them for us. If you feel you’re not beautiful enough, you stand in front of the mirror and repeat affirmations that you’re beautiful."
-    }
+    "what_about": "He knows her secret. She knows his secret too. He is the coolest guy in school. She is the curve wrecker of class. They make a deal in exchange to keep each other’s secret. They should be strangers after that promise. But he offers to help her confess to her crush at the same time. Is that true? Is he just teasing her? Or…?",
     "chapters": [
         {
-            "short": "Self-employment makes a lot more sense when you reaize that there;s no such thing as a secure job anymore",
-            "title": "Don’t try to be somebody you’re not; be very selective with what to give a fuck about",
-            "text": "What most of the self-help advice we get on life does is help us fivate on what we lack. They pinpoint the things we see as our personal pailures and shortcomings and emphasize them for us. If you feel you’re not beautiful enough, you stand in front of the mirror and repeat affirmations that you’re beautiful."
+            "date": "yyyy-MM-dd",
+            "up": true,
+            "sort": 1,
+            "content": [
+                {
+                    "image_original": "url",
+                    "image_placeholder": "url",
+                    "image_height": 105.5
+                }
+            ]
         }
     ],
-    "what_about": "Have you ever imagined that you travel into the comic? Who is the main you most want to meet? My favorite hero is such a person!?",
-    "similar_books": [
-        {
-            "id": 6,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
+    "creator": "Wakabayashi Toshiya Fujita Ameno Shiro Manta Sorato Shunsuke Morikawa Yumi Fuyu Azuma Otsuji Keigo Maki Bimita Megumi Dorokawa Kakitsubata Waka Chacha Goma Momose",
+    "recommendations": {
+        "ranking": {
+            "id": 1,
+            "name": "Recommendations"
         },
-        {
-            "id": 7,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        }
-    ]
+        "covers": [
+            {
+                "id": 1,
+                "name": "Thinking Fast and Slow",
+                "image": "full_url_to_image",
+                "ranking_ids": [1],
+                "categories_ids": [1],
+                "link": "ссылка для шаринга",
+                "paid": true,
+                "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+                "top5": true,
+                "up": false
+            }
+        ]
+    }
 }
 
-/api/book/save - запрос добавления книги в сохраненные
--> {
-    "book_id": 1
-}
-
-<- {
-    "success": true
-}
-
-/api/book/remove - запрос удаления книги из сохраненных
--> {
-    "book_id": 1
-}
-
-<- {
-    "success": true
-}
-
-/api/book/saved - возвращает список всех сохраненных книг
+/api/comic/saved - возвращает список всех сохраненных комиксов
 [
     {
-        "id": 2,
-        "name": "Unlimited Memory",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
+        "id": 1,
+        "name": "Thinking Fast and Slow",
         "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    },
+        "ranking_ids": [1],
+        "categories_ids": [1],
+        "link": "ссылка для шаринга",
+        "paid": true,
+        "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+        "top5": true,
+        "up": false
+    }
+]
+
+/api/comic/save - запрос добавления комикса в сохраненные
+-> {
+    "comic_id": 1
+}
+
+<- {
+    "success": true
+}
+
+/api/comic/remove - запрос удаления комикса из сохраненных
+-> {
+    "comic_id": 1
+}
+
+<- {
+    "success": true
+}
+
+/api/category/comics - запрос на загрузку комиксов указанной категории
+-> {
+    "category_id": 1
+}
+
+<- [
     {
-        "id": 3,
-        "name": "The Law of Success",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
+        "id": 1,
+        "name": "Thinking Fast and Slow",
         "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
+        "ranking_ids": [1],
+        "categories_ids": [1],
+        "link": "ссылка для шаринга",
+        "paid": true,
+        "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+        "top5": true,
+        "up": false
+    }
+]
+
+/api/ranking/comics - запрос на загрузку комиксов указанного фильтра (ranking)
+-> {
+    "ranking_id": 1
+}
+
+<- [
+    {
+        "id": 1,
+        "name": "Thinking Fast and Slow",
+        "image": "full_url_to_image",
+        "ranking_ids": [1],
+        "categories_ids": [1],
+        "link": "ссылка для шаринга",
+        "paid": true,
+        "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+        "top5": true,
+        "up": false
     }
 ]
 
@@ -303,36 +295,17 @@
 {
     "trending_searches": [
         {
-            "id": 2,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
+            "id": 1,
+            "name": "Thinking Fast and Slow",
             "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        },
-        {
-            "id": 3,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
+            "ranking_ids": [1],
+            "categories_ids": [1],
+            "link": "ссылка для шаринга",
+            "paid": true,
+            "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+            "top5": true,
+            "up": false
         }
-    ],
-    "popular_requests": [
-        "Character",
-        "Why does my brain do this",
-        "Wellbeing",
-        "Emotions",
-        "How do I prioritize myself?"
     ]
 }
 
@@ -343,142 +316,15 @@
 
 <- [
     {
-        "id": 2,
-        "name": "Unlimited Memory",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
+        "id": 1,
+        "name": "Thinking Fast and Slow",
         "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    },
-    {
-        "id": 3,
-        "name": "The Law of Success",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
+        "ranking_ids": [1],
+        "categories_ids": [1],
+        "link": "ссылка для шаринга",
+        "paid": true,
+        "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
+        "top5": true,
+        "up": false
     }
 ]
-
-/api/category/books - запрос на загрузку книг указанной категории
--> {
-    "category_id": 1
-}
-
-<- [
-    {
-        "id": 2,
-        "name": "Unlimited Memory",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    },
-    {
-        "id": 3,
-        "name": "The Law of Success",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    }
-]
-
-/api/ranking/books - запрос на загрузку книг указанного фильтра (ranking)
--> {
-    "ranking_id": 1
-}
-
-<- [
-    {
-        "id": 2,
-        "name": "Unlimited Memory",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    },
-    {
-        "id": 3,
-        "name": "The Law of Success",
-        "author": {
-            "name": "Daniel Kahneman",
-            "photo_url": "full_url_to_image"
-        },
-        "image": "full_url_to_image",
-        "ranking_id": 1,
-        "link": "ссылка для шаринга",,
-        "paid": true
-    }
-]
-
-/api/feedback - запрос на отправку отзыва
--> {
-    "book_id": 1,
-    "rating": 5,
-    "improves": [1, 3, 7],
-    "what_better": "text",
-    "what_learn": "text"
-}
-
-<- {
-    "success": true
-}
-
-/api/challenge - запрос на получение челенджа по id
--> {
-    "challenge_id": 1
-}
-
-<- {
-    "id": 1,
-    "name": "40 day challenge",
-    "title": "Self-confidence",
-    "image": "full_url_to_image",
-    "text": "Are you tired of self-doubt, self-criticism, and holding back? Do you often feel like you're not good enough? Are you ready to change your life and reclaim your self-confidence?",
-    "books": [
-        {
-            "id": 6,
-            "name": "Unlimited Memory",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        },
-        {
-            "id": 7,
-            "name": "The Law of Success",
-            "author": {
-                "name": "Daniel Kahneman",
-                "photo_url": "full_url_to_image"
-            },
-            "image": "full_url_to_image",
-            "ranking_id": 1,
-            "link": "ссылка для шаринга",,
-            "paid": true
-        }
-}
