@@ -1,6 +1,6 @@
 //
 //  Collection+Extension.swift
-//  BookSummaries
+//  Manga
 //
 //  Created by Андрей Чернышев on 15.07.2022.
 //

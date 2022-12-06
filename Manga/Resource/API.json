@@ -57,8 +57,7 @@
         "link": "ссылка для шаринга",
         "paid": true,
         "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-        "top5": true,
-        "up": false
+        "top5": true
     },
     "recommendations": {
         "ranking": {
@@ -75,8 +74,7 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     },
@@ -95,8 +93,7 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     },
@@ -115,8 +112,7 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     },
@@ -135,8 +131,7 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     },
@@ -155,16 +150,15 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     }
 }
 
-/api/comic - контент для экрана с детальной информацией о комиксе
+/api/comics - контент для экрана с детальной информацией о комиксе
 -> {
-    "comic_id": 7
+    "comics_id": 7
 }
 
 <- {
@@ -177,7 +171,6 @@
     "paid": true,
     "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
     "top5": true,
-    "up": false,
     "saved": true,
     "what_about": "He knows her secret. She knows his secret too. He is the coolest guy in school. She is the curve wrecker of class. They make a deal in exchange to keep each other’s secret. They should be strangers after that promise. But he offers to help her confess to her crush at the same time. Is that true? Is he just teasing her? Or…?",
     "chapters": [
@@ -210,14 +203,13 @@
                 "link": "ссылка для шаринга",
                 "paid": true,
                 "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-                "top5": true,
-                "up": false
+                "top5": true
             }
         ]
     }
 }
 
-/api/comic/saved - возвращает список всех сохраненных комиксов
+/api/comics/saved - возвращает список всех сохраненных комиксов
 [
     {
         "id": 1,
@@ -228,23 +220,22 @@
         "link": "ссылка для шаринга",
         "paid": true,
         "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-        "top5": true,
-        "up": false
+        "top5": true
     }
 ]
 
-/api/comic/save - запрос добавления комикса в сохраненные
+/api/comics/save - запрос добавления комикса в сохраненные
 -> {
-    "comic_id": 1
+    "comics_id": 1
 }
 
 <- {
     "success": true
 }
 
-/api/comic/remove - запрос удаления комикса из сохраненных
+/api/comics/remove - запрос удаления комикса из сохраненных
 -> {
-    "comic_id": 1
+    "comics_id": 1
 }
 
 <- {
@@ -266,8 +257,7 @@
         "link": "ссылка для шаринга",
         "paid": true,
         "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-        "top5": true,
-        "up": false
+        "top5": true
     }
 ]
 
@@ -286,8 +276,7 @@
         "link": "ссылка для шаринга",
         "paid": true,
         "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-        "top5": true,
-        "up": false
+        "top5": true
     }
 ]
 
@@ -303,8 +292,7 @@
             "link": "ссылка для шаринга",
             "paid": true,
             "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-            "top5": true,
-            "up": false
+            "top5": true
         }
     ]
 }
@@ -324,7 +312,6 @@
         "link": "ссылка для шаринга",
         "paid": true,
         "state": 0, // 0 - none, 1 - ongoing, 2 - completed,
-        "top5": true,
-        "up": false
+        "top5": true
     }
 ]

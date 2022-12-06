@@ -1,6 +1,6 @@
 //
 //  SetRequest.swift
-//  BookSummaries
+//  Manga
 //
 //  Created by Андрей Чернышев on 28.08.2022.
 //
@@ -11,7 +11,6 @@ struct SetRequest: APIRequestBody {
     let userToken: String
     let goal: Int
     let categories: [Int]
-    let quantity: Int
     let pace: Int
     let time: Int
     let pushToken: String?
@@ -31,7 +30,6 @@ struct SetRequest: APIRequestBody {
             "_user_token": userToken,
             "goal": goal,
             "categories": categories,
-            "quantity": quantity,
             "pace": pace,
             "time": time
         ] as [String : Any]

@@ -1,6 +1,6 @@
 //
 //  PaygateViewController.swift
-//  BookSummaries
+//  Manga
 //
 //  Created by Андрей Чернышев on 02.09.2022.
 //

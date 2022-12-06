@@ -88,7 +88,6 @@
 		DE2CB601293A0C8900AC2372 /* SplashAnimateLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5C8293A0C8900AC2372 /* SplashAnimateLampView.swift */; };
 		DE2CB602293A0C8900AC2372 /* TryAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5CA293A0C8900AC2372 /* TryAgainView.swift */; };
 		DE2CB603293A0C8900AC2372 /* TryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5CB293A0C8900AC2372 /* TryAgainViewController.swift */; };
-		DE2CB60C293A0D1900AC2372 /* TextSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB606293A0D1900AC2372 /* TextSize.swift */; };
 		DE2CB60D293A0D1900AC2372 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB607293A0D1900AC2372 /* ProfileManager.swift */; };
 		DE2CB60E293A0D1900AC2372 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB609293A0D1900AC2372 /* LoginRequest.swift */; };
 		DE2CB60F293A0D1900AC2372 /* SyncTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB60A293A0D1900AC2372 /* SyncTokensRequest.swift */; };
@@ -99,6 +98,40 @@
 		DE2CB61B293A103100AC2372 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB616293A103100AC2372 /* PlusJakartaSans-Regular.ttf */; };
 		DE2CB61C293A103100AC2372 /* PlusJakartaSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB617293A103100AC2372 /* PlusJakartaSans-Bold.ttf */; };
 		DE2CB61D293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB618293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf */; };
+		DE2CB76F293A731800AC2372 /* ContentMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB735293A731800AC2372 /* ContentMediator.swift */; };
+		DE2CB770293A731800AC2372 /* ContentManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB736293A731800AC2372 /* ContentManager.swift */; };
+		DE2CB771293A731800AC2372 /* ComicsKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB738293A731800AC2372 /* ComicsKit.swift */; };
+		DE2CB775293A731800AC2372 /* RankingBooksGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB73C293A731800AC2372 /* RankingBooksGroup.swift */; };
+		DE2CB777293A731800AC2372 /* HomeKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB73E293A731800AC2372 /* HomeKit.swift */; };
+		DE2CB778293A731800AC2372 /* Comics.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB73F293A731800AC2372 /* Comics.swift */; };
+		DE2CB779293A731800AC2372 /* Ranking.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB740293A731800AC2372 /* Ranking.swift */; };
+		DE2CB77A293A731800AC2372 /* ComicsCover.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB741293A731800AC2372 /* ComicsCover.swift */; };
+		DE2CB77B293A731800AC2372 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB742293A731800AC2372 /* Category.swift */; };
+		DE2CB77D293A731800AC2372 /* ComicsChapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB744293A731800AC2372 /* ComicsChapter.swift */; };
+		DE2CB77E293A731800AC2372 /* ComicsReadingProgress.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB745293A731800AC2372 /* ComicsReadingProgress.swift */; };
+		DE2CB77F293A731800AC2372 /* GetComicsKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB748293A731800AC2372 /* GetComicsKitResponse.swift */; };
+		DE2CB780293A731800AC2372 /* GetComicsKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB749293A731800AC2372 /* GetComicsKitRequest.swift */; };
+		DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB74E293A731800AC2372 /* GetRankingResponse.swift */; };
+		DE2CB784293A731800AC2372 /* GetRankingRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB74F293A731800AC2372 /* GetRankingRequest.swift */; };
+		DE2CB785293A731800AC2372 /* GetCategoryComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB751293A731800AC2372 /* GetCategoryComicsRequest.swift */; };
+		DE2CB786293A731800AC2372 /* GetCategoryComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB752293A731800AC2372 /* GetCategoryComicsResponse.swift */; };
+		DE2CB789293A731800AC2372 /* GetRankingComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB757293A731800AC2372 /* GetRankingComicsRequest.swift */; };
+		DE2CB78A293A731800AC2372 /* GetRankingComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB758293A731800AC2372 /* GetRankingComicsResponse.swift */; };
+		DE2CB78B293A731800AC2372 /* GetExploreKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB75A293A731800AC2372 /* GetExploreKitResponse.swift */; };
+		DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB75B293A731800AC2372 /* GetExploreKitRequest.swift */; };
+		DE2CB78D293A731800AC2372 /* SearchComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB75D293A731800AC2372 /* SearchComicsResponse.swift */; };
+		DE2CB78E293A731800AC2372 /* SearchComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB75E293A731800AC2372 /* SearchComicsRequest.swift */; };
+		DE2CB78F293A731800AC2372 /* GetHomeKitRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB760293A731800AC2372 /* GetHomeKitRequest.swift */; };
+		DE2CB790293A731800AC2372 /* GetHomeKitResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB761293A731800AC2372 /* GetHomeKitResponse.swift */; };
+		DE2CB791293A731800AC2372 /* RemoveSavedComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB763293A731800AC2372 /* RemoveSavedComicsRequest.swift */; };
+		DE2CB792293A731800AC2372 /* SaveComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB764293A731800AC2372 /* SaveComicsRequest.swift */; };
+		DE2CB794293A731800AC2372 /* GetSavedComicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB767293A731800AC2372 /* GetSavedComicsResponse.swift */; };
+		DE2CB795293A731800AC2372 /* GetSavedComicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB768293A731800AC2372 /* GetSavedComicsRequest.swift */; };
+		DE2CB796293A731800AC2372 /* GetCategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB76A293A731800AC2372 /* GetCategoriesResponse.swift */; };
+		DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB76B293A731800AC2372 /* GetCategoriesRequest.swift */; };
+		DE2CB79B293A754700AC2372 /* ComicsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79A293A754700AC2372 /* ComicsStatus.swift */; };
+		DE2CB79D293A765F00AC2372 /* CategoryComicsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79C293A765F00AC2372 /* CategoryComicsGroup.swift */; };
+		DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79E293A77BC00AC2372 /* ComicsChapterContentBlock.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -187,7 +220,6 @@
 		DE2CB5C8293A0C8900AC2372 /* SplashAnimateLampView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimateLampView.swift; sourceTree = "<group>"; };
 		DE2CB5CA293A0C8900AC2372 /* TryAgainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryAgainView.swift; sourceTree = "<group>"; };
 		DE2CB5CB293A0C8900AC2372 /* TryAgainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryAgainViewController.swift; sourceTree = "<group>"; };
-		DE2CB606293A0D1900AC2372 /* TextSize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextSize.swift; sourceTree = "<group>"; };
 		DE2CB607293A0D1900AC2372 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		DE2CB609293A0D1900AC2372 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		DE2CB60A293A0D1900AC2372 /* SyncTokensRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncTokensRequest.swift; sourceTree = "<group>"; };
@@ -198,6 +230,40 @@
 		DE2CB616293A103100AC2372 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
 		DE2CB617293A103100AC2372 /* PlusJakartaSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Bold.ttf"; sourceTree = "<group>"; };
 		DE2CB618293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		DE2CB735293A731800AC2372 /* ContentMediator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentMediator.swift; sourceTree = "<group>"; };
+		DE2CB736293A731800AC2372 /* ContentManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentManager.swift; sourceTree = "<group>"; };
+		DE2CB738293A731800AC2372 /* ComicsKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsKit.swift; sourceTree = "<group>"; };
+		DE2CB73C293A731800AC2372 /* RankingBooksGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RankingBooksGroup.swift; sourceTree = "<group>"; };
+		DE2CB73E293A731800AC2372 /* HomeKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeKit.swift; sourceTree = "<group>"; };
+		DE2CB73F293A731800AC2372 /* Comics.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Comics.swift; sourceTree = "<group>"; };
+		DE2CB740293A731800AC2372 /* Ranking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ranking.swift; sourceTree = "<group>"; };
+		DE2CB741293A731800AC2372 /* ComicsCover.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsCover.swift; sourceTree = "<group>"; };
+		DE2CB742293A731800AC2372 /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		DE2CB744293A731800AC2372 /* ComicsChapter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsChapter.swift; sourceTree = "<group>"; };
+		DE2CB745293A731800AC2372 /* ComicsReadingProgress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsReadingProgress.swift; sourceTree = "<group>"; };
+		DE2CB748293A731800AC2372 /* GetComicsKitResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetComicsKitResponse.swift; sourceTree = "<group>"; };
+		DE2CB749293A731800AC2372 /* GetComicsKitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetComicsKitRequest.swift; sourceTree = "<group>"; };
+		DE2CB74E293A731800AC2372 /* GetRankingResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRankingResponse.swift; sourceTree = "<group>"; };
+		DE2CB74F293A731800AC2372 /* GetRankingRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRankingRequest.swift; sourceTree = "<group>"; };
+		DE2CB751293A731800AC2372 /* GetCategoryComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoryComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB752293A731800AC2372 /* GetCategoryComicsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoryComicsResponse.swift; sourceTree = "<group>"; };
+		DE2CB757293A731800AC2372 /* GetRankingComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRankingComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB758293A731800AC2372 /* GetRankingComicsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetRankingComicsResponse.swift; sourceTree = "<group>"; };
+		DE2CB75A293A731800AC2372 /* GetExploreKitResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetExploreKitResponse.swift; sourceTree = "<group>"; };
+		DE2CB75B293A731800AC2372 /* GetExploreKitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetExploreKitRequest.swift; sourceTree = "<group>"; };
+		DE2CB75D293A731800AC2372 /* SearchComicsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchComicsResponse.swift; sourceTree = "<group>"; };
+		DE2CB75E293A731800AC2372 /* SearchComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB760293A731800AC2372 /* GetHomeKitRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeKitRequest.swift; sourceTree = "<group>"; };
+		DE2CB761293A731800AC2372 /* GetHomeKitResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetHomeKitResponse.swift; sourceTree = "<group>"; };
+		DE2CB763293A731800AC2372 /* RemoveSavedComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoveSavedComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB764293A731800AC2372 /* SaveComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SaveComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB767293A731800AC2372 /* GetSavedComicsResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSavedComicsResponse.swift; sourceTree = "<group>"; };
+		DE2CB768293A731800AC2372 /* GetSavedComicsRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetSavedComicsRequest.swift; sourceTree = "<group>"; };
+		DE2CB76A293A731800AC2372 /* GetCategoriesResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesResponse.swift; sourceTree = "<group>"; };
+		DE2CB76B293A731800AC2372 /* GetCategoriesRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetCategoriesRequest.swift; sourceTree = "<group>"; };
+		DE2CB79A293A754700AC2372 /* ComicsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsStatus.swift; sourceTree = "<group>"; };
+		DE2CB79C293A765F00AC2372 /* CategoryComicsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryComicsGroup.swift; sourceTree = "<group>"; };
+		DE2CB79E293A77BC00AC2372 /* ComicsChapterContentBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsChapterContentBlock.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -438,6 +504,7 @@
 		DE2CB56A293A0C2700AC2372 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE2CB734293A731800AC2372 /* Content */,
 				DE2CB604293A0D1900AC2372 /* Profile */,
 				DE2CB56B293A0C3E00AC2372 /* Purchase */,
 				DE2CB575293A0C3E00AC2372 /* Session */,
@@ -606,18 +673,9 @@
 			isa = PBXGroup;
 			children = (
 				DE2CB608293A0D1900AC2372 /* Request */,
-				DE2CB605293A0D1900AC2372 /* Models */,
 				DE2CB607293A0D1900AC2372 /* ProfileManager.swift */,
 			);
 			path = Profile;
-			sourceTree = "<group>";
-		};
-		DE2CB605293A0D1900AC2372 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				DE2CB606293A0D1900AC2372 /* TextSize.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		DE2CB608293A0D1900AC2372 /* Request */ = {
@@ -640,6 +698,143 @@
 				DE2CB618293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf */,
 			);
 			path = PlusJakartaSans;
+			sourceTree = "<group>";
+		};
+		DE2CB734293A731800AC2372 /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB737293A731800AC2372 /* Models */,
+				DE2CB746293A731800AC2372 /* Request */,
+				DE2CB735293A731800AC2372 /* ContentMediator.swift */,
+				DE2CB736293A731800AC2372 /* ContentManager.swift */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		DE2CB737293A731800AC2372 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB741293A731800AC2372 /* ComicsCover.swift */,
+				DE2CB79A293A754700AC2372 /* ComicsStatus.swift */,
+				DE2CB73E293A731800AC2372 /* HomeKit.swift */,
+				DE2CB73C293A731800AC2372 /* RankingBooksGroup.swift */,
+				DE2CB79C293A765F00AC2372 /* CategoryComicsGroup.swift */,
+				DE2CB738293A731800AC2372 /* ComicsKit.swift */,
+				DE2CB73F293A731800AC2372 /* Comics.swift */,
+				DE2CB744293A731800AC2372 /* ComicsChapter.swift */,
+				DE2CB79E293A77BC00AC2372 /* ComicsChapterContentBlock.swift */,
+				DE2CB740293A731800AC2372 /* Ranking.swift */,
+				DE2CB742293A731800AC2372 /* Category.swift */,
+				DE2CB745293A731800AC2372 /* ComicsReadingProgress.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DE2CB746293A731800AC2372 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB769293A731800AC2372 /* GetCategories */,
+				DE2CB74D293A731800AC2372 /* GetRanking */,
+				DE2CB75F293A731800AC2372 /* GetHomeKit */,
+				DE2CB747293A731800AC2372 /* GetComicsKit */,
+				DE2CB766293A731800AC2372 /* GetSavedComics */,
+				DE2CB762293A731800AC2372 /* SaveRemove */,
+				DE2CB750293A731800AC2372 /* GetCategoryComics */,
+				DE2CB756293A731800AC2372 /* GetRankingComics */,
+				DE2CB759293A731800AC2372 /* GetExploreKit */,
+				DE2CB75C293A731800AC2372 /* SearchComics */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		DE2CB747293A731800AC2372 /* GetComicsKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB748293A731800AC2372 /* GetComicsKitResponse.swift */,
+				DE2CB749293A731800AC2372 /* GetComicsKitRequest.swift */,
+			);
+			path = GetComicsKit;
+			sourceTree = "<group>";
+		};
+		DE2CB74D293A731800AC2372 /* GetRanking */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB74E293A731800AC2372 /* GetRankingResponse.swift */,
+				DE2CB74F293A731800AC2372 /* GetRankingRequest.swift */,
+			);
+			path = GetRanking;
+			sourceTree = "<group>";
+		};
+		DE2CB750293A731800AC2372 /* GetCategoryComics */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB751293A731800AC2372 /* GetCategoryComicsRequest.swift */,
+				DE2CB752293A731800AC2372 /* GetCategoryComicsResponse.swift */,
+			);
+			path = GetCategoryComics;
+			sourceTree = "<group>";
+		};
+		DE2CB756293A731800AC2372 /* GetRankingComics */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB757293A731800AC2372 /* GetRankingComicsRequest.swift */,
+				DE2CB758293A731800AC2372 /* GetRankingComicsResponse.swift */,
+			);
+			path = GetRankingComics;
+			sourceTree = "<group>";
+		};
+		DE2CB759293A731800AC2372 /* GetExploreKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB75A293A731800AC2372 /* GetExploreKitResponse.swift */,
+				DE2CB75B293A731800AC2372 /* GetExploreKitRequest.swift */,
+			);
+			path = GetExploreKit;
+			sourceTree = "<group>";
+		};
+		DE2CB75C293A731800AC2372 /* SearchComics */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB75D293A731800AC2372 /* SearchComicsResponse.swift */,
+				DE2CB75E293A731800AC2372 /* SearchComicsRequest.swift */,
+			);
+			path = SearchComics;
+			sourceTree = "<group>";
+		};
+		DE2CB75F293A731800AC2372 /* GetHomeKit */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB760293A731800AC2372 /* GetHomeKitRequest.swift */,
+				DE2CB761293A731800AC2372 /* GetHomeKitResponse.swift */,
+			);
+			path = GetHomeKit;
+			sourceTree = "<group>";
+		};
+		DE2CB762293A731800AC2372 /* SaveRemove */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB763293A731800AC2372 /* RemoveSavedComicsRequest.swift */,
+				DE2CB764293A731800AC2372 /* SaveComicsRequest.swift */,
+			);
+			path = SaveRemove;
+			sourceTree = "<group>";
+		};
+		DE2CB766293A731800AC2372 /* GetSavedComics */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB768293A731800AC2372 /* GetSavedComicsRequest.swift */,
+				DE2CB767293A731800AC2372 /* GetSavedComicsResponse.swift */,
+			);
+			path = GetSavedComics;
+			sourceTree = "<group>";
+		};
+		DE2CB769293A731800AC2372 /* GetCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB76A293A731800AC2372 /* GetCategoriesResponse.swift */,
+				DE2CB76B293A731800AC2372 /* GetCategoriesRequest.swift */,
+			);
+			path = GetCategories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -764,13 +959,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */,
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
 				DE2CB5DB293A0C8900AC2372 /* PaygateInfoCell.swift in Sources */,
 				DE2CB5CD293A0C8900AC2372 /* MainView.swift in Sources */,
 				DE2CB5FB293A0C8900AC2372 /* SplashViewController.swift in Sources */,
+				DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */,
+				DE2CB780293A731800AC2372 /* GetComicsKitRequest.swift in Sources */,
 				DE2CB57F293A0C3E00AC2372 /* IAPError.swift in Sources */,
 				DE2CB548293A0B6200AC2372 /* Scalable.swift in Sources */,
 				DE2CB57E293A0C3E00AC2372 /* IAPProduct.swift in Sources */,
+				DE2CB77F293A731800AC2372 /* GetComicsKitResponse.swift in Sources */,
 				DE2CB55B293A0B6200AC2372 /* PaddingTextField.swift in Sources */,
 				DE2CB560293A0B6200AC2372 /* AppDelegate.swift in Sources */,
 				DE2CB60E293A0D1900AC2372 /* LoginRequest.swift in Sources */,
@@ -778,63 +977,92 @@
 				DE2CB5D9293A0C8900AC2372 /* PaygateViewController.swift in Sources */,
 				DE2CB541293A0B6200AC2372 /* String+Extension.swift in Sources */,
 				DE2CB554293A0B6200AC2372 /* RxActivityIndicator.swift in Sources */,
+				DE2CB779293A731800AC2372 /* Ranking.swift in Sources */,
 				DE2CB5D7293A0C8900AC2372 /* PaygateInteractor.swift in Sources */,
 				DE2CB545293A0B6200AC2372 /* XORRequestWrapper.swift in Sources */,
+				DE2CB77B293A731800AC2372 /* Category.swift in Sources */,
+				DE2CB770293A731800AC2372 /* ContentManager.swift in Sources */,
 				DE2CB57D293A0C3E00AC2372 /* IAPActionResult.swift in Sources */,
 				DE2CB542293A0B6200AC2372 /* UIViewRxExtension.swift in Sources */,
 				DE2CB55A293A0B6200AC2372 /* Spinner.swift in Sources */,
 				DE2CB600293A0C8900AC2372 /* SplashView.swift in Sources */,
 				DE2CB558293A0B6200AC2372 /* NavigationController.swift in Sources */,
+				DE2CB796293A731800AC2372 /* GetCategoriesResponse.swift in Sources */,
 				DE2CB566293A0B6200AC2372 /* BranchManager.swift in Sources */,
 				DE2CB552293A0B6200AC2372 /* Weak.swift in Sources */,
+				DE2CB795293A731800AC2372 /* GetSavedComicsRequest.swift in Sources */,
 				DE2CB5FD293A0C8900AC2372 /* SplashReceiptValidationObserver.swift in Sources */,
+				DE2CB77D293A731800AC2372 /* ComicsChapter.swift in Sources */,
 				DE2CB610293A0D1900AC2372 /* SetRequest.swift in Sources */,
+				DE2CB78F293A731800AC2372 /* GetHomeKitRequest.swift in Sources */,
 				DE2CB562293A0B6200AC2372 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE2CB54C293A0B6200AC2372 /* ObservableRetrySingle.swift in Sources */,
+				DE2CB792293A731800AC2372 /* SaveComicsRequest.swift in Sources */,
+				DE2CB785293A731800AC2372 /* GetCategoryComicsRequest.swift in Sources */,
 				DE2CB546293A0B6200AC2372 /* APIRequestBody.swift in Sources */,
 				DE2CB559293A0B6200AC2372 /* TapAreaButton.swift in Sources */,
 				DE2CB57C293A0C3E00AC2372 /* ProductPrice.swift in Sources */,
+				DE2CB794293A731800AC2372 /* GetSavedComicsResponse.swift in Sources */,
+				DE2CB78B293A731800AC2372 /* GetExploreKitResponse.swift in Sources */,
 				DE2CB565293A0B6200AC2372 /* Appearance.swift in Sources */,
 				DE2CB54F293A0B6200AC2372 /* SignError.swift in Sources */,
 				DE2CB603293A0C8900AC2372 /* TryAgainViewController.swift in Sources */,
+				DE2CB778293A731800AC2372 /* Comics.swift in Sources */,
 				DE2CB5DA293A0C8900AC2372 /* PaygateProductButton.swift in Sources */,
 				DE2CB5CE293A0C8900AC2372 /* TabItemView.swift in Sources */,
+				DE2CB775293A731800AC2372 /* RankingBooksGroup.swift in Sources */,
 				DE2CB568293A0B6200AC2372 /* FirebaseManager.swift in Sources */,
+				DE2CB77E293A731800AC2372 /* ComicsReadingProgress.swift in Sources */,
 				DE2CB544293A0B6200AC2372 /* DefaultRequestWrapper.swift in Sources */,
 				DE2CB551293A0B6200AC2372 /* ContentError.swift in Sources */,
+				DE2CB771293A731800AC2372 /* ComicsKit.swift in Sources */,
+				DE2CB78D293A731800AC2372 /* SearchComicsResponse.swift in Sources */,
 				DE2CB556293A0B6200AC2372 /* Toast.swift in Sources */,
 				DE2CB550293A0B6200AC2372 /* NetworkError.swift in Sources */,
 				DE2CB581293A0C3E00AC2372 /* Session.swift in Sources */,
+				DE2CB77A293A731800AC2372 /* ComicsCover.swift in Sources */,
 				DE2CB53D293A0B6200AC2372 /* UIDevice+Extension.swift in Sources */,
 				DE2CB54B293A0B6200AC2372 /* ScreenSize.swift in Sources */,
-				DE2CB60C293A0D1900AC2372 /* TextSize.swift in Sources */,
+				DE2CB786293A731800AC2372 /* GetCategoryComicsResponse.swift in Sources */,
 				DE2CB540293A0B6200AC2372 /* ObservableAndSingle+Extension.swift in Sources */,
+				DE2CB791293A731800AC2372 /* RemoveSavedComicsRequest.swift in Sources */,
 				DE2CB60D293A0D1900AC2372 /* ProfileManager.swift in Sources */,
 				DE2CB547293A0B6200AC2372 /* RestAPITransport.swift in Sources */,
+				DE2CB79D293A765F00AC2372 /* CategoryComicsGroup.swift in Sources */,
 				DE2CB54A293A0B6200AC2372 /* TextAttributes.swift in Sources */,
 				DE2CB5CC293A0C8900AC2372 /* MainViewController.swift in Sources */,
 				DE2CB561293A0B6200AC2372 /* PushNotificationsManager.swift in Sources */,
+				DE2CB79B293A754700AC2372 /* ComicsStatus.swift in Sources */,
 				DE2CB580293A0C3E00AC2372 /* IAPErrorHelper.swift in Sources */,
+				DE2CB777293A731800AC2372 /* HomeKit.swift in Sources */,
 				DE2CB564293A0B6200AC2372 /* SceneDelegate.swift in Sources */,
 				DE2CB582293A0C3E00AC2372 /* SessionManager.swift in Sources */,
 				DE2CB57A293A0C3E00AC2372 /* IAPManager.swift in Sources */,
+				DE2CB76F293A731800AC2372 /* ContentMediator.swift in Sources */,
 				DE2CB5D5293A0C8900AC2372 /* PaygatePrice.swift in Sources */,
 				DE2CB53E293A0B6200AC2372 /* UIColor+Extension.swift in Sources */,
 				DE2CB55E293A0B6200AC2372 /* GradientView.swift in Sources */,
 				DE2CB5FC293A0C8900AC2372 /* SplashActivity.swift in Sources */,
+				DE2CB78A293A731800AC2372 /* GetRankingComicsResponse.swift in Sources */,
+				DE2CB789293A731800AC2372 /* GetRankingComicsRequest.swift in Sources */,
 				DE2CB5D6293A0C8900AC2372 /* PaygateViewControllerDelegate.swift in Sources */,
+				DE2CB78E293A731800AC2372 /* SearchComicsRequest.swift in Sources */,
 				DE2CB5D4293A0C8900AC2372 /* PaygateProductInfo.swift in Sources */,
 				DE2CB5FE293A0C8900AC2372 /* SplashSDKInitialize.swift in Sources */,
 				DE2CB60F293A0D1900AC2372 /* SyncTokensRequest.swift in Sources */,
 				DE2CB5D2293A0C8900AC2372 /* MainViewCoordinator.swift in Sources */,
+				DE2CB784293A731800AC2372 /* GetRankingRequest.swift in Sources */,
 				DE2CB55D293A0B6200AC2372 /* CircleView.swift in Sources */,
 				DE2CB57B293A0C3E00AC2372 /* PurchaseValidationObserver.swift in Sources */,
+				DE2CB790293A731800AC2372 /* GetHomeKitResponse.swift in Sources */,
 				DE2CB549293A0B6200AC2372 /* NumberLaunches.swift in Sources */,
 				DE2CB54E293A0B6200AC2372 /* Fonts.swift in Sources */,
 				DE2CB55C293A0B6200AC2372 /* PaddingLabel.swift in Sources */,
 				DE2CB5CF293A0C8900AC2372 /* TabView.swift in Sources */,
 				DE2CB543293A0B6200AC2372 /* GlobalDefinitions.swift in Sources */,
 				DE2CB557293A0B6200AC2372 /* NavigationControllerSettings.swift in Sources */,
+				DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */,
+				DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */,
 				DE2CB5D3293A0C8900AC2372 /* PaygateViewModel.swift in Sources */,
 				DE2CB5D8293A0C8900AC2372 /* PaygateView.swift in Sources */,
 				DE2CB601293A0C8900AC2372 /* SplashAnimateLampView.swift in Sources */,

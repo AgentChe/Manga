@@ -1,6 +1,6 @@
 //
 //  TabView.swift
-//  BookSummaries
+//  Manga
 //
 //  Created by Андрей Чернышев on 07.07.2022.
 //
