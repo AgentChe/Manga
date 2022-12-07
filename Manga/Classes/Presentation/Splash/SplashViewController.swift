@@ -59,12 +59,6 @@ final class SplashViewController: UIViewController {
             }
         }
     }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        super.viewDidAppear(animated)
-        
-        mainView.animateView.start()
-    }
 }
 
 // MARK: Make
@@ -86,9 +80,7 @@ private extension SplashViewController {
     func goNext(at step: SplashViewModel.Step) {
         switch step {
         case .onboarding:
-            // TODO
-            break
-//            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = OnboardingViewController.make()
+            UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = OnboardingViewController.make()
         case .main:
             UIApplication.shared.windows.filter {$0.isKeyWindow}.first?.rootViewController = MainViewController.make()
         case .paygate:
@@ -102,7 +94,7 @@ private extension SplashViewController {
         state == .none ? mainView.preloader.stopAnimating() : mainView.preloader.startAnimating()
         
         let attrs = TextAttributes()
-            .textColor(Appearance.secondary5)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.regular(size: 14.scale))
             .lineHeight(19.6.scale)
             .letterSpacing(-0.17.scale)

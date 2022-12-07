@@ -6,18 +6,18 @@
 //
 
 final class GlobalDefinitions {
-    static let domain = "https://books.thinkaboutapps.com"
-    static let apiKey = "BeV3sSdfVixSJQFP"
+    static let domain = "https://manga.mustname.com"
+    static let apiKey = "b8Z3e66Yi0k99k6JBZUT"
     
     static let otterScaleHost = "https://api.korrekted.com"
-    static let otterScaleApiKey = "nLcxrPTkFUCO8orL"
+    static let otterScaleApiKey = "qwBJ9c9mWlVT1gpN"
     
-    static let appleAppID = "1585629405"
+    static let appleAppID = "" //TODO
     
-    static let applicationTag = "BOOK_SUMMARIES"
-    static let amplitudeApiKey = "b503251969f4b1d7901d2f7d1388d476"
+    static let applicationTag = "MANGA"
+    static let amplitudeApiKey = "1336d08d429ceb343970fd360e3253f6"
     
-    static let termsOfServiceUrl = "https://books.thinkaboutapps.com/terms"
-    static let privacyPolicyUrl = "https://books.thinkaboutapps.com/policy"
-    static let contactUsUrl = "https://books.thinkaboutapps.com/contact"
+    static let termsOfServiceUrl = "https://mustname.com/terms"
+    static let privacyPolicyUrl = "https://mustname.com/policy"
+    static let contactUsUrl = "https://mustname.com/contact"
 }

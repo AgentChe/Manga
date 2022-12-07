@@ -9,7 +9,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>fb296859475549711</string>
+				<string>fb3370887763183468</string>
 			</array>
 		</dict>
 		<dict>
@@ -17,16 +17,16 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>booksummaries</string>
+				<string>mangaapp</string>
 			</array>
 		</dict>
 	</array>
 	<key>FacebookAppID</key>
-	<string></string>
+	<string>3370887763183468</string>
 	<key>FacebookClientToken</key>
-	<string></string>
+	<string>5eb75730383a3e73954835e610d9fe18</string>
 	<key>FacebookDisplayName</key>
-	<string></string>
+	<string>Manga Comics</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
@@ -58,6 +58,6 @@
 		</dict>
 	</dict>
 	<key>branch_key</key>
-	<string></string>
+	<string>key_live_pl51MNN3jRVk4esMfuRCGhhkBzbX694u</string>
 </dict>
 </plist>

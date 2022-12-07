@@ -23,7 +23,7 @@ final class SplashViewModel {
     
     private lazy var sessionManager = SessionManager()
     private lazy var profileManager = ProfileManager()
-//    private lazy var contentManager = ContentManager()
+    private lazy var contentManager = ContentManager()
     
     private lazy var observableRetrySingle = ObservableRetrySingle()
 }
@@ -100,17 +100,15 @@ private extension SplashViewModel {
     
     func library() -> Observable<Void> {
         func source() -> Single<Void> {
-            // TODO
-//            let categories = contentManager
-//                .obtainCategories(forceUpdate: true)
-//
-//            let ranking = contentManager
-//                .obtainRankings(forceUpdate: true)
-//
-//            return Single
-//                .zip(categories, ranking)
-//                .mapToVoid()
-            return .deferred { .just(Void()) }
+            let categories = contentManager
+                .obtainCategories(forceUpdate: true)
+
+            let ranking = contentManager
+                .obtainRankings(forceUpdate: true)
+
+            return Single
+                .zip(categories, ranking)
+                .mapToVoid()
         }
         
         func trigger(error: Error) -> Observable<Void> {
@@ -130,20 +128,17 @@ private extension SplashViewModel {
     func makeStep() -> Single<Step> {
         Single<Step>
             .create { event in
-                // TODO
-                event(.success(.main))
-                
-//                let step: Step
-//
-//                if !OnboardingViewController.wasViewed() {
-//                    step = .onboarding
-//                } else if self.needPayment() {
-//                    step = .paygate
-//                } else {
-//                    step = .main
-//                }
-//
-//                event(.success(step))
+                let step: Step
+
+                if !OnboardingViewController.wasViewed() {
+                    step = .onboarding
+                } else if self.needPayment() {
+                    step = .paygate
+                } else {
+                    step = .main
+                }
+
+                event(.success(step))
                 
                 return Disposables.create()
             }

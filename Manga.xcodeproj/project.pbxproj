@@ -85,14 +85,12 @@
 		DE2CB5FE293A0C8900AC2372 /* SplashSDKInitialize.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5C4293A0C8900AC2372 /* SplashSDKInitialize.swift */; };
 		DE2CB5FF293A0C8900AC2372 /* SplashViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5C5293A0C8900AC2372 /* SplashViewModel.swift */; };
 		DE2CB600293A0C8900AC2372 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5C6293A0C8900AC2372 /* SplashView.swift */; };
-		DE2CB601293A0C8900AC2372 /* SplashAnimateLampView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5C8293A0C8900AC2372 /* SplashAnimateLampView.swift */; };
 		DE2CB602293A0C8900AC2372 /* TryAgainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5CA293A0C8900AC2372 /* TryAgainView.swift */; };
 		DE2CB603293A0C8900AC2372 /* TryAgainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB5CB293A0C8900AC2372 /* TryAgainViewController.swift */; };
 		DE2CB60D293A0D1900AC2372 /* ProfileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB607293A0D1900AC2372 /* ProfileManager.swift */; };
 		DE2CB60E293A0D1900AC2372 /* LoginRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB609293A0D1900AC2372 /* LoginRequest.swift */; };
 		DE2CB60F293A0D1900AC2372 /* SyncTokensRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB60A293A0D1900AC2372 /* SyncTokensRequest.swift */; };
 		DE2CB610293A0D1900AC2372 /* SetRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB60B293A0D1900AC2372 /* SetRequest.swift */; };
-		DE2CB612293A0E4F00AC2372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB611293A0E4F00AC2372 /* GoogleService-Info.plist */; };
 		DE2CB619293A103100AC2372 /* PlusJakartaSans-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB614293A103100AC2372 /* PlusJakartaSans-Medium.ttf */; };
 		DE2CB61A293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB615293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf */; };
 		DE2CB61B293A103100AC2372 /* PlusJakartaSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB616293A103100AC2372 /* PlusJakartaSans-Regular.ttf */; };
@@ -132,6 +130,36 @@
 		DE2CB79B293A754700AC2372 /* ComicsStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79A293A754700AC2372 /* ComicsStatus.swift */; };
 		DE2CB79D293A765F00AC2372 /* CategoryComicsGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79C293A765F00AC2372 /* CategoryComicsGroup.swift */; };
 		DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB79E293A77BC00AC2372 /* ComicsChapterContentBlock.swift */; };
+		DE2CB7CB2940B4A300AC2372 /* OCombineData.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7A42940B4A300AC2372 /* OCombineData.swift */; };
+		DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7A52940B4A300AC2372 /* OnboardingViewController.swift */; };
+		DE2CB7CD2940B4A300AC2372 /* OProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7A72940B4A300AC2372 /* OProgressView.swift */; };
+		DE2CB7CE2940B4A300AC2372 /* ONotificationsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7A82940B4A300AC2372 /* ONotificationsView.swift */; };
+		DE2CB7CF2940B4A300AC2372 /* OCircleProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7AA2940B4A300AC2372 /* OCircleProgressView.swift */; };
+		DE2CB7D12940B4A300AC2372 /* OBottomProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7AC2940B4A300AC2372 /* OBottomProgressView.swift */; };
+		DE2CB7D22940B4A300AC2372 /* OComicsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7AD2940B4A300AC2372 /* OComicsButton.swift */; };
+		DE2CB7D42940B4A300AC2372 /* ONotificationsSwitch.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7AF2940B4A300AC2372 /* ONotificationsSwitch.swift */; };
+		DE2CB7D52940B4A300AC2372 /* OTimeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7B02940B4A300AC2372 /* OTimeButton.swift */; };
+		DE2CB7D92940B4A300AC2372 /* OComicsImageCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7B52940B4A300AC2372 /* OComicsImageCollectionView.swift */; };
+		DE2CB7DA2940B4A300AC2372 /* OAgeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7B62940B4A300AC2372 /* OAgeButton.swift */; };
+		DE2CB7DB2940B4A300AC2372 /* OCategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7B82940B4A300AC2372 /* OCategoriesCollectionView.swift */; };
+		DE2CB7DC2940B4A300AC2372 /* OCategoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7B92940B4A300AC2372 /* OCategoriesCollectionCell.swift */; };
+		DE2CB7DD2940B4A300AC2372 /* OCategoriesCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7BA2940B4A300AC2372 /* OCategoriesCollectionElement.swift */; };
+		DE2CB7DE2940B4A300AC2372 /* OCategoriesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7BB2940B4A300AC2372 /* OCategoriesCollectionLayout.swift */; };
+		DE2CB7DF2940B4A300AC2372 /* OGoalButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7BC2940B4A300AC2372 /* OGoalButton.swift */; };
+		DE2CB7E02940B4A300AC2372 /* OBriefView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7BD2940B4A300AC2372 /* OBriefView.swift */; };
+		DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7BE2940B4A300AC2372 /* OWelcomeView.swift */; };
+		DE2CB7E32940B4A300AC2372 /* OInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C02940B4A300AC2372 /* OInfoView.swift */; };
+		DE2CB7E42940B4A300AC2372 /* OSlideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C12940B4A300AC2372 /* OSlideView.swift */; };
+		DE2CB7E52940B4A300AC2372 /* OPaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C22940B4A300AC2372 /* OPaceView.swift */; };
+		DE2CB7E62940B4A300AC2372 /* OInfoLibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C32940B4A300AC2372 /* OInfoLibraryView.swift */; };
+		DE2CB7E72940B4A300AC2372 /* OComicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C42940B4A300AC2372 /* OComicsView.swift */; };
+		DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C52940B4A300AC2372 /* OCategoriesView.swift */; };
+		DE2CB7E92940B4A300AC2372 /* OTimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C62940B4A300AC2372 /* OTimeView.swift */; };
+		DE2CB7EA2940B4A300AC2372 /* OGoalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C72940B4A300AC2372 /* OGoalView.swift */; };
+		DE2CB7EB2940B4A300AC2372 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C82940B4A300AC2372 /* OAgeView.swift */; };
+		DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */; };
+		DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */; };
+		DE2CB7EF2940EE1600AC2372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -217,14 +245,12 @@
 		DE2CB5C4293A0C8900AC2372 /* SplashSDKInitialize.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashSDKInitialize.swift; sourceTree = "<group>"; };
 		DE2CB5C5293A0C8900AC2372 /* SplashViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashViewModel.swift; sourceTree = "<group>"; };
 		DE2CB5C6293A0C8900AC2372 /* SplashView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
-		DE2CB5C8293A0C8900AC2372 /* SplashAnimateLampView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplashAnimateLampView.swift; sourceTree = "<group>"; };
 		DE2CB5CA293A0C8900AC2372 /* TryAgainView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryAgainView.swift; sourceTree = "<group>"; };
 		DE2CB5CB293A0C8900AC2372 /* TryAgainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TryAgainViewController.swift; sourceTree = "<group>"; };
 		DE2CB607293A0D1900AC2372 /* ProfileManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileManager.swift; sourceTree = "<group>"; };
 		DE2CB609293A0D1900AC2372 /* LoginRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRequest.swift; sourceTree = "<group>"; };
 		DE2CB60A293A0D1900AC2372 /* SyncTokensRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SyncTokensRequest.swift; sourceTree = "<group>"; };
 		DE2CB60B293A0D1900AC2372 /* SetRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetRequest.swift; sourceTree = "<group>"; };
-		DE2CB611293A0E4F00AC2372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DE2CB614293A103100AC2372 /* PlusJakartaSans-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Medium.ttf"; sourceTree = "<group>"; };
 		DE2CB615293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		DE2CB616293A103100AC2372 /* PlusJakartaSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "PlusJakartaSans-Regular.ttf"; sourceTree = "<group>"; };
@@ -264,6 +290,36 @@
 		DE2CB79A293A754700AC2372 /* ComicsStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsStatus.swift; sourceTree = "<group>"; };
 		DE2CB79C293A765F00AC2372 /* CategoryComicsGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryComicsGroup.swift; sourceTree = "<group>"; };
 		DE2CB79E293A77BC00AC2372 /* ComicsChapterContentBlock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsChapterContentBlock.swift; sourceTree = "<group>"; };
+		DE2CB7A42940B4A300AC2372 /* OCombineData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCombineData.swift; sourceTree = "<group>"; };
+		DE2CB7A52940B4A300AC2372 /* OnboardingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewController.swift; sourceTree = "<group>"; };
+		DE2CB7A72940B4A300AC2372 /* OProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OProgressView.swift; sourceTree = "<group>"; };
+		DE2CB7A82940B4A300AC2372 /* ONotificationsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONotificationsView.swift; sourceTree = "<group>"; };
+		DE2CB7AA2940B4A300AC2372 /* OCircleProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCircleProgressView.swift; sourceTree = "<group>"; };
+		DE2CB7AC2940B4A300AC2372 /* OBottomProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBottomProgressView.swift; sourceTree = "<group>"; };
+		DE2CB7AD2940B4A300AC2372 /* OComicsButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OComicsButton.swift; sourceTree = "<group>"; };
+		DE2CB7AF2940B4A300AC2372 /* ONotificationsSwitch.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ONotificationsSwitch.swift; sourceTree = "<group>"; };
+		DE2CB7B02940B4A300AC2372 /* OTimeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTimeButton.swift; sourceTree = "<group>"; };
+		DE2CB7B52940B4A300AC2372 /* OComicsImageCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OComicsImageCollectionView.swift; sourceTree = "<group>"; };
+		DE2CB7B62940B4A300AC2372 /* OAgeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAgeButton.swift; sourceTree = "<group>"; };
+		DE2CB7B82940B4A300AC2372 /* OCategoriesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionView.swift; sourceTree = "<group>"; };
+		DE2CB7B92940B4A300AC2372 /* OCategoriesCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionCell.swift; sourceTree = "<group>"; };
+		DE2CB7BA2940B4A300AC2372 /* OCategoriesCollectionElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionElement.swift; sourceTree = "<group>"; };
+		DE2CB7BB2940B4A300AC2372 /* OCategoriesCollectionLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCategoriesCollectionLayout.swift; sourceTree = "<group>"; };
+		DE2CB7BC2940B4A300AC2372 /* OGoalButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGoalButton.swift; sourceTree = "<group>"; };
+		DE2CB7BD2940B4A300AC2372 /* OBriefView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OBriefView.swift; sourceTree = "<group>"; };
+		DE2CB7BE2940B4A300AC2372 /* OWelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OWelcomeView.swift; sourceTree = "<group>"; };
+		DE2CB7C02940B4A300AC2372 /* OInfoView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OInfoView.swift; sourceTree = "<group>"; };
+		DE2CB7C12940B4A300AC2372 /* OSlideView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OSlideView.swift; sourceTree = "<group>"; };
+		DE2CB7C22940B4A300AC2372 /* OPaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OPaceView.swift; sourceTree = "<group>"; };
+		DE2CB7C32940B4A300AC2372 /* OInfoLibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OInfoLibraryView.swift; sourceTree = "<group>"; };
+		DE2CB7C42940B4A300AC2372 /* OComicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OComicsView.swift; sourceTree = "<group>"; };
+		DE2CB7C52940B4A300AC2372 /* OCategoriesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OCategoriesView.swift; sourceTree = "<group>"; };
+		DE2CB7C62940B4A300AC2372 /* OTimeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OTimeView.swift; sourceTree = "<group>"; };
+		DE2CB7C72940B4A300AC2372 /* OGoalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OGoalView.swift; sourceTree = "<group>"; };
+		DE2CB7C82940B4A300AC2372 /* OAgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
+		DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
+		DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
+		DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Manga/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -328,7 +384,7 @@
 				DE2CB4FD293A0AD800AC2372 /* Strings */,
 				DE2CB4FC293A0AD300AC2372 /* Fonts */,
 				DE2CB4F5293A093700AC2372 /* Info.plist */,
-				DE2CB611293A0E4F00AC2372 /* GoogleService-Info.plist */,
+				DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */,
 				DE2CB4F2293A093700AC2372 /* LaunchScreen.storyboard */,
 				DE2CB4F0293A093700AC2372 /* Assets.xcassets */,
 				DE2CB500293A0B3500AC2372 /* API.json */,
@@ -562,6 +618,7 @@
 		DE2CB583293A0C5A00AC2372 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE2CB7A22940B4A300AC2372 /* Onboarding */,
 				DE2CB584293A0C8900AC2372 /* Main */,
 				DE2CB58F293A0C8900AC2372 /* Paygate */,
 				DE2CB5BF293A0C8900AC2372 /* Splash */,
@@ -634,7 +691,6 @@
 			isa = PBXGroup;
 			children = (
 				DE2CB5C1293A0C8900AC2372 /* Utils */,
-				DE2CB5C7293A0C8900AC2372 /* Views */,
 				DE2CB5C0293A0C8900AC2372 /* SplashViewController.swift */,
 				DE2CB5C5293A0C8900AC2372 /* SplashViewModel.swift */,
 				DE2CB5C6293A0C8900AC2372 /* SplashView.swift */,
@@ -650,14 +706,6 @@
 				DE2CB5C4293A0C8900AC2372 /* SplashSDKInitialize.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		DE2CB5C7293A0C8900AC2372 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				DE2CB5C8293A0C8900AC2372 /* SplashAnimateLampView.swift */,
-			);
-			path = Views;
 			sourceTree = "<group>";
 		};
 		DE2CB5C9293A0C8900AC2372 /* TryAgain */ = {
@@ -837,6 +885,74 @@
 			path = GetCategories;
 			sourceTree = "<group>";
 		};
+		DE2CB7A22940B4A300AC2372 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB7A32940B4A300AC2372 /* Utils */,
+				DE2CB7A62940B4A300AC2372 /* Views */,
+				DE2CB7A52940B4A300AC2372 /* OnboardingViewController.swift */,
+				DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */,
+				DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */,
+			);
+			path = Onboarding;
+			sourceTree = "<group>";
+		};
+		DE2CB7A32940B4A300AC2372 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB7A42940B4A300AC2372 /* OCombineData.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DE2CB7A62940B4A300AC2372 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB7A92940B4A300AC2372 /* Atoms */,
+				DE2CB7C12940B4A300AC2372 /* OSlideView.swift */,
+				DE2CB7BE2940B4A300AC2372 /* OWelcomeView.swift */,
+				DE2CB7C02940B4A300AC2372 /* OInfoView.swift */,
+				DE2CB7C72940B4A300AC2372 /* OGoalView.swift */,
+				DE2CB7C82940B4A300AC2372 /* OAgeView.swift */,
+				DE2CB7BD2940B4A300AC2372 /* OBriefView.swift */,
+				DE2CB7C52940B4A300AC2372 /* OCategoriesView.swift */,
+				DE2CB7C22940B4A300AC2372 /* OPaceView.swift */,
+				DE2CB7C62940B4A300AC2372 /* OTimeView.swift */,
+				DE2CB7A82940B4A300AC2372 /* ONotificationsView.swift */,
+				DE2CB7C32940B4A300AC2372 /* OInfoLibraryView.swift */,
+				DE2CB7C42940B4A300AC2372 /* OComicsView.swift */,
+				DE2CB7A72940B4A300AC2372 /* OProgressView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE2CB7A92940B4A300AC2372 /* Atoms */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB7B72940B4A300AC2372 /* Categories */,
+				DE2CB7AA2940B4A300AC2372 /* OCircleProgressView.swift */,
+				DE2CB7AC2940B4A300AC2372 /* OBottomProgressView.swift */,
+				DE2CB7AD2940B4A300AC2372 /* OComicsButton.swift */,
+				DE2CB7AF2940B4A300AC2372 /* ONotificationsSwitch.swift */,
+				DE2CB7B02940B4A300AC2372 /* OTimeButton.swift */,
+				DE2CB7B52940B4A300AC2372 /* OComicsImageCollectionView.swift */,
+				DE2CB7B62940B4A300AC2372 /* OAgeButton.swift */,
+				DE2CB7BC2940B4A300AC2372 /* OGoalButton.swift */,
+			);
+			path = Atoms;
+			sourceTree = "<group>";
+		};
+		DE2CB7B72940B4A300AC2372 /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB7B82940B4A300AC2372 /* OCategoriesCollectionView.swift */,
+				DE2CB7B92940B4A300AC2372 /* OCategoriesCollectionCell.swift */,
+				DE2CB7BA2940B4A300AC2372 /* OCategoriesCollectionElement.swift */,
+				DE2CB7BB2940B4A300AC2372 /* OCategoriesCollectionLayout.swift */,
+			);
+			path = Categories;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -901,10 +1017,10 @@
 				DE2CB4F4293A093700AC2372 /* LaunchScreen.storyboard in Resources */,
 				DE2CB619293A103100AC2372 /* PlusJakartaSans-Medium.ttf in Resources */,
 				DE2CB4FF293A0AE500AC2372 /* Localizable.strings in Resources */,
-				DE2CB612293A0E4F00AC2372 /* GoogleService-Info.plist in Resources */,
 				DE2CB61A293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE2CB61D293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE2CB61B293A103100AC2372 /* PlusJakartaSans-Regular.ttf in Resources */,
+				DE2CB7EF2940EE1600AC2372 /* GoogleService-Info.plist in Resources */,
 				DE2CB501293A0B3500AC2372 /* API.json in Resources */,
 				DE2CB4F1293A093700AC2372 /* Assets.xcassets in Resources */,
 			);
@@ -960,13 +1076,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */,
+				DE2CB7DB2940B4A300AC2372 /* OCategoriesCollectionView.swift in Sources */,
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
 				DE2CB5DB293A0C8900AC2372 /* PaygateInfoCell.swift in Sources */,
+				DE2CB7D92940B4A300AC2372 /* OComicsImageCollectionView.swift in Sources */,
 				DE2CB5CD293A0C8900AC2372 /* MainView.swift in Sources */,
 				DE2CB5FB293A0C8900AC2372 /* SplashViewController.swift in Sources */,
+				DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */,
+				DE2CB7E72940B4A300AC2372 /* OComicsView.swift in Sources */,
 				DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */,
 				DE2CB780293A731800AC2372 /* GetComicsKitRequest.swift in Sources */,
+				DE2CB7DD2940B4A300AC2372 /* OCategoriesCollectionElement.swift in Sources */,
 				DE2CB57F293A0C3E00AC2372 /* IAPError.swift in Sources */,
+				DE2CB7CD2940B4A300AC2372 /* OProgressView.swift in Sources */,
 				DE2CB548293A0B6200AC2372 /* Scalable.swift in Sources */,
 				DE2CB57E293A0C3E00AC2372 /* IAPProduct.swift in Sources */,
 				DE2CB77F293A731800AC2372 /* GetComicsKitResponse.swift in Sources */,
@@ -982,10 +1104,13 @@
 				DE2CB545293A0B6200AC2372 /* XORRequestWrapper.swift in Sources */,
 				DE2CB77B293A731800AC2372 /* Category.swift in Sources */,
 				DE2CB770293A731800AC2372 /* ContentManager.swift in Sources */,
+				DE2CB7E52940B4A300AC2372 /* OPaceView.swift in Sources */,
+				DE2CB7E92940B4A300AC2372 /* OTimeView.swift in Sources */,
 				DE2CB57D293A0C3E00AC2372 /* IAPActionResult.swift in Sources */,
 				DE2CB542293A0B6200AC2372 /* UIViewRxExtension.swift in Sources */,
 				DE2CB55A293A0B6200AC2372 /* Spinner.swift in Sources */,
 				DE2CB600293A0C8900AC2372 /* SplashView.swift in Sources */,
+				DE2CB7EA2940B4A300AC2372 /* OGoalView.swift in Sources */,
 				DE2CB558293A0B6200AC2372 /* NavigationController.swift in Sources */,
 				DE2CB796293A731800AC2372 /* GetCategoriesResponse.swift in Sources */,
 				DE2CB566293A0B6200AC2372 /* BranchManager.swift in Sources */,
@@ -1009,7 +1134,9 @@
 				DE2CB603293A0C8900AC2372 /* TryAgainViewController.swift in Sources */,
 				DE2CB778293A731800AC2372 /* Comics.swift in Sources */,
 				DE2CB5DA293A0C8900AC2372 /* PaygateProductButton.swift in Sources */,
+				DE2CB7DE2940B4A300AC2372 /* OCategoriesCollectionLayout.swift in Sources */,
 				DE2CB5CE293A0C8900AC2372 /* TabItemView.swift in Sources */,
+				DE2CB7DA2940B4A300AC2372 /* OAgeButton.swift in Sources */,
 				DE2CB775293A731800AC2372 /* RankingBooksGroup.swift in Sources */,
 				DE2CB568293A0B6200AC2372 /* FirebaseManager.swift in Sources */,
 				DE2CB77E293A731800AC2372 /* ComicsReadingProgress.swift in Sources */,
@@ -1017,12 +1144,17 @@
 				DE2CB551293A0B6200AC2372 /* ContentError.swift in Sources */,
 				DE2CB771293A731800AC2372 /* ComicsKit.swift in Sources */,
 				DE2CB78D293A731800AC2372 /* SearchComicsResponse.swift in Sources */,
+				DE2CB7D12940B4A300AC2372 /* OBottomProgressView.swift in Sources */,
+				DE2CB7E42940B4A300AC2372 /* OSlideView.swift in Sources */,
+				DE2CB7E02940B4A300AC2372 /* OBriefView.swift in Sources */,
+				DE2CB7DC2940B4A300AC2372 /* OCategoriesCollectionCell.swift in Sources */,
 				DE2CB556293A0B6200AC2372 /* Toast.swift in Sources */,
 				DE2CB550293A0B6200AC2372 /* NetworkError.swift in Sources */,
 				DE2CB581293A0C3E00AC2372 /* Session.swift in Sources */,
 				DE2CB77A293A731800AC2372 /* ComicsCover.swift in Sources */,
 				DE2CB53D293A0B6200AC2372 /* UIDevice+Extension.swift in Sources */,
 				DE2CB54B293A0B6200AC2372 /* ScreenSize.swift in Sources */,
+				DE2CB7CF2940B4A300AC2372 /* OCircleProgressView.swift in Sources */,
 				DE2CB786293A731800AC2372 /* GetCategoryComicsResponse.swift in Sources */,
 				DE2CB540293A0B6200AC2372 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE2CB791293A731800AC2372 /* RemoveSavedComicsRequest.swift in Sources */,
@@ -1030,9 +1162,12 @@
 				DE2CB547293A0B6200AC2372 /* RestAPITransport.swift in Sources */,
 				DE2CB79D293A765F00AC2372 /* CategoryComicsGroup.swift in Sources */,
 				DE2CB54A293A0B6200AC2372 /* TextAttributes.swift in Sources */,
+				DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */,
+				DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */,
 				DE2CB5CC293A0C8900AC2372 /* MainViewController.swift in Sources */,
 				DE2CB561293A0B6200AC2372 /* PushNotificationsManager.swift in Sources */,
 				DE2CB79B293A754700AC2372 /* ComicsStatus.swift in Sources */,
+				DE2CB7D52940B4A300AC2372 /* OTimeButton.swift in Sources */,
 				DE2CB580293A0C3E00AC2372 /* IAPErrorHelper.swift in Sources */,
 				DE2CB777293A731800AC2372 /* HomeKit.swift in Sources */,
 				DE2CB564293A0B6200AC2372 /* SceneDelegate.swift in Sources */,
@@ -1041,7 +1176,10 @@
 				DE2CB76F293A731800AC2372 /* ContentMediator.swift in Sources */,
 				DE2CB5D5293A0C8900AC2372 /* PaygatePrice.swift in Sources */,
 				DE2CB53E293A0B6200AC2372 /* UIColor+Extension.swift in Sources */,
+				DE2CB7D22940B4A300AC2372 /* OComicsButton.swift in Sources */,
 				DE2CB55E293A0B6200AC2372 /* GradientView.swift in Sources */,
+				DE2CB7E32940B4A300AC2372 /* OInfoView.swift in Sources */,
+				DE2CB7CE2940B4A300AC2372 /* ONotificationsView.swift in Sources */,
 				DE2CB5FC293A0C8900AC2372 /* SplashActivity.swift in Sources */,
 				DE2CB78A293A731800AC2372 /* GetRankingComicsResponse.swift in Sources */,
 				DE2CB789293A731800AC2372 /* GetRankingComicsRequest.swift in Sources */,
@@ -1057,21 +1195,27 @@
 				DE2CB790293A731800AC2372 /* GetHomeKitResponse.swift in Sources */,
 				DE2CB549293A0B6200AC2372 /* NumberLaunches.swift in Sources */,
 				DE2CB54E293A0B6200AC2372 /* Fonts.swift in Sources */,
+				DE2CB7EB2940B4A300AC2372 /* OAgeView.swift in Sources */,
 				DE2CB55C293A0B6200AC2372 /* PaddingLabel.swift in Sources */,
 				DE2CB5CF293A0C8900AC2372 /* TabView.swift in Sources */,
 				DE2CB543293A0B6200AC2372 /* GlobalDefinitions.swift in Sources */,
 				DE2CB557293A0B6200AC2372 /* NavigationControllerSettings.swift in Sources */,
 				DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */,
+				DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */,
 				DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */,
 				DE2CB5D3293A0C8900AC2372 /* PaygateViewModel.swift in Sources */,
 				DE2CB5D8293A0C8900AC2372 /* PaygateView.swift in Sources */,
-				DE2CB601293A0C8900AC2372 /* SplashAnimateLampView.swift in Sources */,
+				DE2CB7DF2940B4A300AC2372 /* OGoalButton.swift in Sources */,
+				DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */,
 				DE2CB602293A0C8900AC2372 /* TryAgainView.swift in Sources */,
 				DE2CB54D293A0B6200AC2372 /* XOREncryption.swift in Sources */,
 				DE2CB569293A0B6200AC2372 /* FacebookManager.swift in Sources */,
 				DE2CB53F293A0B6200AC2372 /* Collection+Extension.swift in Sources */,
+				DE2CB7E62940B4A300AC2372 /* OInfoLibraryView.swift in Sources */,
 				DE2CB563293A0B6200AC2372 /* PushNotificationsModel.swift in Sources */,
+				DE2CB7D42940B4A300AC2372 /* ONotificationsSwitch.swift in Sources */,
 				DE2CB555293A0B6200AC2372 /* PaginatedDataLoader.swift in Sources */,
+				DE2CB7CB2940B4A300AC2372 /* OCombineData.swift in Sources */,
 				DE2CB5FF293A0C8900AC2372 /* SplashViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
