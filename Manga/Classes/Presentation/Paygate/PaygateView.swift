@@ -250,7 +250,7 @@ private extension PaygateView {
     func makeSeparator() -> UIView {
         let view = UIView()
         view.isHidden = !ScreenSize.isIphoneXFamily
-        view.backgroundColor = Appearance.secondary5
+        view.backgroundColor = Appearance.secondary1
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

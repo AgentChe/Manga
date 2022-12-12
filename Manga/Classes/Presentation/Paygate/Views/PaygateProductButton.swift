@@ -47,7 +47,7 @@ private extension PaygateProductButton {
     }
     
     func changeSelection() {
-        layer.borderColor = isChecked ? Appearance.primary.cgColor : Appearance.secondary5.cgColor
+        layer.borderColor = isChecked ? Appearance.primary.cgColor : Appearance.secondary1.cgColor
         discountPlaceholderView.backgroundColor = isChecked ? Appearance.secondary1 : Appearance.black
         
         checkedView.isHidden = !isChecked
