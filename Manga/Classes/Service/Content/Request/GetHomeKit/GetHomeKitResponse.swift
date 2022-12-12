@@ -57,7 +57,7 @@ private extension GetHomeKitResponse {
     
     static func map(categoryGroupJSON: [String: Any]) -> CategoryComicsGroup? {
         guard
-            let categoryJSON = categoryGroupJSON["ranking"] as? [String: Any],
+            let categoryJSON = categoryGroupJSON["category"] as? [String: Any],
             let categoryId = categoryJSON["id"] as? Int,
             let categoryName = categoryJSON["name"] as? String,
             let coversArray = categoryGroupJSON["covers"] as? [[String: Any]]

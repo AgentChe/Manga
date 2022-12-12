@@ -99,3 +99,11 @@
 "Onboarding.Progress.Bottom1" = "Your profile %i%%";
 "Onboarding.Progress.Bottom2" = "Book preferences %i%%";
 "Onboarding.Progress.Bottom3" = "Creating your plan %i%%";
+
+// MARK: Home
+"Home.Title" = "For you";
+"Home.FreeButton.Free" = "FREE MANGA";
+"Home.ContinueToRead" = "Continue to read";
+"Home.Categories" = "Explore categories";
+"Home.ComicsStatus.Ongoing" = "Ongoing";
+"Home.ComicsStatus.Completed" = "Completed";

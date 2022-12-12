@@ -160,6 +160,21 @@
 		DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */; };
 		DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */; };
 		DE2CB7EF2940EE1600AC2372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */; };
+		DE2CB8302943651100AC2372 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80D2943651000AC2372 /* HomeView.swift */; };
+		DE2CB8312943651100AC2372 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80E2943651000AC2372 /* HomeViewController.swift */; };
+		DE2CB8322943651100AC2372 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80F2943651000AC2372 /* HomeViewModel.swift */; };
+		DE2CB8362943651100AC2372 /* HomeTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8182943651000AC2372 /* HomeTitleCell.swift */; };
+		DE2CB8372943651100AC2372 /* HomeSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8192943651000AC2372 /* HomeSeparatorCell.swift */; };
+		DE2CB8382943651100AC2372 /* HomeFreeComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB81A2943651000AC2372 /* HomeFreeComicsCell.swift */; };
+		DE2CB8392943651100AC2372 /* HomeComicsNumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB81B2943651000AC2372 /* HomeComicsNumberCell.swift */; };
+		DE2CB83A2943651100AC2372 /* HomeCategoriesCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB81E2943651000AC2372 /* HomeCategoriesCollectionView.swift */; };
+		DE2CB83B2943651100AC2372 /* HomeCategoriesCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB81F2943651000AC2372 /* HomeCategoriesCollectionCell.swift */; };
+		DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8202943651000AC2372 /* HomeCategoriesCell.swift */; };
+		DE2CB83D2943651100AC2372 /* HomeComicsBlockCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8222943651000AC2372 /* HomeComicsBlockCell.swift */; };
+		DE2CB83E2943651100AC2372 /* HomeCollectionComicsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8242943651000AC2372 /* HomeCollectionComicsView.swift */; };
+		DE2CB83F2943651100AC2372 /* HomeCollectionComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8252943651000AC2372 /* HomeCollectionComicsCell.swift */; };
+		DE2CB8402943651100AC2372 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8262943651000AC2372 /* HomeTableView.swift */; };
+		DE2CB8412943651100AC2372 /* HomeTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8272943651000AC2372 /* HomeTableElement.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -320,6 +335,21 @@
 		DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
 		DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Manga/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		DE2CB80D2943651000AC2372 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DE2CB80E2943651000AC2372 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		DE2CB80F2943651000AC2372 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DE2CB8182943651000AC2372 /* HomeTitleCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTitleCell.swift; sourceTree = "<group>"; };
+		DE2CB8192943651000AC2372 /* HomeSeparatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeSeparatorCell.swift; sourceTree = "<group>"; };
+		DE2CB81A2943651000AC2372 /* HomeFreeComicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFreeComicsCell.swift; sourceTree = "<group>"; };
+		DE2CB81B2943651000AC2372 /* HomeComicsNumberCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeComicsNumberCell.swift; sourceTree = "<group>"; };
+		DE2CB81E2943651000AC2372 /* HomeCategoriesCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionView.swift; sourceTree = "<group>"; };
+		DE2CB81F2943651000AC2372 /* HomeCategoriesCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionCell.swift; sourceTree = "<group>"; };
+		DE2CB8202943651000AC2372 /* HomeCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCell.swift; sourceTree = "<group>"; };
+		DE2CB8222943651000AC2372 /* HomeComicsBlockCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeComicsBlockCell.swift; sourceTree = "<group>"; };
+		DE2CB8242943651000AC2372 /* HomeCollectionComicsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionComicsView.swift; sourceTree = "<group>"; };
+		DE2CB8252943651000AC2372 /* HomeCollectionComicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeCollectionComicsCell.swift; sourceTree = "<group>"; };
+		DE2CB8262943651000AC2372 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
+		DE2CB8272943651000AC2372 /* HomeTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableElement.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -618,6 +648,7 @@
 		DE2CB583293A0C5A00AC2372 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE2CB8002943651000AC2372 /* Home */,
 				DE2CB7A22940B4A300AC2372 /* Onboarding */,
 				DE2CB584293A0C8900AC2372 /* Main */,
 				DE2CB58F293A0C8900AC2372 /* Paygate */,
@@ -953,6 +984,93 @@
 			path = Categories;
 			sourceTree = "<group>";
 		};
+		DE2CB8002943651000AC2372 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB80C2943651000AC2372 /* ForYou */,
+			);
+			name = Home;
+			path = Manga/Classes/Presentation/Home;
+			sourceTree = SOURCE_ROOT;
+		};
+		DE2CB80C2943651000AC2372 /* ForYou */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8102943651000AC2372 /* Views */,
+				DE2CB80E2943651000AC2372 /* HomeViewController.swift */,
+				DE2CB80F2943651000AC2372 /* HomeViewModel.swift */,
+				DE2CB80D2943651000AC2372 /* HomeView.swift */,
+			);
+			path = ForYou;
+			sourceTree = "<group>";
+		};
+		DE2CB8102943651000AC2372 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8112943651000AC2372 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE2CB8112943651000AC2372 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8122943651000AC2372 /* Cells */,
+				DE2CB8262943651000AC2372 /* HomeTableView.swift */,
+				DE2CB8272943651000AC2372 /* HomeTableElement.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE2CB8122943651000AC2372 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8212943651000AC2372 /* HomeCollectionComics */,
+				DE2CB81C2943651000AC2372 /* HomeCategories */,
+				DE2CB8182943651000AC2372 /* HomeTitleCell.swift */,
+				DE2CB8192943651000AC2372 /* HomeSeparatorCell.swift */,
+				DE2CB81A2943651000AC2372 /* HomeFreeComicsCell.swift */,
+				DE2CB81B2943651000AC2372 /* HomeComicsNumberCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE2CB81C2943651000AC2372 /* HomeCategories */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB81D2943651000AC2372 /* Collection */,
+				DE2CB8202943651000AC2372 /* HomeCategoriesCell.swift */,
+			);
+			path = HomeCategories;
+			sourceTree = "<group>";
+		};
+		DE2CB81D2943651000AC2372 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB81E2943651000AC2372 /* HomeCategoriesCollectionView.swift */,
+				DE2CB81F2943651000AC2372 /* HomeCategoriesCollectionCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
+		DE2CB8212943651000AC2372 /* HomeCollectionComics */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8232943651000AC2372 /* Collection */,
+				DE2CB8222943651000AC2372 /* HomeComicsBlockCell.swift */,
+			);
+			path = HomeCollectionComics;
+			sourceTree = "<group>";
+		};
+		DE2CB8232943651000AC2372 /* Collection */ = {
+			isa = PBXGroup;
+			children = (
+				DE2CB8242943651000AC2372 /* HomeCollectionComicsView.swift */,
+				DE2CB8252943651000AC2372 /* HomeCollectionComicsCell.swift */,
+			);
+			path = Collection;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1075,6 +1193,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DE2CB8392943651100AC2372 /* HomeComicsNumberCell.swift in Sources */,
 				DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */,
 				DE2CB7DB2940B4A300AC2372 /* OCategoriesCollectionView.swift in Sources */,
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
@@ -1083,6 +1202,8 @@
 				DE2CB5CD293A0C8900AC2372 /* MainView.swift in Sources */,
 				DE2CB5FB293A0C8900AC2372 /* SplashViewController.swift in Sources */,
 				DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */,
+				DE2CB8312943651100AC2372 /* HomeViewController.swift in Sources */,
+				DE2CB8372943651100AC2372 /* HomeSeparatorCell.swift in Sources */,
 				DE2CB7E72940B4A300AC2372 /* OComicsView.swift in Sources */,
 				DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */,
 				DE2CB780293A731800AC2372 /* GetComicsKitRequest.swift in Sources */,
@@ -1142,11 +1263,14 @@
 				DE2CB77E293A731800AC2372 /* ComicsReadingProgress.swift in Sources */,
 				DE2CB544293A0B6200AC2372 /* DefaultRequestWrapper.swift in Sources */,
 				DE2CB551293A0B6200AC2372 /* ContentError.swift in Sources */,
+				DE2CB8412943651100AC2372 /* HomeTableElement.swift in Sources */,
 				DE2CB771293A731800AC2372 /* ComicsKit.swift in Sources */,
+				DE2CB83D2943651100AC2372 /* HomeComicsBlockCell.swift in Sources */,
 				DE2CB78D293A731800AC2372 /* SearchComicsResponse.swift in Sources */,
 				DE2CB7D12940B4A300AC2372 /* OBottomProgressView.swift in Sources */,
 				DE2CB7E42940B4A300AC2372 /* OSlideView.swift in Sources */,
 				DE2CB7E02940B4A300AC2372 /* OBriefView.swift in Sources */,
+				DE2CB8322943651100AC2372 /* HomeViewModel.swift in Sources */,
 				DE2CB7DC2940B4A300AC2372 /* OCategoriesCollectionCell.swift in Sources */,
 				DE2CB556293A0B6200AC2372 /* Toast.swift in Sources */,
 				DE2CB550293A0B6200AC2372 /* NetworkError.swift in Sources */,
@@ -1165,6 +1289,7 @@
 				DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */,
 				DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */,
 				DE2CB5CC293A0C8900AC2372 /* MainViewController.swift in Sources */,
+				DE2CB83F2943651100AC2372 /* HomeCollectionComicsCell.swift in Sources */,
 				DE2CB561293A0B6200AC2372 /* PushNotificationsManager.swift in Sources */,
 				DE2CB79B293A754700AC2372 /* ComicsStatus.swift in Sources */,
 				DE2CB7D52940B4A300AC2372 /* OTimeButton.swift in Sources */,
@@ -1189,29 +1314,37 @@
 				DE2CB5FE293A0C8900AC2372 /* SplashSDKInitialize.swift in Sources */,
 				DE2CB60F293A0D1900AC2372 /* SyncTokensRequest.swift in Sources */,
 				DE2CB5D2293A0C8900AC2372 /* MainViewCoordinator.swift in Sources */,
+				DE2CB83E2943651100AC2372 /* HomeCollectionComicsView.swift in Sources */,
 				DE2CB784293A731800AC2372 /* GetRankingRequest.swift in Sources */,
 				DE2CB55D293A0B6200AC2372 /* CircleView.swift in Sources */,
 				DE2CB57B293A0C3E00AC2372 /* PurchaseValidationObserver.swift in Sources */,
 				DE2CB790293A731800AC2372 /* GetHomeKitResponse.swift in Sources */,
 				DE2CB549293A0B6200AC2372 /* NumberLaunches.swift in Sources */,
 				DE2CB54E293A0B6200AC2372 /* Fonts.swift in Sources */,
+				DE2CB8402943651100AC2372 /* HomeTableView.swift in Sources */,
 				DE2CB7EB2940B4A300AC2372 /* OAgeView.swift in Sources */,
+				DE2CB83B2943651100AC2372 /* HomeCategoriesCollectionCell.swift in Sources */,
 				DE2CB55C293A0B6200AC2372 /* PaddingLabel.swift in Sources */,
 				DE2CB5CF293A0C8900AC2372 /* TabView.swift in Sources */,
 				DE2CB543293A0B6200AC2372 /* GlobalDefinitions.swift in Sources */,
 				DE2CB557293A0B6200AC2372 /* NavigationControllerSettings.swift in Sources */,
 				DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */,
+				DE2CB8362943651100AC2372 /* HomeTitleCell.swift in Sources */,
+				DE2CB8382943651100AC2372 /* HomeFreeComicsCell.swift in Sources */,
 				DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */,
+				DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */,
 				DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */,
 				DE2CB5D3293A0C8900AC2372 /* PaygateViewModel.swift in Sources */,
 				DE2CB5D8293A0C8900AC2372 /* PaygateView.swift in Sources */,
 				DE2CB7DF2940B4A300AC2372 /* OGoalButton.swift in Sources */,
+				DE2CB83A2943651100AC2372 /* HomeCategoriesCollectionView.swift in Sources */,
 				DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */,
 				DE2CB602293A0C8900AC2372 /* TryAgainView.swift in Sources */,
 				DE2CB54D293A0B6200AC2372 /* XOREncryption.swift in Sources */,
 				DE2CB569293A0B6200AC2372 /* FacebookManager.swift in Sources */,
 				DE2CB53F293A0B6200AC2372 /* Collection+Extension.swift in Sources */,
 				DE2CB7E62940B4A300AC2372 /* OInfoLibraryView.swift in Sources */,
+				DE2CB8302943651100AC2372 /* HomeView.swift in Sources */,
 				DE2CB563293A0B6200AC2372 /* PushNotificationsModel.swift in Sources */,
 				DE2CB7D42940B4A300AC2372 /* ONotificationsSwitch.swift in Sources */,
 				DE2CB555293A0B6200AC2372 /* PaginatedDataLoader.swift in Sources */,

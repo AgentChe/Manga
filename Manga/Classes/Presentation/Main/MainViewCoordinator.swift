@@ -10,7 +10,7 @@ import UIKit
 final class MainViewCoordinator {
     weak var parentVC: MainViewController?
     
-    lazy var homeVC = NavigationController(rootViewController: UIViewController())
+    lazy var homeVC = NavigationController(rootViewController: HomeViewController.make())
     lazy var libraryVC = NavigationController(rootViewController: UIViewController())
     lazy var exploreVC = NavigationController(rootViewController:UIViewController())
     
