@@ -10,6 +10,7 @@ import Kingfisher
 
 final class HomeCollectionComicsCell: UICollectionViewCell {
     lazy var comicsImageView = makeImageView()
+    lazy var top5IconView = makeTop5IconView()
     lazy var nameLabel = makeLabel(numberOfLines: 2)
     lazy var categoriesLabel = makeLabel(numberOfLines: 1)
     lazy var statusContainer = makeStatusContainer()
@@ -38,6 +39,8 @@ final class HomeCollectionComicsCell: UICollectionViewCell {
 extension HomeCollectionComicsCell {
     func setup(element: HomeComicsCover) {
         comicsImageView.kf.setImage(with: element.comics.imageUrl)
+        
+        top5IconView.isHidden = !element.comics.isTop5
         
         nameLabel.attributedText = element.comics.name
             .attributed(with: TextAttributes()
@@ -109,6 +112,13 @@ private extension HomeCollectionComicsCell {
         ])
         
         NSLayoutConstraint.activate([
+            top5IconView.widthAnchor.constraint(equalToConstant: 38.scale),
+            top5IconView.heightAnchor.constraint(equalToConstant: 38.scale),
+            top5IconView.trailingAnchor.constraint(equalTo: comicsImageView.trailingAnchor, constant: -10.scale),
+            top5IconView.topAnchor.constraint(equalTo: comicsImageView.topAnchor, constant: 10.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             nameLabel.topAnchor.constraint(equalTo: comicsImageView.bottomAnchor, constant: 16.scale)
@@ -141,6 +151,15 @@ private extension HomeCollectionComicsCell {
         view.contentMode = .scaleAspectFill
         view.layer.cornerRadius = 16.scale
         view.layer.masksToBounds = true
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
+    func makeTop5IconView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFit
+        view.image = UIImage(named: "Home.Top5")
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

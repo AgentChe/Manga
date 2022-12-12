@@ -16,6 +16,7 @@ final class HomeViewModel {
     
     private lazy var rankings = makeRankings()
     private lazy var categories = makeCategories()
+    private lazy var comicsInProgress = makeComicsInProgress()
     private lazy var homeKit = makeHomeKit()
     
     private lazy var contentManager = ContentManager()
@@ -27,8 +28,8 @@ final class HomeViewModel {
 private extension HomeViewModel {
     func makeElements() -> Driver<[HomeTableElement]> {
         Driver
-            .combineLatest(rankings, categories, homeKit)
-            .map { [weak self] rankings, categories, kit -> [HomeTableElement] in
+            .combineLatest(rankings, categories, comicsInProgress, homeKit)
+            .map { [weak self] rankings, categories, comicsInProgress, kit -> [HomeTableElement] in
                 guard let self = self else {
                     return []
                 }
@@ -81,6 +82,21 @@ private extension HomeViewModel {
                     result.append(contentsOf: [
                         .offset(30.scale),
                         .comicsByCategory(block)
+                    ])
+                }
+                
+                if !comicsInProgress.isEmpty {
+                    let comics = comicsInProgress.map { comics -> HomeComicsCover in
+                        let cover = ComicsCover(comics: comics.comics)
+                        let comicsCategories = self.categories(categories, in: cover)
+                        return HomeComicsCover(comics: cover,
+                                               categories: comicsCategories)
+                    }
+                    let block = HomeTableComicsInProgress(title: "Home.ContinueToRead".localized,
+                                                          comics: comics)
+                    result.append(contentsOf: [
+                        .offset(30.scale),
+                        .comicsInProgress(block)
                     ])
                 }
                 
@@ -149,6 +165,29 @@ private extension HomeViewModel {
             .asDriver(onErrorJustReturn: [])
     }
     
+    func makeComicsInProgress() -> Driver<[ComicsReadingProgress]> {
+        let initial = contentManager
+            .obtainReadingComics()
+            .asDriver(onErrorJustReturn: [])
+        
+        let updated = Signal
+            .merge(
+                ContentMediator.shared.comicsReadingProgressUpdated.map { _ in Void() },
+                ContentMediator.shared.comicsDidRemovedProgress.map { _ in Void() }
+            )
+            .flatMapLatest { [weak self] void -> Driver<[ComicsReadingProgress]> in
+                guard let self = self else {
+                    return .never()
+                }
+                
+                return self.contentManager
+                    .obtainReadingComics()
+                    .asDriver(onErrorJustReturn: [])
+            }
+        
+        return Driver.merge(initial, updated)
+    }
+    
     func makeHomeKit() -> Driver<HomeKit> {
         func source() -> Single<HomeKit> {
             contentManager
@@ -176,12 +215,13 @@ private extension HomeViewModel {
             .trackActivity(activity)
             .asDriver(onErrorDriveWith: .never())
     }
-    
+}
+
+// MARK: Private (Additional)
+private extension HomeViewModel {
     func categories(_ categories: [Category], in comics: ComicsCover) -> [Category] {
         categories.filter { category -> Bool in
-            // TODO
-//            comics.categoriesIds.contains(where: { $0 == category.id })
-            [3, 4].contains(where: { $0 == category.id })
+            comics.categoriesIds.contains(where: { $0 == category.id })
         }
     }
 }

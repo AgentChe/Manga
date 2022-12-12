@@ -987,13 +987,13 @@
 		DE2CB8002943651000AC2372 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				DE2CB80C2943651000AC2372 /* ForYou */,
+				DE2CB80C2943651000AC2372 /* Home */,
 			);
 			name = Home;
 			path = Manga/Classes/Presentation/Home;
 			sourceTree = SOURCE_ROOT;
 		};
-		DE2CB80C2943651000AC2372 /* ForYou */ = {
+		DE2CB80C2943651000AC2372 /* Home */ = {
 			isa = PBXGroup;
 			children = (
 				DE2CB8102943651000AC2372 /* Views */,
@@ -1001,7 +1001,7 @@
 				DE2CB80F2943651000AC2372 /* HomeViewModel.swift */,
 				DE2CB80D2943651000AC2372 /* HomeView.swift */,
 			);
-			path = ForYou;
+			path = Home;
 			sourceTree = "<group>";
 		};
 		DE2CB8102943651000AC2372 /* Views */ = {

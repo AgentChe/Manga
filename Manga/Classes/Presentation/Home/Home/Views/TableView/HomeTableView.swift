@@ -10,6 +10,7 @@ import UIKit
 protocol HomeTableDelegate: AnyObject {
     func homeTableDidTapped(comics: ComicsCover)
     func homeTableDidTapped(category: Category)
+    func homeTableDidTappedComicsInProgress()
     func homeTableDidTapped(ranking: Ranking)
 }
 
@@ -68,6 +69,12 @@ extension HomeTableView: UITableViewDataSource {
                 self?.mainDelegate?.homeTableDidTapped(comics: comics.comics)
             })
             return cell
+        case .comicsInProgress(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: HomeComicsBlockCell.self)) as! HomeComicsBlockCell
+            cell.setup(title: element.title, comics: element.comics, canOpen: true, tapped: { [weak self] comics in
+                self?.mainDelegate?.homeTableDidTapped(comics: comics.comics)
+            })
+            return cell
         case .title(let element):
             let cell = dequeueReusableCell(withIdentifier: String(describing: HomeTitleCell.self)) as! HomeTitleCell
             cell.setup(title: element)
@@ -96,7 +103,7 @@ extension HomeTableView: UITableViewDelegate {
             return offset
         case .freeComics:
             return 309.scale
-        case .comicsByCategory, .comicsByRanking:
+        case .comicsByCategory, .comicsByRanking, .comicsInProgress:
             return 323.scale
         case .title:
             return 24.scale
@@ -121,6 +128,8 @@ extension HomeTableView: UITableViewDelegate {
             if element.canOpen {
                 mainDelegate?.homeTableDidTapped(ranking: element.ranking)
             }
+        case .comicsInProgress:
+            mainDelegate?.homeTableDidTappedComicsInProgress()
         case .comicsNumber(let element):
             mainDelegate?.homeTableDidTapped(comics: element.comics.comics)
         default:

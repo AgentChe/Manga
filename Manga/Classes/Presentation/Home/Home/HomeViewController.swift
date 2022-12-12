@@ -81,6 +81,10 @@ extension HomeViewController: HomeTableDelegate {
         print("tapped category: \(category.name)")
     }
     
+    func homeTableDidTappedComicsInProgress() {
+        print("tapped comics in progress")
+    }
+    
     func homeTableDidTapped(ranking: Ranking) {
 //        let vc = RankingsViewController.make(start: ranking)
 //        present(vc, animated: true)

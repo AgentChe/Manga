@@ -7,12 +7,12 @@
 
 import CoreGraphics
 
-// TODO: continue to read
 enum HomeTableElement {
     case offset(CGFloat)
     case freeComics(HomeComicsCover)
     case comicsByCategory(HomeTableComicsByCategory)
     case comicsByRanking(HomeTableComicsByRanking)
+    case comicsInProgress(HomeTableComicsInProgress)
     case title(String)
     case comicsNumber(HomeComicsNumber)
     case separator
@@ -34,6 +34,11 @@ struct HomeTableComicsByRanking {
     let ranking: Ranking
     let comics: [HomeComicsCover]
     let canOpen: Bool
+}
+
+struct HomeTableComicsInProgress {
+    let title: String
+    let comics: [HomeComicsCover]
 }
 
 struct HomeComicsNumber {
