@@ -107,3 +107,7 @@
 "Home.Categories" = "Explore categories";
 "Home.ComicsStatus.Ongoing" = "Ongoing";
 "Home.ComicsStatus.Completed" = "Completed";
+
+// MARK: ComicsBY
+"ComicsBY.ComicsStatus.Ongoing" = "Ongoing";
+"ComicsBY.ComicsStatus.Completed" = "Completed";

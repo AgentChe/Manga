@@ -62,6 +62,7 @@ extension HomeViewController {
 // MARK: HomeTableDelegate
 extension HomeViewController: HomeTableDelegate {
     func homeTableDidTapped(comics: ComicsCover) {
+        // TODO
 //        let vc: UIViewController
 //
 //        let needPayment = !SessionManager().hasActiveSubscriptions()
@@ -76,19 +77,18 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidTapped(category: Category) {
-//        let vc = CategoryViewController.make(category: category)
-//        present(vc, animated: true)
-        print("tapped category: \(category.name)")
+        let vc = ComicsByViewController.make(category: category)
+        present(vc, animated: true)
     }
     
     func homeTableDidTappedComicsInProgress() {
+        // TODO
         print("tapped comics in progress")
     }
     
     func homeTableDidTapped(ranking: Ranking) {
-//        let vc = RankingsViewController.make(start: ranking)
-//        present(vc, animated: true)
-        print("tapped ranking: \(ranking.name)")
+        let vc = ComicsByViewController.make(ranking: ranking)
+        present(vc, animated: true)
     }
 }
 
@@ -108,6 +108,7 @@ private extension HomeViewController {
         
         button.rx.tap
             .bind(to: Binder(self) { base, void in
+                // TODO
 //                let vc = SettingsViewController.make()
 //                base.navigationController?.pushViewController(vc, animated: true)
             })

@@ -14,7 +14,6 @@ final class HomeViewModel {
     lazy var elements = makeElements()
     lazy var activity = RxActivityIndicator()
     
-    private lazy var rankings = makeRankings()
     private lazy var categories = makeCategories()
     private lazy var comicsInProgress = makeComicsInProgress()
     private lazy var homeKit = makeHomeKit()
@@ -28,8 +27,8 @@ final class HomeViewModel {
 private extension HomeViewModel {
     func makeElements() -> Driver<[HomeTableElement]> {
         Driver
-            .combineLatest(rankings, categories, comicsInProgress, homeKit)
-            .map { [weak self] rankings, categories, comicsInProgress, kit -> [HomeTableElement] in
+            .combineLatest(categories, comicsInProgress, homeKit)
+            .map { [weak self] categories, comicsInProgress, kit -> [HomeTableElement] in
                 guard let self = self else {
                     return []
                 }
@@ -151,12 +150,6 @@ private extension HomeViewModel {
                 
                 return result
         }
-    }
-    
-    func makeRankings() -> Driver<[Ranking]> {
-        contentManager
-            .obtainRankings(forceUpdate: false)
-            .asDriver(onErrorJustReturn: [])
     }
     
     func makeCategories() -> Driver<[Category]> {
