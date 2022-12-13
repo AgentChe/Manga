@@ -7,8 +7,6 @@
 
 import UIKit
 
-// TODO: iPhone 8
-// TODO: Картинки
 final class OnboardingView: UIView {
     enum Step: Int {
         case welcome, info, goal, age, brief, categories, pace, time, notifications, infoLibrary, comics, progress

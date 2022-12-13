@@ -43,7 +43,7 @@ private extension OInfoView {
 private extension OInfoView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 117.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 121.scale),
             imageView.heightAnchor.constraint(equalToConstant: 139.scale),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
             imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 256.scale : 187.scale)

@@ -17,11 +17,13 @@ final class OGoalView: OSlideView {
     lazy var titleLabel = makeTitleLabel()
     lazy var discoverButton = makeDiscoverButton()
     lazy var readButton = makeReadButton()
+    lazy var saveButton = makeSaveButton()
     lazy var nextButton = makeNextButton()
     
     private lazy var buttons = [
         discoverButton,
-        readButton
+        readButton,
+        saveButton
     ]
     
     override init(step: OnboardingView.Step) {
@@ -86,7 +88,7 @@ private extension OGoalView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 399.scale : 158.scale)
+            titleLabel.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 331.scale : 231.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -101,6 +103,13 @@ private extension OGoalView {
             readButton.heightAnchor.constraint(equalToConstant: 80.scale),
             readButton.topAnchor.constraint(equalTo: discoverButton.bottomAnchor, constant: 16.scale),
             readButton.centerXAnchor.constraint(equalTo: centerXAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            saveButton.widthAnchor.constraint(equalToConstant: 305.scale),
+            saveButton.heightAnchor.constraint(equalToConstant: 80.scale),
+            saveButton.topAnchor.constraint(equalTo: readButton.bottomAnchor, constant: 16.scale),
+            saveButton.centerXAnchor.constraint(equalTo: centerXAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -153,6 +162,24 @@ private extension OGoalView {
                                     icon: "Onboarding.Goal.2",
                                     title: "Onboarding.Goal.2.Title".localized,
                                     subTitle: "Onboarding.Goal.2.SubTitle".localized)
+        let view = OGoalButton(goal: goal)
+        view.backgroundColor = Appearance.black
+        view.layer.cornerRadius = 20.scale
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOpacity = 0.08
+        view.layer.shadowOffset = .zero
+        view.layer.shadowRadius = 6.scale
+        view.translatesAutoresizingMaskIntoConstraints = false
+        view.addTarget(self, action: #selector(goalTapped(sender:)), for: .touchUpInside)
+        addSubview(view)
+        return view
+    }
+    
+    func makeSaveButton() -> OGoalButton {
+        let goal = OGoalButton.Goal(code: 2,
+                                    icon: "Onboarding.Goal.3",
+                                    title: "Onboarding.Goal.3.Title".localized,
+                                    subTitle: "Onboarding.Goal.3.SubTitle".localized)
         let view = OGoalButton(goal: goal)
         view.backgroundColor = Appearance.black
         view.layer.cornerRadius = 20.scale

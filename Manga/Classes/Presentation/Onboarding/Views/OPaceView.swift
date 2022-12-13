@@ -79,23 +79,23 @@ private extension OPaceView {
         ])
         
         NSLayoutConstraint.activate([
-            icon1View.widthAnchor.constraint(equalToConstant: 70.scale),
-            icon1View.heightAnchor.constraint(equalToConstant: 70.scale),
-            icon1View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
-            icon1View.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 436.scale : 330.scale)
+            icon1View.widthAnchor.constraint(equalToConstant: 52.scale),
+            icon1View.heightAnchor.constraint(equalToConstant: 52.scale),
+            icon1View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
+            icon1View.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 469.scale : 330.scale)
         ])
         
         NSLayoutConstraint.activate([
-            icon2View.widthAnchor.constraint(equalToConstant: 70.scale),
-            icon2View.heightAnchor.constraint(equalToConstant: 70.scale),
-            icon2View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 152.scale),
+            icon2View.widthAnchor.constraint(equalToConstant: 52.scale),
+            icon2View.heightAnchor.constraint(equalToConstant: 52.scale),
+            icon2View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 166.scale),
             icon2View.centerYAnchor.constraint(equalTo: icon1View.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            icon3View.widthAnchor.constraint(equalToConstant: 70.scale),
-            icon3View.heightAnchor.constraint(equalToConstant: 70.scale),
-            icon3View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 285.scale),
+            icon3View.widthAnchor.constraint(equalToConstant: 52.scale),
+            icon3View.heightAnchor.constraint(equalToConstant: 52.scale),
+            icon3View.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 299.scale),
             icon3View.centerYAnchor.constraint(equalTo: icon1View.centerYAnchor)
         ])
         
@@ -112,7 +112,7 @@ private extension OPaceView {
         ])
         
         NSLayoutConstraint.activate([
-            label2.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 143.scale),
+            label2.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 134.scale),
             label2.centerYAnchor.constraint(equalTo: label1.centerYAnchor)
         ])
         

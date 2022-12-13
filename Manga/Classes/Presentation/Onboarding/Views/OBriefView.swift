@@ -49,15 +49,15 @@ private extension OBriefView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 238.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 167.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 274.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 274.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 82.scale)
+            imageView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 24.scale)
         ])
         
         NSLayoutConstraint.activate([
             subTitleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
-            subTitleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 73.scale)
+            subTitleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.scale)
         ])
         
         NSLayoutConstraint.activate([

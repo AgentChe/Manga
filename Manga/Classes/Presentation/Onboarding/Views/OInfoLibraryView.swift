@@ -43,15 +43,15 @@ private extension OInfoLibraryView {
 private extension OInfoLibraryView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: 135.scale),
-            imageView.heightAnchor.constraint(equalToConstant: 184.scale),
+            imageView.widthAnchor.constraint(equalToConstant: 179.scale),
+            imageView.heightAnchor.constraint(equalToConstant: 139.scale),
             imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 201.scale : 60.scale)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 256.scale : 156.scale)
         ])
         
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 24.scale),
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 34.scale)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.scale)
         ])
         
         NSLayoutConstraint.activate([

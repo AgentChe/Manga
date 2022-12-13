@@ -56,13 +56,15 @@
 "Onboarding.Welcome.Title" = "All your favorite manga\ninside your pocket";
 "Onboarding.Welcome.SubTitle" = "Keep yourself entertained with the best\nmanga anywhere and anytime. You'll find\nanything you're looking for";
 "Onboarding.Welcome.Button" = "Start now";
-"Onboarding.Info.Title" = "Now let’s get to know\nyou.";
+"Onboarding.Info.Title" = "Now let’s get to know\nyou a bit";
 "Onboarding.Info.SubTitle" = "We need some  information to build a\ncustom manga library";
-"Onboarding.Goal.Title" = "How do you want to\nuse app?";
+"Onboarding.Goal.Title" = "What’s your goal?";
 "Onboarding.Goal.1.Title" = "Discover ";
-"Onboarding.Goal.1.SubTitle" = "\ninteresting manga";
+"Onboarding.Goal.1.SubTitle" = "\ntrending manga";
 "Onboarding.Goal.2.Title" = "Read";
-"Onboarding.Goal.2.SubTitle" = "\ndaily free manga";
+"Onboarding.Goal.2.SubTitle" = "\nnew chapters daily";
+"Onboarding.Goal.3.Title" = "Save";
+"Onboarding.Goal.3.SubTitle" = "\nfavorite comics";
 "Onboarding.Age.Title" = "What is your age?";
 "Onboarding.Age.1" = "18-24";
 "Onboarding.Age.2" = "25-34";
@@ -71,7 +73,7 @@
 "Onboarding.Age.5" = "60+";
 "Onboarding.Brief.Title" = "Unforgettable adventures\nevery day!";
 "Onboarding.Brief.SubTitle" = "You'll find manga and comics from every\ngenre possible. Read them on the go and\nfollow updates of your favorite ones";
-"Onboarding.Categories.Title" = "What  are you into?";
+"Onboarding.Categories.Title" = "What grabs your\nattention most?";
 "Onboarding.Pace.Title" = "At what pace do you\nlike to read?";
 "Onboarding.Pace1" = "Slowly but\nsurely";
 "Onboarding.Pace2" = "Medium-paced";
@@ -90,7 +92,7 @@
 "Onboarding.Notifications.SaveButton" = "Save";
 "Onboarding.Notifications.SkipButton" = "Not now";
 "Onboarding.InfoLibrary.Title" = "Let’s create your\nperfect  library";
-"Onboarding.InfoLibrary.SubTitle" = "Please pick comics based on your interests\nand  then you can see them in your selection";
+"Onboarding.InfoLibrary.SubTitle" = "Please pick the comics depending on your\npersonal interests";
 "Onboarding.InfoLibrary.Button" = "Got it";
 "Onboarding.Comics.Title" = "Does this manga\ninterest you?";
 "Onboarding.Progress.Title1" = "Analyzing your\nprofile...";
