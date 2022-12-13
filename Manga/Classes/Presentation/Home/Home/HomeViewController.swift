@@ -108,9 +108,8 @@ private extension HomeViewController {
         
         button.rx.tap
             .bind(to: Binder(self) { base, void in
-                // TODO
-//                let vc = SettingsViewController.make()
-//                base.navigationController?.pushViewController(vc, animated: true)
+                let vc = SettingsViewController.make()
+                base.navigationController?.pushViewController(vc, animated: true)
             })
             .disposed(by: disposeBag)
     }

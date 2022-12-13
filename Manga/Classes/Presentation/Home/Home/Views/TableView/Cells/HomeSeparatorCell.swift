@@ -48,7 +48,7 @@ private extension HomeSeparatorCell {
 private extension HomeSeparatorCell {
     func makeSeparator() -> UIView {
         let view = UIView()
-        view.backgroundColor = Appearance.white.withAlphaComponent(0.1)
+        view.backgroundColor = Appearance.grey
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

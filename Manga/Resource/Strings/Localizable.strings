@@ -108,6 +108,14 @@
 "Home.ComicsStatus.Ongoing" = "Ongoing";
 "Home.ComicsStatus.Completed" = "Completed";
 
+// MARK: Settings
+"Settings.Title" = "Settings";
+"Settings.ContactUs" = "Contact us";
+"Settings.PrivacyPolicy" = "Privacy Policy";
+"Settings.TermsOfUse" = "Terms of Use";
+"Settings.GetAccess.Title" = "Get access to the full library";
+"Settings.GetAccess.Button" = "Start free trial";
+
 // MARK: ComicsBY
 "ComicsBY.ComicsStatus.Ongoing" = "Ongoing";
 "ComicsBY.ComicsStatus.Completed" = "Completed";
