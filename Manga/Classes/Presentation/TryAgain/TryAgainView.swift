@@ -46,7 +46,7 @@ private extension TryAgainView {
         NSLayoutConstraint.activate([
             titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor),
             titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor),
-            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 25.scale)
+            titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 24.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -84,7 +84,7 @@ private extension TryAgainView {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.bold(size: 20.scale))
             .lineHeight(24.scale)
             .letterSpacing(-0.17.scale)
@@ -100,7 +100,7 @@ private extension TryAgainView {
     
     func makeSubTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.black.withAlphaComponent(0.5))
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.regular(size: 16.scale))
             .lineHeight(24.scale)
             .letterSpacing(-0.17.scale)
@@ -131,14 +131,14 @@ private extension TryAgainView {
     
     func makeContactButton() -> UIButton {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
             .letterSpacing(-0.17.scale)
         
         let view = UIButton()
         view.setAttributedTitle("TryAgain.Contact".localized.attributed(with: attrs), for: .normal)
         view.layer.cornerRadius = 16.scale
-        view.backgroundColor = Appearance.secondary1
+        view.backgroundColor = Appearance.black
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

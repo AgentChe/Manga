@@ -7,7 +7,6 @@
 
 import UIKit
 
-// TODO: проверить
 struct Appearance {
     static let primary = UIColor(integralRed: 53, green: 89, blue: 205)
     static let secondary1 = UIColor(integralRed: 227, green: 74, blue: 117)
