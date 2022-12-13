@@ -8,6 +8,8 @@
 import UIKit
 
 final class SplashView: UIView {
+    lazy var imageView = makeImageView()
+    lazy var preloaderContainer = makePreloaderContainer()
     lazy var preloader = makePreloader()
     lazy var preloaderLabel = makeLabel()
     
@@ -34,20 +36,56 @@ private extension SplashView {
 private extension SplashView {
     func makeConstraints() {
         NSLayoutConstraint.activate([
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            imageView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            imageView.topAnchor.constraint(equalTo: topAnchor),
+            imageView.bottomAnchor.constraint(equalTo: bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            preloaderContainer.leadingAnchor.constraint(equalTo: leadingAnchor),
+            preloaderContainer.trailingAnchor.constraint(equalTo: trailingAnchor),
+            preloaderContainer.bottomAnchor.constraint(equalTo: bottomAnchor),
+            preloaderContainer.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 193.scale : 163.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
             preloader.centerXAnchor.constraint(equalTo: centerXAnchor),
-            preloader.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -54.scale : -34.scale)
+            preloader.bottomAnchor.constraint(equalTo: preloaderLabel.topAnchor, constant: -10.scale)
         ])
         
         NSLayoutConstraint.activate([
             preloaderLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
             preloaderLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
-            preloaderLabel.bottomAnchor.constraint(equalTo: preloader.topAnchor, constant: -10.scale)
+            preloaderLabel.bottomAnchor.constraint(equalTo: bottomAnchor, constant: ScreenSize.isIphoneXFamily ? -54.scale : -34.scale)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension SplashView {
+    func makeImageView() -> UIImageView {
+        let view = UIImageView()
+        view.contentMode = .scaleAspectFill
+        view.image = UIImage(named: "Splash.Image")
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makePreloaderContainer() -> GradientView {
+        let view = GradientView()
+        view.gradientLayer.colors = [
+            Appearance.primary.withAlphaComponent(0).cgColor,
+            Appearance.primary.cgColor
+        ]
+        view.gradientLayer.startPoint = CGPoint(x: 0.5, y: 0)
+        view.gradientLayer.endPoint = CGPoint(x: 0.5, y: 1)
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
     func makePreloader() -> Spinner {
         let view = Spinner(size: CGSize(width: 32.scale, height: 32.scale), color: .white)
         view.translatesAutoresizingMaskIntoConstraints = false
