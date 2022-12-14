@@ -42,7 +42,7 @@ private extension TabItemView {
             color = Appearance.primary
             alpha = 1
         case .deselected:
-            color = Appearance.black
+            color = Appearance.white
             alpha = 0.5
         }
         
