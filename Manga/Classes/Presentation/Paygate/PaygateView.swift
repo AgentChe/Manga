@@ -74,10 +74,10 @@ private extension PaygateView {
         ])
         
         NSLayoutConstraint.activate([
-            imageView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 211.scale : 152.scale),
-            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 174.scale : 126.scale),
+            imageView.widthAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 252.scale : 178.scale),
+            imageView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 222.scale : 157.scale),
             imageView.centerXAnchor.constraint(equalTo: centerXAnchor),
-            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 84.scale : 64.scale)
+            imageView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 36.scale : 30.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -89,21 +89,21 @@ private extension PaygateView {
             cell1.leadingAnchor.constraint(equalTo: leadingAnchor),
             cell1.trailingAnchor.constraint(equalTo: trailingAnchor),
             cell1.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 10.scale : 8.scale),
-            cell1.heightAnchor.constraint(equalToConstant: 24.scale)
+            cell1.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 24.scale : 20.scale)
         ])
         
         NSLayoutConstraint.activate([
             cell2.leadingAnchor.constraint(equalTo: leadingAnchor),
             cell2.trailingAnchor.constraint(equalTo: trailingAnchor),
             cell2.topAnchor.constraint(equalTo: cell1.bottomAnchor, constant: 7.scale),
-            cell2.heightAnchor.constraint(equalToConstant: 24.scale)
+            cell2.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 24.scale : 20.scale)
         ])
         
         NSLayoutConstraint.activate([
             cell3.leadingAnchor.constraint(equalTo: leadingAnchor),
             cell3.trailingAnchor.constraint(equalTo: trailingAnchor),
             cell3.topAnchor.constraint(equalTo: cell2.bottomAnchor, constant: 7.scale),
-            cell3.heightAnchor.constraint(equalToConstant: 24.scale)
+            cell3.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 24.scale : 20.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -186,7 +186,7 @@ private extension PaygateView {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.bold(size: 24.scale))
             .lineHeight(31.2.scale)
             .letterSpacing(-0.37.scale)
@@ -236,7 +236,7 @@ private extension PaygateView {
     
     func makeInfoLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.black.withAlphaComponent(0.6))
+            .textColor(Appearance.white.withAlphaComponent(0.6))
             .font(Fonts.PlusJakartaSans.regular(size: 12.scale))
             .lineHeight(14.4.scale)
         
@@ -250,7 +250,7 @@ private extension PaygateView {
     func makeSeparator() -> UIView {
         let view = UIView()
         view.isHidden = !ScreenSize.isIphoneXFamily
-        view.backgroundColor = Appearance.secondary1
+        view.backgroundColor = Appearance.grey
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -258,7 +258,7 @@ private extension PaygateView {
     
     func makeTermsOfServiceButton() -> TapAreaButton {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.semiBold(size: 12.scale))
         
         let view = TapAreaButton()
@@ -271,7 +271,7 @@ private extension PaygateView {
     
     func makePrivacyPolicyButton() -> TapAreaButton {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.semiBold(size: 12.scale))
         
         let view = TapAreaButton()
@@ -284,7 +284,7 @@ private extension PaygateView {
     
     func makeRestoreButton() -> TapAreaButton {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.semiBold(size: 12.scale))
         
         let view = TapAreaButton()

@@ -10,6 +10,7 @@ import RxCocoa
 import OtterScaleiOS
 
 final class PaygateViewModel {
+    // TODO: заменить
     enum Constants {
         static let monthly = "app.books.month"
         static let lifetime = "app.books.forever"

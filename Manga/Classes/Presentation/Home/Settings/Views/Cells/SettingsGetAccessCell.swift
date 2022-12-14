@@ -7,8 +7,6 @@
 
 import UIKit
 
-// TODO: заменить картинку в Assets
-// TODO: заменить текст
 final class SettingsGetAccessCell: UITableViewCell {
     lazy var pictureView = makeImageView()
     lazy var titleLabel = makeTitleLabel()
@@ -73,7 +71,7 @@ private extension SettingsGetAccessCell {
     
     func makeTitleLabel() -> UILabel {
         let attrs = TextAttributes()
-            .textColor(Appearance.black)
+            .textColor(Appearance.white)
             .font(Fonts.PlusJakartaSans.bold(size: 20.scale))
             .lineHeight(24.scale)
             .letterSpacing(-0.17.scale)

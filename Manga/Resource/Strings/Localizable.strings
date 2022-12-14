@@ -34,9 +34,9 @@
 
 // MARK: Paygate
 "Paygate.Title" = "Unlock Premium Status";
-"Paygate.Cell1" = "200+ book summaries";
-"Paygate.Cell2" = "Offline reading";
-"Paygate.Cell3" = "Listen or read anytime & anywhere";
+"Paygate.Cell1" = "Smooth reading experience";
+"Paygate.Cell2" = "More than 20,000 titles";
+"Paygate.Cell3" = "The latest manga chapters";
 "Paygate.Info" = "Secured by the App Store. Cancel anytime.";
 "Paygate.TermsOfUse" = "Terms of use";
 "Paygate.PrivacyPolicy" = "Privacy Policy";

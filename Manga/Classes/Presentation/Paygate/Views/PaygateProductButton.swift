@@ -47,7 +47,7 @@ private extension PaygateProductButton {
     }
     
     func changeSelection() {
-        layer.borderColor = isChecked ? Appearance.primary.cgColor : Appearance.secondary1.cgColor
+        layer.borderColor = isChecked ? Appearance.primary.cgColor : Appearance.white.cgColor
         discountPlaceholderView.backgroundColor = isChecked ? Appearance.secondary1 : Appearance.black
         
         checkedView.isHidden = !isChecked
@@ -60,27 +60,27 @@ private extension PaygateProductButton {
         
         nameLabel.attributedText = info.name
             .attributed(with: TextAttributes()
-                            .textColor(Appearance.black)
+                            .textColor(Appearance.white)
                             .font(Fonts.PlusJakartaSans.bold(size: 20.scale))
                             .lineHeight(24.scale))
         
         let slash = "/".attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.semiBold(size: 22.scale))
                                 .lineHeight(22.scale)
                                 .letterSpacing(-1.scale))
         
         let priceValue = info.price.attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.semiBold(size: 22.scale))
                                 .lineHeight(22.scale)
                                 .letterSpacing(-1.scale))
         let pricePeriod = info.pricePeriod.attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.regular(size: 12.scale))
                                 .lineHeight(12.scale))
         let priceDescription = info.priceDescription?.attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.regular(size: 12.scale))
                                 .lineHeight(12.scale))
         let price = NSMutableAttributedString()
@@ -103,12 +103,12 @@ private extension PaygateProductButton {
         }
         
         let bottomPrice = info.bottomPrice?.attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.semiBold(size: 22.scale))
                                 .lineHeight(30.8.scale)
                                 .letterSpacing(-1.scale))
         let bottomDescription = info.bottomDescription.attributed(with: TextAttributes()
-                                .textColor(Appearance.black)
+                                .textColor(Appearance.white)
                                 .font(Fonts.PlusJakartaSans.regular(size: 12.scale))
                                 .lineHeight(16.8.scale))
         let bottom = NSMutableAttributedString()
