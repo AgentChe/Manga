@@ -131,3 +131,18 @@
 "Explore.ComicsStatus.Completed" = "Completed";
 "Explore.Empty.Title" = "No results found";
 "Explore.Empty.Text" = "Check the spelling or try\ndifferent keywords";
+
+// MARK: Library
+"Library.Title" = "Library";
+"Library.Saved" = "Saved";
+"Library.History" = "My history";
+"Library.Downloaded" = "Download";
+"Library.Delete" = "Delete from the Library";
+"Library.Share" = "Share";
+"Library.Empty.Saved.Title" = "No saved books";
+"Library.Empty.Saved.SubTitle" = "Here will be book summaries\nthat you save";
+"Library.Empty.History.Title" = "Looks empty here";
+"Library.Empty.History.SubTitle" = "Here will be book summaries\nthat you read";
+"Library.Empty.Downloaded.Title" = "No downloaded books";
+"Library.Empty.Downloaded.SubTitle" = "Here will be book summaries\nthat you download";
+"Library.Empty.Button" = "Discover books";

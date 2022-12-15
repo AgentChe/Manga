@@ -202,6 +202,19 @@
 		DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3167294AFE2200B2E228 /* RequestReview.swift */; };
 		DE8A316B294B68B700B2E228 /* DownloadComicsQueue.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A316A294B68B700B2E228 /* DownloadComicsQueue.swift */; };
 		DE8A316D294B68BF00B2E228 /* DownloadComicsOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A316C294B68BF00B2E228 /* DownloadComicsOperation.swift */; };
+		DE8A3183294B838400B2E228 /* LibraryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3170294B838400B2E228 /* LibraryViewModel.swift */; };
+		DE8A3184294B838400B2E228 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3171294B838400B2E228 /* LibraryViewController.swift */; };
+		DE8A3185294B838400B2E228 /* LibraryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3172294B838400B2E228 /* LibraryView.swift */; };
+		DE8A3186294B838400B2E228 /* LibraryTableComicsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3176294B838400B2E228 /* LibraryTableComicsCell.swift */; };
+		DE8A3187294B838400B2E228 /* LibraryTableSeparatorCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3177294B838400B2E228 /* LibraryTableSeparatorCell.swift */; };
+		DE8A3188294B838400B2E228 /* LibraryTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3178294B838400B2E228 /* LibraryTableElement.swift */; };
+		DE8A3189294B838400B2E228 /* LibraryTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3179294B838400B2E228 /* LibraryTableView.swift */; };
+		DE8A318A294B838400B2E228 /* LibraryEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A317A294B838400B2E228 /* LibraryEmptyView.swift */; };
+		DE8A318B294B838400B2E228 /* LibraryFilterButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A317C294B838400B2E228 /* LibraryFilterButton.swift */; };
+		DE8A318C294B838400B2E228 /* LibraryFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A317D294B838400B2E228 /* LibraryFilterView.swift */; };
+		DE8A318D294B838400B2E228 /* LibraryBookMenuView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A317F294B838400B2E228 /* LibraryBookMenuView.swift */; };
+		DE8A318E294B838400B2E228 /* LBMButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3181294B838400B2E228 /* LBMButton.swift */; };
+		DE8A318F294B838400B2E228 /* LibraryBookMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3182294B838400B2E228 /* LibraryBookMenuViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,6 +417,19 @@
 		DE8A3167294AFE2200B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 		DE8A316A294B68B700B2E228 /* DownloadComicsQueue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadComicsQueue.swift; sourceTree = "<group>"; };
 		DE8A316C294B68BF00B2E228 /* DownloadComicsOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DownloadComicsOperation.swift; sourceTree = "<group>"; };
+		DE8A3170294B838400B2E228 /* LibraryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewModel.swift; sourceTree = "<group>"; };
+		DE8A3171294B838400B2E228 /* LibraryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		DE8A3172294B838400B2E228 /* LibraryView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryView.swift; sourceTree = "<group>"; };
+		DE8A3176294B838400B2E228 /* LibraryTableComicsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableComicsCell.swift; sourceTree = "<group>"; };
+		DE8A3177294B838400B2E228 /* LibraryTableSeparatorCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableSeparatorCell.swift; sourceTree = "<group>"; };
+		DE8A3178294B838400B2E228 /* LibraryTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableElement.swift; sourceTree = "<group>"; };
+		DE8A3179294B838400B2E228 /* LibraryTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableView.swift; sourceTree = "<group>"; };
+		DE8A317A294B838400B2E228 /* LibraryEmptyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryEmptyView.swift; sourceTree = "<group>"; };
+		DE8A317C294B838400B2E228 /* LibraryFilterButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryFilterButton.swift; sourceTree = "<group>"; };
+		DE8A317D294B838400B2E228 /* LibraryFilterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryFilterView.swift; sourceTree = "<group>"; };
+		DE8A317F294B838400B2E228 /* LibraryBookMenuView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuView.swift; sourceTree = "<group>"; };
+		DE8A3181294B838400B2E228 /* LBMButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LBMButton.swift; sourceTree = "<group>"; };
+		DE8A3182294B838400B2E228 /* LibraryBookMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryBookMenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -703,6 +729,7 @@
 		DE2CB583293A0C5A00AC2372 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				DE8A316E294B838400B2E228 /* Library */,
 				DE8A314D294A153C00B2E228 /* Explore */,
 				DE8A312B29486F3A00B2E228 /* ComicsBy */,
 				DE2CB8002943651000AC2372 /* Home */,
@@ -1240,6 +1267,82 @@
 			path = DownloadComics;
 			sourceTree = "<group>";
 		};
+		DE8A316E294B838400B2E228 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A316F294B838400B2E228 /* Library */,
+				DE8A317E294B838400B2E228 /* LibraryBookMenu */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DE8A316F294B838400B2E228 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A3173294B838400B2E228 /* Views */,
+				DE8A3171294B838400B2E228 /* LibraryViewController.swift */,
+				DE8A3170294B838400B2E228 /* LibraryViewModel.swift */,
+				DE8A3172294B838400B2E228 /* LibraryView.swift */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		DE8A3173294B838400B2E228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A317B294B838400B2E228 /* Filter */,
+				DE8A3174294B838400B2E228 /* TableView */,
+				DE8A317A294B838400B2E228 /* LibraryEmptyView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE8A3174294B838400B2E228 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A3175294B838400B2E228 /* Cells */,
+				DE8A3178294B838400B2E228 /* LibraryTableElement.swift */,
+				DE8A3179294B838400B2E228 /* LibraryTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE8A3175294B838400B2E228 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A3176294B838400B2E228 /* LibraryTableComicsCell.swift */,
+				DE8A3177294B838400B2E228 /* LibraryTableSeparatorCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE8A317B294B838400B2E228 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A317C294B838400B2E228 /* LibraryFilterButton.swift */,
+				DE8A317D294B838400B2E228 /* LibraryFilterView.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		DE8A317E294B838400B2E228 /* LibraryBookMenu */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A3180294B838400B2E228 /* Views */,
+				DE8A3182294B838400B2E228 /* LibraryBookMenuViewController.swift */,
+				DE8A317F294B838400B2E228 /* LibraryBookMenuView.swift */,
+			);
+			path = LibraryBookMenu;
+			sourceTree = "<group>";
+		};
+		DE8A3180294B838400B2E228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A3181294B838400B2E228 /* LBMButton.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -1365,19 +1468,24 @@
 				DE2CB8392943651100AC2372 /* HomeComicsNumberCell.swift in Sources */,
 				DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */,
 				DE2CB7DB2940B4A300AC2372 /* OCategoriesCollectionView.swift in Sources */,
+				DE8A3189294B838400B2E228 /* LibraryTableView.swift in Sources */,
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
 				DE2CB5DB293A0C8900AC2372 /* PaygateInfoCell.swift in Sources */,
+				DE8A3186294B838400B2E228 /* LibraryTableComicsCell.swift in Sources */,
 				DE8A3164294A153C00B2E228 /* ExploreCollectionElement.swift in Sources */,
 				DE8A31452948A1F900B2E228 /* SettingsView.swift in Sources */,
 				DE2CB7D92940B4A300AC2372 /* OComicsImageCollectionView.swift in Sources */,
 				DE2CB5CD293A0C8900AC2372 /* MainView.swift in Sources */,
 				DE2CB5FB293A0C8900AC2372 /* SplashViewController.swift in Sources */,
+				DE8A3184294B838400B2E228 /* LibraryViewController.swift in Sources */,
+				DE8A318E294B838400B2E228 /* LBMButton.swift in Sources */,
 				DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */,
 				DE8A315B294A153C00B2E228 /* ExploreView.swift in Sources */,
 				DE2CB8312943651100AC2372 /* HomeViewController.swift in Sources */,
 				DE2CB8372943651100AC2372 /* HomeSeparatorCell.swift in Sources */,
 				DE2CB7E72940B4A300AC2372 /* OComicsView.swift in Sources */,
 				DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */,
+				DE8A318D294B838400B2E228 /* LibraryBookMenuView.swift in Sources */,
 				DE8A314A2948A1F900B2E228 /* SettingsTableElement.swift in Sources */,
 				DE8A316B294B68B700B2E228 /* DownloadComicsQueue.swift in Sources */,
 				DE2CB780293A731800AC2372 /* GetComicsKitRequest.swift in Sources */,
@@ -1386,6 +1494,7 @@
 				DE2CB7DD2940B4A300AC2372 /* OCategoriesCollectionElement.swift in Sources */,
 				DE2CB57F293A0C3E00AC2372 /* IAPError.swift in Sources */,
 				DE2CB7CD2940B4A300AC2372 /* OProgressView.swift in Sources */,
+				DE8A318F294B838400B2E228 /* LibraryBookMenuViewController.swift in Sources */,
 				DE2CB548293A0B6200AC2372 /* Scalable.swift in Sources */,
 				DE2CB57E293A0C3E00AC2372 /* IAPProduct.swift in Sources */,
 				DE2CB77F293A731800AC2372 /* GetComicsKitResponse.swift in Sources */,
@@ -1393,6 +1502,7 @@
 				DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */,
 				DE2CB55B293A0B6200AC2372 /* PaddingTextField.swift in Sources */,
 				DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */,
+				DE8A3188294B838400B2E228 /* LibraryTableElement.swift in Sources */,
 				DE2CB560293A0B6200AC2372 /* AppDelegate.swift in Sources */,
 				DE8A315F294A153C00B2E228 /* ExploreCollectionView.swift in Sources */,
 				DE2CB60E293A0D1900AC2372 /* LoginRequest.swift in Sources */,
@@ -1470,10 +1580,12 @@
 				DE2CB786293A731800AC2372 /* GetCategoryComicsResponse.swift in Sources */,
 				DE2CB540293A0B6200AC2372 /* ObservableAndSingle+Extension.swift in Sources */,
 				DE2CB791293A731800AC2372 /* RemoveSavedComicsRequest.swift in Sources */,
+				DE8A318A294B838400B2E228 /* LibraryEmptyView.swift in Sources */,
 				DE2CB60D293A0D1900AC2372 /* ProfileManager.swift in Sources */,
 				DE2CB547293A0B6200AC2372 /* RestAPITransport.swift in Sources */,
 				DE2CB79D293A765F00AC2372 /* CategoryComicsGroup.swift in Sources */,
 				DE2CB54A293A0B6200AC2372 /* TextAttributes.swift in Sources */,
+				DE8A3187294B838400B2E228 /* LibraryTableSeparatorCell.swift in Sources */,
 				DE8A3161294A153C00B2E228 /* ExploreCollectionComicsCell.swift in Sources */,
 				DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */,
 				DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */,
@@ -1485,9 +1597,12 @@
 				DE2CB7D52940B4A300AC2372 /* OTimeButton.swift in Sources */,
 				DE2CB580293A0C3E00AC2372 /* IAPErrorHelper.swift in Sources */,
 				DE2CB777293A731800AC2372 /* HomeKit.swift in Sources */,
+				DE8A3183294B838400B2E228 /* LibraryViewModel.swift in Sources */,
 				DE8A315E294A153C00B2E228 /* SearchView.swift in Sources */,
 				DE2CB564293A0B6200AC2372 /* SceneDelegate.swift in Sources */,
+				DE8A318C294B838400B2E228 /* LibraryFilterView.swift in Sources */,
 				DE2CB582293A0C3E00AC2372 /* SessionManager.swift in Sources */,
+				DE8A3185294B838400B2E228 /* LibraryView.swift in Sources */,
 				DE2CB57A293A0C3E00AC2372 /* IAPManager.swift in Sources */,
 				DE2CB76F293A731800AC2372 /* ContentMediator.swift in Sources */,
 				DE2CB5D5293A0C8900AC2372 /* PaygatePrice.swift in Sources */,
@@ -1538,6 +1653,7 @@
 				DE2CB569293A0B6200AC2372 /* FacebookManager.swift in Sources */,
 				DE2CB53F293A0B6200AC2372 /* Collection+Extension.swift in Sources */,
 				DE2CB7E62940B4A300AC2372 /* OInfoLibraryView.swift in Sources */,
+				DE8A318B294B838400B2E228 /* LibraryFilterButton.swift in Sources */,
 				DE2CB8302943651100AC2372 /* HomeView.swift in Sources */,
 				DE2CB563293A0B6200AC2372 /* PushNotificationsModel.swift in Sources */,
 				DE2CB7D42940B4A300AC2372 /* ONotificationsSwitch.swift in Sources */,

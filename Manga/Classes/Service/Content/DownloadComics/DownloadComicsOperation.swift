@@ -36,14 +36,6 @@ private extension DownloadComicsOperation {
             } else {
                 self.download(imageUrls: urls, completion: completion)
             }
-            
-            // TODO
-            switch result {
-            case .success(let element):
-                print("success: \(element.originalSource.url)")
-            case .failure(let error):
-                print("error: \(error)")
-            }
         })
     }
     
