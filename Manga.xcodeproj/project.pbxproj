@@ -199,6 +199,7 @@
 		DE8A3163294A153C00B2E228 /* ExploreCollectionCategoriesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3159294A153C00B2E228 /* ExploreCollectionCategoriesCell.swift */; };
 		DE8A3164294A153C00B2E228 /* ExploreCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A315A294A153C00B2E228 /* ExploreCollectionElement.swift */; };
 		DE8A3166294A3A6000B2E228 /* ExploreEmptyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3165294A3A6000B2E228 /* ExploreEmptyView.swift */; };
+		DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A3167294AFE2200B2E228 /* RequestReview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -398,6 +399,7 @@
 		DE8A3159294A153C00B2E228 /* ExploreCollectionCategoriesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCollectionCategoriesCell.swift; sourceTree = "<group>"; };
 		DE8A315A294A153C00B2E228 /* ExploreCollectionElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExploreCollectionElement.swift; sourceTree = "<group>"; };
 		DE8A3165294A3A6000B2E228 /* ExploreEmptyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreEmptyView.swift; sourceTree = "<group>"; };
+		DE8A3167294AFE2200B2E228 /* RequestReview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestReview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -579,6 +581,7 @@
 				DE2CB522293A0B6200AC2372 /* RxActivityIndicator.swift */,
 				DE2CB523293A0B6200AC2372 /* PaginatedDataLoader.swift */,
 				DE2CB524293A0B6200AC2372 /* Toast.swift */,
+				DE8A3167294AFE2200B2E228 /* RequestReview.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -1374,6 +1377,7 @@
 				DE8A315C294A153C00B2E228 /* ExploreViewModel.swift in Sources */,
 				DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */,
 				DE2CB55B293A0B6200AC2372 /* PaddingTextField.swift in Sources */,
+				DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */,
 				DE2CB560293A0B6200AC2372 /* AppDelegate.swift in Sources */,
 				DE8A315F294A153C00B2E228 /* ExploreCollectionView.swift in Sources */,
 				DE2CB60E293A0D1900AC2372 /* LoginRequest.swift in Sources */,
