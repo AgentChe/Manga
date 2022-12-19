@@ -90,17 +90,16 @@ extension ComicsByViewController {
 // MARK: ComicsByCollectionDelegate
 extension ComicsByViewController: ComicsByCollectionDelegate {
     func comicsByCollectionTapped(comics: ComicsCover) {
-        // TODO
-//        let vc: UIViewController
-//
-//        let needPayment = !SessionManager().hasActiveSubscriptions()
-//        if needPayment && book.paid {
-//            vc = PaygateViewController.make()
-//        } else {
-//            vc = BookViewController.make(bookId: book.id)
-//        }
-//
-//        present(vc, animated: true)
+        let vc: UIViewController
+
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && comics.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = ComicsViewController.make(comicsId: comics.id)
+        }
+
+        present(vc, animated: true)
     }
 }
 

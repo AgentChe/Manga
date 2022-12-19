@@ -62,18 +62,16 @@ extension HomeViewController {
 // MARK: HomeTableDelegate
 extension HomeViewController: HomeTableDelegate {
     func homeTableDidTapped(comics: ComicsCover) {
-        // TODO
-//        let vc: UIViewController
-//
-//        let needPayment = !SessionManager().hasActiveSubscriptions()
-//        if needPayment && book.paid {
-//            vc = PaygateViewController.make()
-//        } else {
-//            vc = BookViewController.make(bookId: book.id)
-//        }
-//
-//        present(vc, animated: true)
-        print("tapped comics: \(comics.name)")
+        let vc: UIViewController
+
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && comics.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = ComicsViewController.make(comicsId: comics.id)
+        }
+
+        present(vc, animated: true)
     }
     
     func homeTableDidTapped(category: Category) {
@@ -83,7 +81,6 @@ extension HomeViewController: HomeTableDelegate {
     
     func homeTableDidTappedComicsInProgress() {
         // TODO
-        print("tapped comics in progress")
     }
     
     func homeTableDidTapped(ranking: Ranking) {

@@ -146,3 +146,17 @@
 "Library.Empty.Downloaded.Title" = "No downloaded books";
 "Library.Empty.Downloaded.SubTitle" = "Here will be book summaries\nthat you download";
 "Library.Empty.Button" = "Discover books";
+
+// MARK: Comics
+"Comics.ComicsStatus.Ongoing" = "Ongoing";
+"Comics.ComicsStatus.Completed" = "Completed";
+"Comics.ChaptersCount" = "%i chapters";
+"Comics.WhatAbout?" = "What is it about?";
+"Comics.Chapters" = "Chapters";
+"Comics.ChapterNumber" = "Chapter %i";
+"Comics.SeeAll" = "See all";
+"Comics.Creator" = "Creator";
+"Comics.Recommendations" = "Recommendations";
+"Comics.ExploreCategories" = "Explore categories";
+"Comics.Button.ReadFirst" = "Read first episode";
+"Comics.Button.Read" = "Read";

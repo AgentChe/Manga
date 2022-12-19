@@ -82,18 +82,17 @@ extension LibraryViewController {
 
 // MARK: LibraryTableDelegate
 extension LibraryViewController: LibraryTableDelegate {
-    // TODO
     func libraryTableDidTapped(comics: ComicsCover) {
-//        let vc: UIViewController
-//
-//        let needPayment = !SessionManager().hasActiveSubscriptions()
-//        if needPayment && book.paid {
-//            vc = PaygateViewController.make()
-//        } else {
-//            vc = BookViewController.make(bookId: book.id)
-//        }
-//
-//        present(vc, animated: true)
+        let vc: UIViewController
+
+        let needPayment = !SessionManager().hasActiveSubscriptions()
+        if needPayment && comics.paid {
+            vc = PaygateViewController.make()
+        } else {
+            vc = ComicsViewController.make(comicsId: comics.id)
+        }
+
+        present(vc, animated: true)
     }
     
     func libraryTableDidTappedMenu(comics: ComicsCover) {
