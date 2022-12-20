@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class BookNavButton: TapAreaButton {
+final class ComicsNavButton: TapAreaButton {
     lazy var iconView = makeImageView()
     
     override init(frame: CGRect) {
@@ -28,7 +28,7 @@ final class BookNavButton: TapAreaButton {
 }
 
 // MARK: Make constraints
-private extension BookNavButton {
+private extension ComicsNavButton {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             iconView.widthAnchor.constraint(equalToConstant: 22.scale),
@@ -40,7 +40,7 @@ private extension BookNavButton {
 }
 
 // MARK: Lazy initialization
-private extension BookNavButton {
+private extension ComicsNavButton {
     func makeImageView() -> UIImageView {
         let view = UIImageView()
         view.contentMode = .scaleAspectFit

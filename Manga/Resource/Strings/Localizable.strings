@@ -160,3 +160,11 @@
 "Comics.ExploreCategories" = "Explore categories";
 "Comics.Button.ReadFirst" = "Read first episode";
 "Comics.Button.Read" = "Read";
+
+// MARK: Chapters
+"Chapters.Title" = "Chapters";
+"Chapters.ChapterNumber" = "Chapter %i";
+
+// MARK: Reader
+"Reader.MarkAsFinished" = "Mark as finished";
+"Reader.ChapterNumber" = "Chapter %i";

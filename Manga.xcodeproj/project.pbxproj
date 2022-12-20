@@ -232,6 +232,19 @@
 		DE8A31BD294DEB7E00B2E228 /* ComicsNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31A8294DEB7D00B2E228 /* ComicsNavButton.swift */; };
 		DE8A31C12950451D00B2E228 /* CoversChaptersTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31C02950451D00B2E228 /* CoversChaptersTitleCell.swift */; };
 		DE8A31C32951B4C300B2E228 /* ComicsDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31C22951B4C300B2E228 /* ComicsDownloadButton.swift */; };
+		DE8A31DC2951C53B00B2E228 /* ChaptersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31CE2951C53B00B2E228 /* ChaptersViewModel.swift */; };
+		DE8A31DD2951C53B00B2E228 /* ChaptersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31CF2951C53B00B2E228 /* ChaptersViewController.swift */; };
+		DE8A31DE2951C53B00B2E228 /* ChaptersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D02951C53B00B2E228 /* ChaptersView.swift */; };
+		DE8A31DF2951C53B00B2E228 /* ChaptersTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D32951C53B00B2E228 /* ChaptersTableElement.swift */; };
+		DE8A31E02951C53B00B2E228 /* ChaptersTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D42951C53B00B2E228 /* ChaptersTableView.swift */; };
+		DE8A31E12951C53B00B2E228 /* ChapterTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D52951C53B00B2E228 /* ChapterTableCell.swift */; };
+		DE8A31E22951C53B00B2E228 /* ReaderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D72951C53B00B2E228 /* ReaderViewController.swift */; };
+		DE8A31E32951C53B00B2E228 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D82951C53B00B2E228 /* ReaderView.swift */; };
+		DE8A31E42951C53B00B2E228 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */; };
+		DE8A31EB2951DE8F00B2E228 /* ReaderNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */; };
+		DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */; };
+		DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */; };
+		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -464,6 +477,19 @@
 		DE8A31A8294DEB7D00B2E228 /* ComicsNavButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsNavButton.swift; sourceTree = "<group>"; };
 		DE8A31C02950451D00B2E228 /* CoversChaptersTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoversChaptersTitleCell.swift; sourceTree = "<group>"; };
 		DE8A31C22951B4C300B2E228 /* ComicsDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDownloadButton.swift; sourceTree = "<group>"; };
+		DE8A31CE2951C53B00B2E228 /* ChaptersViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersViewModel.swift; sourceTree = "<group>"; };
+		DE8A31CF2951C53B00B2E228 /* ChaptersViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersViewController.swift; sourceTree = "<group>"; };
+		DE8A31D02951C53B00B2E228 /* ChaptersView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersView.swift; sourceTree = "<group>"; };
+		DE8A31D32951C53B00B2E228 /* ChaptersTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersTableElement.swift; sourceTree = "<group>"; };
+		DE8A31D42951C53B00B2E228 /* ChaptersTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChaptersTableView.swift; sourceTree = "<group>"; };
+		DE8A31D52951C53B00B2E228 /* ChapterTableCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChapterTableCell.swift; sourceTree = "<group>"; };
+		DE8A31D72951C53B00B2E228 /* ReaderViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewController.swift; sourceTree = "<group>"; };
+		DE8A31D82951C53B00B2E228 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
+		DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
+		DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderNavView.swift; sourceTree = "<group>"; };
+		DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBottomView.swift; sourceTree = "<group>"; };
+		DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableView.swift; sourceTree = "<group>"; };
+		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1381,6 +1407,8 @@
 		DE8A3190294DEB5C00B2E228 /* Comics */ = {
 			isa = PBXGroup;
 			children = (
+				DE8A31CD2951C53B00B2E228 /* Chapters */,
+				DE8A31D62951C53B00B2E228 /* Reader */,
 				DE8A3191294DEB7D00B2E228 /* Comics */,
 			);
 			path = Comics;
@@ -1432,6 +1460,65 @@
 				DE8A31A0294DEB7D00B2E228 /* ComicsCreatorCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE8A31CD2951C53B00B2E228 /* Chapters */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31D12951C53B00B2E228 /* Views */,
+				DE8A31CF2951C53B00B2E228 /* ChaptersViewController.swift */,
+				DE8A31CE2951C53B00B2E228 /* ChaptersViewModel.swift */,
+				DE8A31D02951C53B00B2E228 /* ChaptersView.swift */,
+			);
+			path = Chapters;
+			sourceTree = "<group>";
+		};
+		DE8A31D12951C53B00B2E228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31D22951C53B00B2E228 /* TableView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE8A31D22951C53B00B2E228 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31D32951C53B00B2E228 /* ChaptersTableElement.swift */,
+				DE8A31D52951C53B00B2E228 /* ChapterTableCell.swift */,
+				DE8A31D42951C53B00B2E228 /* ChaptersTableView.swift */,
+			);
+			path = TableView;
+			sourceTree = "<group>";
+		};
+		DE8A31D62951C53B00B2E228 /* Reader */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31E92951DE8400B2E228 /* Views */,
+				DE8A31D72951C53B00B2E228 /* ReaderViewController.swift */,
+				DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */,
+				DE8A31D82951C53B00B2E228 /* ReaderView.swift */,
+			);
+			path = Reader;
+			sourceTree = "<group>";
+		};
+		DE8A31E92951DE8400B2E228 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31EE2951EEA600B2E228 /* TableView */,
+				DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */,
+				DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DE8A31EE2951EEA600B2E228 /* TableView */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */,
+				DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */,
+			);
+			path = TableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1563,9 +1650,12 @@
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
 				DE8A31AB294DEB7E00B2E228 /* ComicsViewModel.swift in Sources */,
 				DE2CB5DB293A0C8900AC2372 /* PaygateInfoCell.swift in Sources */,
+				DE8A31E02951C53B00B2E228 /* ChaptersTableView.swift in Sources */,
 				DE8A3186294B838400B2E228 /* LibraryTableComicsCell.swift in Sources */,
 				DE8A3164294A153C00B2E228 /* ExploreCollectionElement.swift in Sources */,
+				DE8A31DC2951C53B00B2E228 /* ChaptersViewModel.swift in Sources */,
 				DE8A31452948A1F900B2E228 /* SettingsView.swift in Sources */,
+				DE8A31E42951C53B00B2E228 /* ReaderViewModel.swift in Sources */,
 				DE2CB7D92940B4A300AC2372 /* OComicsImageCollectionView.swift in Sources */,
 				DE2CB5CD293A0C8900AC2372 /* MainView.swift in Sources */,
 				DE2CB5FB293A0C8900AC2372 /* SplashViewController.swift in Sources */,
@@ -1574,6 +1664,7 @@
 				DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */,
 				DE8A315B294A153C00B2E228 /* ExploreView.swift in Sources */,
 				DE2CB8312943651100AC2372 /* HomeViewController.swift in Sources */,
+				DE8A31E12951C53B00B2E228 /* ChapterTableCell.swift in Sources */,
 				DE2CB8372943651100AC2372 /* HomeSeparatorCell.swift in Sources */,
 				DE2CB7E72940B4A300AC2372 /* OComicsView.swift in Sources */,
 				DE2CB79F293A77BC00AC2372 /* ComicsChapterContentBlock.swift in Sources */,
@@ -1594,6 +1685,7 @@
 				DE8A315C294A153C00B2E228 /* ExploreViewModel.swift in Sources */,
 				DE8A31BA294DEB7E00B2E228 /* ComicsWhatAboutCell.swift in Sources */,
 				DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */,
+				DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */,
 				DE2CB55B293A0B6200AC2372 /* PaddingTextField.swift in Sources */,
 				DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */,
 				DE8A3188294B838400B2E228 /* LibraryTableElement.swift in Sources */,
@@ -1606,6 +1698,7 @@
 				DE2CB554293A0B6200AC2372 /* RxActivityIndicator.swift in Sources */,
 				DE2CB779293A731800AC2372 /* Ranking.swift in Sources */,
 				DE2CB5D7293A0C8900AC2372 /* PaygateInteractor.swift in Sources */,
+				DE8A31DE2951C53B00B2E228 /* ChaptersView.swift in Sources */,
 				DE2CB545293A0B6200AC2372 /* XORRequestWrapper.swift in Sources */,
 				DE2CB77B293A731800AC2372 /* Category.swift in Sources */,
 				DE2CB770293A731800AC2372 /* ContentManager.swift in Sources */,
@@ -1616,6 +1709,7 @@
 				DE2CB55A293A0B6200AC2372 /* Spinner.swift in Sources */,
 				DE8A31B3294DEB7E00B2E228 /* ComicsSeeAllCell.swift in Sources */,
 				DE2CB600293A0C8900AC2372 /* SplashView.swift in Sources */,
+				DE8A31EB2951DE8F00B2E228 /* ReaderNavView.swift in Sources */,
 				DE2CB7EA2940B4A300AC2372 /* OGoalView.swift in Sources */,
 				DE2CB558293A0B6200AC2372 /* NavigationController.swift in Sources */,
 				DE2CB796293A731800AC2372 /* GetCategoriesResponse.swift in Sources */,
@@ -1687,9 +1781,11 @@
 				DE2CB54A293A0B6200AC2372 /* TextAttributes.swift in Sources */,
 				DE8A3187294B838400B2E228 /* LibraryTableSeparatorCell.swift in Sources */,
 				DE8A3161294A153C00B2E228 /* ExploreCollectionComicsCell.swift in Sources */,
+				DE8A31E22951C53B00B2E228 /* ReaderViewController.swift in Sources */,
 				DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */,
 				DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */,
 				DE2CB5CC293A0C8900AC2372 /* MainViewController.swift in Sources */,
+				DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */,
 				DE2CB83F2943651100AC2372 /* HomeCollectionComicsCell.swift in Sources */,
 				DE8A31AE294DEB7E00B2E228 /* ComicsViewController.swift in Sources */,
 				DE2CB561293A0B6200AC2372 /* PushNotificationsManager.swift in Sources */,
@@ -1707,6 +1803,7 @@
 				DE8A3185294B838400B2E228 /* LibraryView.swift in Sources */,
 				DE2CB57A293A0C3E00AC2372 /* IAPManager.swift in Sources */,
 				DE2CB76F293A731800AC2372 /* ContentMediator.swift in Sources */,
+				DE8A31DD2951C53B00B2E228 /* ChaptersViewController.swift in Sources */,
 				DE2CB5D5293A0C8900AC2372 /* PaygatePrice.swift in Sources */,
 				DE2CB53E293A0B6200AC2372 /* UIColor+Extension.swift in Sources */,
 				DE2CB7D22940B4A300AC2372 /* OComicsButton.swift in Sources */,
@@ -1719,6 +1816,7 @@
 				DE2CB78A293A731800AC2372 /* GetRankingComicsResponse.swift in Sources */,
 				DE2CB789293A731800AC2372 /* GetRankingComicsRequest.swift in Sources */,
 				DE2CB5D6293A0C8900AC2372 /* PaygateViewControllerDelegate.swift in Sources */,
+				DE8A31E32951C53B00B2E228 /* ReaderView.swift in Sources */,
 				DE8A31C12950451D00B2E228 /* CoversChaptersTitleCell.swift in Sources */,
 				DE2CB78E293A731800AC2372 /* SearchComicsRequest.swift in Sources */,
 				DE2CB5D4293A0C8900AC2372 /* PaygateProductInfo.swift in Sources */,
@@ -1752,6 +1850,7 @@
 				DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */,
 				DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */,
 				DE2CB5D3293A0C8900AC2372 /* PaygateViewModel.swift in Sources */,
+				DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */,
 				DE2CB5D8293A0C8900AC2372 /* PaygateView.swift in Sources */,
 				DE2CB7DF2940B4A300AC2372 /* OGoalButton.swift in Sources */,
 				DE2CB83A2943651100AC2372 /* HomeCategoriesCollectionView.swift in Sources */,
@@ -1768,6 +1867,7 @@
 				DE8A3160294A153C00B2E228 /* ExploreCollectionTitleCell.swift in Sources */,
 				DE2CB555293A0B6200AC2372 /* PaginatedDataLoader.swift in Sources */,
 				DE2CB7CB2940B4A300AC2372 /* OCombineData.swift in Sources */,
+				DE8A31DF2951C53B00B2E228 /* ChaptersTableElement.swift in Sources */,
 				DE8A31472948A1F900B2E228 /* SettingsSeparatorCell.swift in Sources */,
 				DE2CB5FF293A0C8900AC2372 /* SplashViewModel.swift in Sources */,
 			);

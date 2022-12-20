@@ -119,8 +119,8 @@ private extension ComicsView {
         return view
     }
     
-    func makeShareButton() -> BookNavButton {
-        let view = BookNavButton()
+    func makeShareButton() -> ComicsNavButton {
+        let view = ComicsNavButton()
         view.backgroundColor = Appearance.black
         view.iconView.image = UIImage(named: "Comics.Share")
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -128,8 +128,8 @@ private extension ComicsView {
         return view
     }
     
-    func makeFavoriteButton() -> BookNavButton {
-        let view = BookNavButton()
+    func makeFavoriteButton() -> ComicsNavButton {
+        let view = ComicsNavButton()
         view.backgroundColor = Appearance.black
         view.iconView.image = UIImage(named: "Comics.Mark.Uncheck")
         view.translatesAutoresizingMaskIntoConstraints = false

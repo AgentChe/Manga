@@ -82,9 +82,8 @@ final class ComicsViewController: UIViewController {
         
         viewModel.reader
             .drive(Binder(self) { base, reader in
-                // TODO
-//                let vc = ReaderViewController.make(book: reader.0, chapter: reader.1)
-//                base.present(vc, animated: true)
+                let vc = ReaderViewController.make(comics: reader.0, chapter: reader.1)
+                base.present(vc, animated: true)
             })
             .disposed(by: disposeBag)
         
