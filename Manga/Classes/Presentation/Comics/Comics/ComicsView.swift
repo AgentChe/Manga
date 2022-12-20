@@ -111,10 +111,9 @@ private extension ComicsView {
         return view
     }
     
-    func makeDownloadButton() -> BookNavButton {
-        let view = BookNavButton()
+    func makeDownloadButton() -> ComicsDownloadButton {
+        let view = ComicsDownloadButton()
         view.backgroundColor = Appearance.black
-        view.iconView.image = UIImage(named: "Comics.Download")
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

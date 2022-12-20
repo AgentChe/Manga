@@ -231,6 +231,7 @@
 		DE8A31BC294DEB7E00B2E228 /* ComicsTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31A7294DEB7D00B2E228 /* ComicsTableElement.swift */; };
 		DE8A31BD294DEB7E00B2E228 /* ComicsNavButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31A8294DEB7D00B2E228 /* ComicsNavButton.swift */; };
 		DE8A31C12950451D00B2E228 /* CoversChaptersTitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31C02950451D00B2E228 /* CoversChaptersTitleCell.swift */; };
+		DE8A31C32951B4C300B2E228 /* ComicsDownloadButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31C22951B4C300B2E228 /* ComicsDownloadButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -462,6 +463,7 @@
 		DE8A31A7294DEB7D00B2E228 /* ComicsTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsTableElement.swift; sourceTree = "<group>"; };
 		DE8A31A8294DEB7D00B2E228 /* ComicsNavButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsNavButton.swift; sourceTree = "<group>"; };
 		DE8A31C02950451D00B2E228 /* CoversChaptersTitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoversChaptersTitleCell.swift; sourceTree = "<group>"; };
+		DE8A31C22951B4C300B2E228 /* ComicsDownloadButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsDownloadButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1400,6 +1402,7 @@
 			children = (
 				DE8A3198294DEB7D00B2E228 /* TableView */,
 				DE8A31A8294DEB7D00B2E228 /* ComicsNavButton.swift */,
+				DE8A31C22951B4C300B2E228 /* ComicsDownloadButton.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1738,6 +1741,7 @@
 				DE2CB5CF293A0C8900AC2372 /* TabView.swift in Sources */,
 				DE8A31462948A1F900B2E228 /* SettingsViewModel.swift in Sources */,
 				DE2CB543293A0B6200AC2372 /* GlobalDefinitions.swift in Sources */,
+				DE8A31C32951B4C300B2E228 /* ComicsDownloadButton.swift in Sources */,
 				DE2CB557293A0B6200AC2372 /* NavigationControllerSettings.swift in Sources */,
 				DE8A31B2294DEB7E00B2E228 /* ComicsInfoCell.swift in Sources */,
 				DE8A31BC294DEB7E00B2E228 /* ComicsTableElement.swift in Sources */,

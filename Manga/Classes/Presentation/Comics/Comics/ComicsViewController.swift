@@ -67,6 +67,19 @@ final class ComicsViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
+        mainView.downloadButton.rx.tap
+            .withLatestFrom(viewModel.downloadState)
+            .filter { $0 == .download }
+            .mapToVoid()
+            .bind(to: viewModel.didTapStartDownload)
+            .disposed(by: disposeBag)
+        
+        viewModel.downloadState
+            .drive(Binder(mainView.downloadButton) { base, state in
+                base.downloadState = state
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.reader
             .drive(Binder(self) { base, reader in
                 // TODO
@@ -149,7 +162,7 @@ extension ComicsViewController: ComicsTableDelegate {
 private extension ComicsViewController {
     func update(favorite: Bool) {
         let image = UIImage(named: favorite ? "Comics.Mark.Check" : "Comics.Mark.Uncheck")
-        mainView.favoriteButton.setImage(image, for: .normal)
+        mainView.favoriteButton.iconView.image = image
     }
     
     func openError() -> Observable<Void> {
