@@ -45,7 +45,7 @@ final class ExploreViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.searchView.changedText
-            .do(onNext: { _ in
+            .do(onNext: { text in
                 AmplitudeManager.shared
                     .logEvent(name: "Explore Tap", parameters: ["what": "search"])
             })
