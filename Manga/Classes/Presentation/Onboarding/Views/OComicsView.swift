@@ -48,7 +48,7 @@ final class OComicsView: OSlideView {
         super.moveToThis()
         
         AmplitudeManager.shared
-            .logEvent(name: "Onboarding Comics Screen")
+            .logEvent(name: "Personalisation Screen")
     }
 }
 

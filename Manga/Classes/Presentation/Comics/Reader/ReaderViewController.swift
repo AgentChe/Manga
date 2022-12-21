@@ -35,12 +35,20 @@ final class ReaderViewController: UIViewController {
         AmplitudeManager.shared
             .logEvent(name: "Read Screen")
         
-        Observable
-            .merge(
-                mainView.navView.closeButton.rx.tap.asObservable(),
-                mainView.bottomView.markFinishButton.rx.tap.asObservable()
-            )
+        mainView.navView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "close"])
+                
+                base.dismiss(animated: true)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.bottomView.markFinishButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "mark as finished"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -49,6 +57,9 @@ final class ReaderViewController: UIViewController {
             .withLatestFrom(viewModel.comics)
             .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
             .bind(to: Binder(self) { base, args in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "chapters"])
+                
                 base.open(chapters: args.0.chapters, currentChapter: args.1)
             })
             .disposed(by: disposeBag)
@@ -56,6 +67,9 @@ final class ReaderViewController: UIViewController {
         mainView.bottomView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "share"])
+                
                 base.share(url: url)
             })
             .disposed(by: disposeBag)

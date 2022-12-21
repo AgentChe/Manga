@@ -35,7 +35,7 @@ final class ComicsViewController: UIViewController {
         super.viewDidLoad()
         
         AmplitudeManager.shared
-            .logEvent(name: "Comics Screen")
+            .logEvent(name: "Book Screen")
         
         viewModel.tryAgain = { [weak self] error -> Observable<Void> in
             guard let self = self else {
@@ -53,6 +53,9 @@ final class ComicsViewController: UIViewController {
         
         mainView.closeButton.rx.tap
             .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "back"])
+                
                 base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
@@ -71,6 +74,10 @@ final class ComicsViewController: UIViewController {
             .withLatestFrom(viewModel.downloadState)
             .filter { $0 == .download }
             .mapToVoid()
+            .do(onNext: {
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "download"])
+            })
             .bind(to: viewModel.didTapStartDownload)
             .disposed(by: disposeBag)
         
@@ -82,6 +89,9 @@ final class ComicsViewController: UIViewController {
         
         viewModel.reader
             .drive(Binder(self) { base, reader in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "read"])
+                
                 let vc = ReaderViewController.make(comics: reader.0, chapter: reader.1)
                 base.present(vc, animated: true)
             })
@@ -90,12 +100,19 @@ final class ComicsViewController: UIViewController {
         mainView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "share"])
+                
                 base.share(url: url)
             })
             .disposed(by: disposeBag)
         
         mainView.favoriteButton.rx.tap
             .withLatestFrom(viewModel.isSavedComics)
+            .do(onNext: { _ in
+                AmplitudeManager.shared
+                    .logEvent(name: "Book Tap", parameters: ["what": "bookmark"])
+            })
             .bind(to: viewModel.didTapMark)
             .disposed(by: disposeBag)
         

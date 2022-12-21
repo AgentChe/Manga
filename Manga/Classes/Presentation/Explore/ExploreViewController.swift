@@ -45,6 +45,10 @@ final class ExploreViewController: UIViewController {
             .disposed(by: disposeBag)
         
         mainView.searchView.changedText
+            .do(onNext: { _ in
+                AmplitudeManager.shared
+                    .logEvent(name: "Explore Tap", parameters: ["what": "search"])
+            })
             .emit(to: viewModel.search)
             .disposed(by: disposeBag)
         
@@ -83,6 +87,9 @@ extension ExploreViewController {
 // MARK: ExploreCollectionDelegate
 extension ExploreViewController: ExploreCollectionDelegate {
     func exploreCollectionDidTapped(category: Category) {
+        AmplitudeManager.shared
+            .logEvent(name: "Explore Tap", parameters: ["what": "categories"])
+        
         let vc = ComicsByViewController.make(category: category)
         present(vc, animated: true)
     }
