@@ -15,6 +15,18 @@ final class HomeViewController: UIViewController {
     
     private lazy var viewModel = HomeViewModel()
     
+    private let continueToReadTapped: () -> Void
+    
+    private init(continueToReadTapped: @escaping () -> Void) {
+        self.continueToReadTapped = continueToReadTapped
+        
+        super.init(nibName: nil, bundle: nil)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     override func loadView() {
         view = mainView
     }
@@ -52,8 +64,8 @@ final class HomeViewController: UIViewController {
 
 // MARK: Make
 extension HomeViewController {
-    static func make() -> HomeViewController {
-        let vc = HomeViewController()
+    static func make(continueToReadTapped: @escaping () -> Void) -> HomeViewController {
+        let vc = HomeViewController(continueToReadTapped: continueToReadTapped)
         vc.navigationItem.backButtonTitle = " "
         return vc
     }
@@ -80,7 +92,7 @@ extension HomeViewController: HomeTableDelegate {
     }
     
     func homeTableDidTappedComicsInProgress() {
-        // TODO
+        continueToReadTapped()
     }
     
     func homeTableDidTapped(ranking: Ranking) {
