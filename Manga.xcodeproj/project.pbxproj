@@ -159,7 +159,6 @@
 		DE2CB7EB2940B4A300AC2372 /* OAgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C82940B4A300AC2372 /* OAgeView.swift */; };
 		DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */; };
 		DE2CB7ED2940B4A300AC2372 /* OnboardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */; };
-		DE2CB7EF2940EE1600AC2372 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */; };
 		DE2CB8302943651100AC2372 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80D2943651000AC2372 /* HomeView.swift */; };
 		DE2CB8312943651100AC2372 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80E2943651000AC2372 /* HomeViewController.swift */; };
 		DE2CB8322943651100AC2372 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB80F2943651000AC2372 /* HomeViewModel.swift */; };
@@ -245,6 +244,7 @@
 		DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */; };
 		DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */; };
 		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
+		DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -404,7 +404,6 @@
 		DE2CB7C82940B4A300AC2372 /* OAgeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OAgeView.swift; sourceTree = "<group>"; };
 		DE2CB7C92940B4A300AC2372 /* OnboardingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		DE2CB7CA2940B4A300AC2372 /* OnboardingViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnboardingViewModel.swift; sourceTree = "<group>"; };
-		DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = "GoogleService-Info.plist"; path = "Manga/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		DE2CB80D2943651000AC2372 /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		DE2CB80E2943651000AC2372 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		DE2CB80F2943651000AC2372 /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
@@ -490,6 +489,7 @@
 		DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBottomView.swift; sourceTree = "<group>"; };
 		DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableView.swift; sourceTree = "<group>"; };
 		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
+		DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -554,7 +554,7 @@
 				DE2CB4FD293A0AD800AC2372 /* Strings */,
 				DE2CB4FC293A0AD300AC2372 /* Fonts */,
 				DE2CB4F5293A093700AC2372 /* Info.plist */,
-				DE2CB7EE2940EE1600AC2372 /* GoogleService-Info.plist */,
+				DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */,
 				DE2CB4F2293A093700AC2372 /* LaunchScreen.storyboard */,
 				DE2CB4F0293A093700AC2372 /* Assets.xcassets */,
 				DE2CB500293A0B3500AC2372 /* API.json */,
@@ -1588,7 +1588,7 @@
 				DE2CB61A293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE2CB61D293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE2CB61B293A103100AC2372 /* PlusJakartaSans-Regular.ttf in Resources */,
-				DE2CB7EF2940EE1600AC2372 /* GoogleService-Info.plist in Resources */,
+				DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */,
 				DE2CB501293A0B3500AC2372 /* API.json in Resources */,
 				DE2CB4F1293A093700AC2372 /* Assets.xcassets in Resources */,
 			);
