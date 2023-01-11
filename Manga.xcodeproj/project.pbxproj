@@ -244,6 +244,7 @@
 		DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */; };
 		DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */; };
 		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
+		DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9002296F02F20093658A /* AppsFlyerManager.swift */; };
 		DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
@@ -490,6 +491,7 @@
 		DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBottomView.swift; sourceTree = "<group>"; };
 		DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableView.swift; sourceTree = "<group>"; };
 		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
+		DEAD9002296F02F20093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -726,6 +728,7 @@
 				DE2CB53A293A0B6200AC2372 /* AmplitudeManager.swift */,
 				DE2CB53B293A0B6200AC2372 /* FirebaseManager.swift */,
 				DE2CB53C293A0B6200AC2372 /* FacebookManager.swift */,
+				DEAD9002296F02F20093658A /* AppsFlyerManager.swift */,
 			);
 			path = Analytics;
 			sourceTree = "<group>";
@@ -1715,6 +1718,7 @@
 				DE2CB7EA2940B4A300AC2372 /* OGoalView.swift in Sources */,
 				DE2CB558293A0B6200AC2372 /* NavigationController.swift in Sources */,
 				DE2CB796293A731800AC2372 /* GetCategoriesResponse.swift in Sources */,
+				DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */,
 				DE2CB566293A0B6200AC2372 /* BranchManager.swift in Sources */,
 				DE2CB552293A0B6200AC2372 /* Weak.swift in Sources */,
 				DE8A313629486F3A00B2E228 /* ComicsByCollectionCell.swift in Sources */,
@@ -2014,7 +2018,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2029,7 +2033,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";
@@ -2048,7 +2052,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2063,7 +2067,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 1.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";
