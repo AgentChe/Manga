@@ -2018,7 +2018,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2033,7 +2033,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";
@@ -2052,7 +2052,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2067,7 +2067,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.0;
+				MARKETING_VERSION = 1.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";
