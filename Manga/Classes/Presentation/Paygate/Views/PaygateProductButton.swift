@@ -72,7 +72,7 @@ private extension PaygateProductButton {
         
         let priceValue = info.price.attributed(with: TextAttributes()
                                 .textColor(Appearance.white)
-                                .font(Fonts.PlusJakartaSans.semiBold(size: 22.scale))
+                                .font(Fonts.PlusJakartaSans.bold(size: 22.scale))
                                 .lineHeight(22.scale)
                                 .letterSpacing(-1.scale))
         let pricePeriod = info.pricePeriod.attributed(with: TextAttributes()

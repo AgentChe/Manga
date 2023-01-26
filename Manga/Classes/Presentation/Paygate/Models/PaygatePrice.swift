@@ -41,12 +41,12 @@ extension PaygateProduct {
         let discount = 100 / (monthlyPrice.priceValue / diff)
          
         let info = PaygateProductInfo(name: "Paygate.Lifetime.Name".localized,
-                                      price: pricePeriodResult,
-                                      pricePeriod: "Paygate.Price.Period".localized,
+                                      price: priceResult,
+                                      pricePeriod: "Paygate.Lifetime.BottomDescription".localized,
                                       priceDescription: "Paygate.Lifetime.PriceDescription".localized,
                                       discount: Int(discount),
-                                      bottomPrice: priceResult,
-                                      bottomDescription: "Paygate.Lifetime.BottomDescription".localized)
+                                      bottomPrice: pricePeriodResult,
+                                      bottomDescription: "Paygate.Price.Period".localized)
         
         return PaygateProduct(type: .lifetime,
                               price: lifetimePrice,
