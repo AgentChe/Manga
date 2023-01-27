@@ -44,10 +44,7 @@ private extension DownloadComicsOperation {
         
         comics.chapters.forEach { chapter in
             chapter.content.forEach { block in
-                urls.append(contentsOf: [
-                    block.placeholderImageUrl,
-                    block.originalImageUrl
-                ])
+                urls.append(block.originalImageUrl)
             }
         }
         

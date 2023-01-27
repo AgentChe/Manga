@@ -9,6 +9,4 @@ import UIKit
 
 struct ComicsChapterContentBlock: Codable, Hashable {
     let originalImageUrl: URL
-    let placeholderImageUrl: URL
-    let imageHeight: CGFloat
 }

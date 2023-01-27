@@ -55,17 +55,12 @@ final class GetComicsKitResponse {
             let content = contentArray.compactMap { contentJSON -> ComicsChapterContentBlock? in
                 guard
                     let imageOriginalPath = contentJSON["image_original"] as? String,
-                    let imageOriginalUrl = URL(string: imageOriginalPath),
-                    let imagePlaceholderPath = contentJSON["image_placeholder"] as? String,
-                    let imagePlaceholderUrl = URL(string: imagePlaceholderPath),
-                    let imageHeight = contentJSON["image_height"] as? CGFloat
+                    let imageOriginalUrl = URL(string: imageOriginalPath)
                 else {
                     return nil
                 }
                 
-                return ComicsChapterContentBlock(originalImageUrl: imageOriginalUrl,
-                                                 placeholderImageUrl: imagePlaceholderUrl,
-                                                 imageHeight: imageHeight)
+                return ComicsChapterContentBlock(originalImageUrl: imageOriginalUrl)
             }
             
             return ComicsChapter(date: date,

@@ -9,6 +9,7 @@ import UIKit
 import Kingfisher
 
 final class ReaderTableCell: UITableViewCell {
+    lazy var placeholerView = makePlaceholderView()
     lazy var pictureView = makeImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -32,13 +33,19 @@ final class ReaderTableCell: UITableViewCell {
 
 // MARK: Public
 extension ReaderTableCell {
-    func setup(placeholderUrl: URL, imageUrl: URL) {
-        pictureView.kf.setImage(with: placeholderUrl, completionHandler: { [weak self] result in
-            guard let self = self else {
+    func setup(imageUrl: URL, calculated: @escaping ((CGFloat) -> Void)) {
+        pictureView.kf.setImage(with: imageUrl, completionHandler: { [weak self] result in
+            guard let self = self, case let .success(image) = result else {
                 return
             }
             
-            self.pictureView.kf.setImage(with: imageUrl)
+            self.placeholerView.isHidden = true
+            
+            let size = image.image.size
+            let aspectRatio = size.height / size.width
+            let height = self.frame.width * aspectRatio
+            
+            calculated(height)
         })
     }
 }
@@ -57,6 +64,13 @@ private extension ReaderTableCell {
 private extension ReaderTableCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
+            placeholerView.widthAnchor.constraint(equalToConstant: 85.scale),
+            placeholerView.heightAnchor.constraint(equalToConstant: 80.scale),
+            placeholerView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            placeholerView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             pictureView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
             pictureView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             pictureView.topAnchor.constraint(equalTo: contentView.topAnchor),
@@ -67,9 +81,19 @@ private extension ReaderTableCell {
 
 // MARK: Lazy initialization
 private extension ReaderTableCell {
+    func makePlaceholderView() -> UIImageView {
+        let view = UIImageView()
+        view.image = UIImage(named: "Reader.Placeholder")
+        view.contentMode = .scaleAspectFit
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
     func makeImageView() -> UIImageView {
         let view = UIImageView()
-        view.contentMode = .scaleAspectFill
+        view.contentMode = .scaleAspectFit
+        view.clipsToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view
