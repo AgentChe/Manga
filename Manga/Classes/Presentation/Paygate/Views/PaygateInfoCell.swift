@@ -27,9 +27,9 @@ extension PaygateInfoCell {
     func setup(text: String) {
         let attrs = TextAttributes()
             .textColor(Appearance.white)
-            .font(Fonts.PlusJakartaSans.regular(size: ScreenSize.isIphoneXFamily ? 16.scale : 14.scale))
-            .lineHeight(ScreenSize.isIphoneXFamily ? 24.scale : 19.6.scale)
-            .letterSpacing(-0.17.scale)
+            .font(Fonts.PlusJakartaSans.regular(size: 17.scale))
+            .lineHeight(27.2.scale)
+            .letterSpacing(-0.41.scale)
         label.attributedText = text.attributed(with: attrs)
     }
 }
@@ -40,12 +40,12 @@ private extension PaygateInfoCell {
         NSLayoutConstraint.activate([
             imageView.widthAnchor.constraint(equalToConstant: 12.scale),
             imageView.heightAnchor.constraint(equalToConstant: 13.scale),
-            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 49.scale),
+            imageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 42.scale),
             imageView.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 71.scale),
+            label.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 64.scale),
             label.centerYAnchor.constraint(equalTo: centerYAnchor)
         ])
     }

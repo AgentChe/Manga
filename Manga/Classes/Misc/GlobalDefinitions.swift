@@ -21,4 +21,9 @@ final class GlobalDefinitions {
     static let termsOfServiceUrl = "https://mustname.com/terms"
     static let privacyPolicyUrl = "https://mustname.com/policy"
     static let contactUsUrl = "https://mustname.com/contact"
+    
+    enum Paygate {
+        static let defaultLifetime = "mobile.manga.4ever"
+        static let defaultMonthly = "mobile.manga.month"
+    }
 }
