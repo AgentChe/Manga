@@ -48,9 +48,7 @@ extension HomeCategoriesCollectionView: UICollectionViewDataSource {
 // MARK: UICollectionViewDelegateFlowLayout
 extension HomeCategoriesCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        let element = elements[indexPath.row]
-        let width = HomeCategoriesCollectionCell.width(for: element)
-        return CGSize(width: width, height: 45.scale)
+        HomeCategoriesCollectionCell.size(for: elements[indexPath.row])
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {

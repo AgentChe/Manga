@@ -15,6 +15,8 @@ final class HomeFreeComicsCell: UITableViewCell {
     lazy var freeLabel = makeFreeLabel()
     lazy var nameLabel = makeLabel()
     lazy var categoriesLabel = makeLabel()
+    lazy var statusContainer = makeStatusContainer()
+    lazy var statusLabel = makeLabel()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -58,6 +60,8 @@ extension HomeFreeComicsCell {
                             .letterSpacing(-0.17.scale)
                             .textAlignment(.center)
                             .lineBreakMode(.byTruncatingTail))
+        
+        fill(status: element.comics.status)
     }
 }
 
@@ -68,6 +72,31 @@ private extension HomeFreeComicsCell {
         contentView.backgroundColor = UIColor.clear
         
         selectionStyle = .none
+    }
+    
+    func fill(status: ComicsStatus) {
+        let text: String
+        let containerColor: UIColor
+        
+        switch status {
+        case .none:
+            text = ""
+            containerColor = UIColor.clear
+        case .ongoing:
+            text = "Home.ComicsStatus.Ongoing".localized
+            containerColor = Appearance.primary
+        case .completed:
+            text = "Home.ComicsStatus.Completed".localized
+            containerColor = Appearance.secondary1
+        }
+        
+        let attrs = TextAttributes()
+            .textColor(Appearance.white)
+            .font(Fonts.PlusJakartaSans.semiBold(size: 12.scale))
+            .lineHeight(14.4.scale)
+        
+        statusContainer.backgroundColor = containerColor
+        statusLabel.attributedText = text.attributed(with: attrs)
     }
 }
 
@@ -107,9 +136,21 @@ private extension HomeFreeComicsCell {
         ])
         
         NSLayoutConstraint.activate([
-            categoriesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 44.scale),
-            categoriesLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -44.scale),
+            categoriesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 73.scale),
+            categoriesLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -73.scale),
             categoriesLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5.scale)
+        ])
+        
+        NSLayoutConstraint.activate([
+            statusContainer.centerXAnchor.constraint(equalTo: comicsImageView.centerXAnchor),
+            statusContainer.bottomAnchor.constraint(equalTo: comicsImageView.bottomAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
+            statusLabel.leadingAnchor.constraint(equalTo: statusContainer.leadingAnchor, constant: 8.scale),
+            statusLabel.trailingAnchor.constraint(equalTo: statusContainer.trailingAnchor, constant: -8.scale),
+            statusLabel.topAnchor.constraint(equalTo: statusContainer.topAnchor, constant: 4.scale),
+            statusLabel.bottomAnchor.constraint(equalTo: statusContainer.bottomAnchor, constant: -4.scale)
         ])
     }
 }
@@ -161,6 +202,15 @@ private extension HomeFreeComicsCell {
     
     func makeLabel() -> UILabel {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        contentView.addSubview(view)
+        return view
+    }
+    
+    func makeStatusContainer() -> UIView {
+        let view = UIView()
+        view.layer.cornerRadius = 8.scale
+        view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
         return view

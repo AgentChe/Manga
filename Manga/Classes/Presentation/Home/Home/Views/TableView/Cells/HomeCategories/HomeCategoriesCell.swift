@@ -54,9 +54,9 @@ private extension HomeCategoriesCell {
 // MARK: Lazy initialization
 private extension HomeCategoriesCell {
     func makeCollectionView() -> HomeCategoriesCollectionView {
-        let layout = UICollectionViewFlowLayout()
+        let layout = HomeCategoriesCollectionLayout()
         layout.scrollDirection = .horizontal
-        layout.minimumLineSpacing = 8.scale
+        layout.minimumLineSpacing = 16.scale
         layout.minimumInteritemSpacing = 8.scale
         layout.sectionInset = UIEdgeInsets(top: 0, left: 16.scale, bottom: 0, right: 16.scale)
         

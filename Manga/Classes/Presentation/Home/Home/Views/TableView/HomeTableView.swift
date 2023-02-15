@@ -111,8 +111,12 @@ extension HomeTableView: UITableViewDelegate {
             return 78.scale
         case .separator:
             return 1.scale
-        case .categories:
-            return 45.scale
+        case .categories(let elements):
+            guard let category = elements.first else {
+                return 0
+            }
+            
+            return HomeCategoriesCollectionCell.size(for: category).height * 2 + 16.scale
         }
     }
     

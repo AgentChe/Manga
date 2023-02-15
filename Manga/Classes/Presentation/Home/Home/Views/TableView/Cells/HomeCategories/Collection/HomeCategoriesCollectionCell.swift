@@ -9,8 +9,13 @@ import UIKit
 import Kingfisher
 
 final class HomeCategoriesCollectionCell: UICollectionViewCell {
-    lazy var container = makeContainer()
     lazy var nameLabel = makeLabel()
+    
+    private static let attrs = TextAttributes()
+        .textColor(Appearance.white)
+        .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
+        .lineHeight(20.8.scale)
+        .letterSpacing(-0.17.scale)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -26,22 +31,13 @@ final class HomeCategoriesCollectionCell: UICollectionViewCell {
 
 // MARK: Public
 extension HomeCategoriesCollectionCell {
-    static func width(for element: Category) -> CGFloat {
-        let attrs = TextAttributes()
-            .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
-            .lineHeight(20.8.scale)
-            .letterSpacing(-0.17.scale)
-        let size = element.name.attributed(with: attrs).size()
-        return size.width + 32.scale
+    static func size(for element: Category) -> CGSize {
+        let size = element.name.attributed(with: HomeCategoriesCollectionCell.attrs).size()
+        return CGSize(width: size.width + 32.scale, height: size.height + 24.scale)
     }
     
     func setup(element: Category) {
-        nameLabel.attributedText = element.name
-            .attributed(with: TextAttributes()
-                            .textColor(Appearance.white)
-                            .font(Fonts.PlusJakartaSans.semiBold(size: 16.scale))
-                            .lineHeight(20.8.scale)
-                            .letterSpacing(-0.17.scale))
+        nameLabel.attributedText = element.name.attributed(with: HomeCategoriesCollectionCell.attrs)
     }
 }
 
@@ -61,34 +57,22 @@ private extension HomeCategoriesCollectionCell {
 private extension HomeCategoriesCollectionCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            container.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
-            container.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
-            container.topAnchor.constraint(equalTo: contentView.topAnchor),
-            container.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            nameLabel.centerXAnchor.constraint(equalTo: container.centerXAnchor),
-            nameLabel.centerYAnchor.constraint(equalTo: container.centerYAnchor)
+            nameLabel.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            nameLabel.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }
 }
 
 // MARK: Lazy initialization
 private extension HomeCategoriesCollectionCell {
-    func makeContainer() -> UIView {
-        let view = UIView()
+    func makeLabel() -> PaddingLabel {
+        let view = PaddingLabel()
+        view.insets = UIEdgeInsets(top: 12.scale, left: 16.scale, bottom: 12.scale, right: 16.scale)
         view.backgroundColor = Appearance.black
         view.layer.cornerRadius = 16.scale
+        view.layer.masksToBounds = true
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
-        return view
-    }
-    
-    func makeLabel() -> UILabel {
-        let view = UILabel()
-        view.translatesAutoresizingMaskIntoConstraints = false
-        container.addSubview(view)
         return view
     }
 }

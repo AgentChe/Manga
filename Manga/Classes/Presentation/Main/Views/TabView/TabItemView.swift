@@ -21,8 +21,12 @@ final class TabItemView: UIButton {
         }
     }
     
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    private let code: String
+    
+    init(code: String) {
+        self.code = code
+        
+        super.init(frame: .zero)
         
         makeConstraints()
     }
@@ -36,20 +40,28 @@ final class TabItemView: UIButton {
 private extension TabItemView {
     func update() {
         let color: UIColor
+        let image: UIImage?
         
         switch mode {
         case .selected:
-            color = Appearance.primary
+            color = UIColor(integralRed: 80, green: 120, blue: 248)
+            image = UIImage(named: code + ".Selected")
             alpha = 1
         case .deselected:
             color = Appearance.white
+            image = UIImage(named: code + ".Deselected")
             alpha = 0.5
         }
         
-        label.textColor = color
+        let attrs = TextAttributes()
+            .font(Fonts.PlusJakartaSans.semiBold(size: 12.scale))
+            .textColor(color)
+            .lineHeight(12.scale)
+            .letterSpacing(-0.17.scale)
+            .textAlignment(.center)
+        label.attributedText = code.localized.attributed(with: attrs)
         
-        iconView.image = iconView.image?.withRenderingMode(.alwaysTemplate)
-        iconView.tintColor = color
+        iconView.image = image
     }
 }
 
