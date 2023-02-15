@@ -86,9 +86,7 @@ private extension OBottomProgressView {
         constraint.constant = -40.scale
         constraint.isActive = true
         
-        UIView.animate(withDuration: 0.3, animations: { [weak self] in
-            self?.layoutIfNeeded()
-        })
+        layoutIfNeeded()
     }
     
     func upCurrentLabel(at stage: Stage, totalPercent: Int) {

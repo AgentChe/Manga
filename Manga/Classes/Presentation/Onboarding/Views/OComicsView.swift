@@ -276,13 +276,15 @@ private extension OComicsView {
     }
     
     func makeDislikeButton() -> OComicsButton {
-        let view = OComicsButton(imageName: "Onboarding.Comics.Dislike")
+        let view = OComicsButton(primaryImage: "Onboarding.Comics.Normal.Dislike",
+                                 highlitedImage: "Onboarding.Comics.Select.Dislike")
         view.backgroundColor = Appearance.black
         view.layer.cornerRadius = 20.scale
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.08
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 6.scale
+        view.isHighlighted = false
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(dislikeTapped), for: .touchUpInside)
         addSubview(view)
@@ -290,13 +292,15 @@ private extension OComicsView {
     }
     
     func makeLikeButton() -> OComicsButton {
-        let view = OComicsButton(imageName: "Onboarding.Comics.Like")
+        let view = OComicsButton(primaryImage: "Onboarding.Comics.Normal.Like",
+                                 highlitedImage: "Onboarding.Comics.Select.Like")
         view.backgroundColor = Appearance.black
         view.layer.cornerRadius = 20.scale
         view.layer.shadowColor = UIColor.black.cgColor
         view.layer.shadowOpacity = 0.08
         view.layer.shadowOffset = .zero
         view.layer.shadowRadius = 6.scale
+        view.isHighlighted = false
         view.translatesAutoresizingMaskIntoConstraints = false
         view.addTarget(self, action: #selector(likeTapped), for: .touchUpInside)
         addSubview(view)

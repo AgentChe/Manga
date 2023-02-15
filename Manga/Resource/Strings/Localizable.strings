@@ -24,7 +24,7 @@
 
 // MARK: Splash
 "Splash.Preloader1" = "Checking your account...";
-"Splash.Preloader2" = "Syncing the question bank...";
+"Splash.Preloader2" = "Syncing the manga library";
 "Splash.Preloader3" = "Setting up your account...";
 
 // MARK: Main
@@ -99,7 +99,7 @@
 "Onboarding.Progress.Title2" = "Identifying your\npreferences ...";
 "Onboarding.Progress.Title3" = "Creating your\npersonalized library...";
 "Onboarding.Progress.Bottom1" = "Your profile %i%%";
-"Onboarding.Progress.Bottom2" = "Book preferences %i%%";
+"Onboarding.Progress.Bottom2" = "Manga preferences %i%%";
 "Onboarding.Progress.Bottom3" = "Creating your plan %i%%";
 
 // MARK: Home
