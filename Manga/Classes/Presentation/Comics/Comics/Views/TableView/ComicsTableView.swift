@@ -115,7 +115,7 @@ extension ComicsTableView: UITableViewDelegate {
         case .cover:
             return 267.scale
         case .progress:
-            return 16.scale
+            return 8.scale
         case .chapter:
             return 60.scale
         case .separator:
@@ -124,8 +124,12 @@ extension ComicsTableView: UITableViewDelegate {
             return 53.scale
         case .block:
             return 323.scale
-        case .exploreCategories:
-            return 45.scale
+        case .exploreCategories(let elements):
+            guard let category = elements.first else {
+                return 0
+            }
+            
+            return HomeCategoriesCollectionCell.size(for: category).height * 2 + 16.scale
         default:
             return UITableView.automaticDimension
         }

@@ -55,7 +55,7 @@ private extension ComicsProgressCell {
 private extension ComicsProgressCell {
     func makeProgressView() -> UIProgressView {
         let view = UIProgressView()
-        view.layer.cornerRadius = 8.scale
+        view.layer.cornerRadius = 4.scale
         view.layer.masksToBounds = true
         view.trackTintColor = Appearance.grey
         view.progressTintColor = Appearance.primary
