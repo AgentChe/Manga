@@ -253,6 +253,7 @@
 		DED89D51299CC6FB00325104 /* PaygateProductButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D47299CC6FB00325104 /* PaygateProductButton.swift */; };
 		DED89D52299CC6FB00325104 /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D48299CC6FB00325104 /* PaygateInfoCell.swift */; };
 		DED89D56299D17F000325104 /* HomeCategoriesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D55299D17F000325104 /* HomeCategoriesCollectionLayout.swift */; };
+		DED89D6C299E321400325104 /* ExploreCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D6B299E321400325104 /* ExploreCollectionLayout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -507,6 +508,7 @@
 		DED89D47299CC6FB00325104 /* PaygateProductButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateProductButton.swift; sourceTree = "<group>"; };
 		DED89D48299CC6FB00325104 /* PaygateInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
 		DED89D55299D17F000325104 /* HomeCategoriesCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionLayout.swift; sourceTree = "<group>"; };
+		DED89D6B299E321400325104 /* ExploreCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionLayout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1294,6 +1296,7 @@
 				DE8A3155294A153C00B2E228 /* Cells */,
 				DE8A3154294A153C00B2E228 /* ExploreCollectionView.swift */,
 				DE8A315A294A153C00B2E228 /* ExploreCollectionElement.swift */,
+				DED89D6B299E321400325104 /* ExploreCollectionLayout.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1702,6 +1705,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DE2CB8392943651100AC2372 /* HomeComicsNumberCell.swift in Sources */,
+				DED89D6C299E321400325104 /* ExploreCollectionLayout.swift in Sources */,
 				DE2CB797293A731800AC2372 /* GetCategoriesRequest.swift in Sources */,
 				DED89D4B299CC6FB00325104 /* PaygateOptionInfo.swift in Sources */,
 				DE2CB7DB2940B4A300AC2372 /* OCategoriesCollectionView.swift in Sources */,

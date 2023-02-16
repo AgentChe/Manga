@@ -50,7 +50,7 @@ private extension ExploreCollectionTitleCell {
 private extension ExploreCollectionTitleCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            label.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             label.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
     }

@@ -84,13 +84,18 @@ extension ExploreCollectionView: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch elements[indexPath.row] {
         case .verticalOffset(let offset):
-            return CGSize(width: 343.scale, height: offset)
+            return CGSize(width: 375.scale, height: offset)
         case .title:
-            return CGSize(width: 343.scale, height: 24.scale)
-        case .categories:
-            return CGSize(width: 343.scale, height: 56.scale)
+            return CGSize(width: 375.scale, height: 24.scale)
+        case .categories(let elements):
+            guard let category = elements.first else {
+                return CGSize.zero
+            }
+            
+            return CGSize(width: 375.scale,
+                          height: HomeCategoriesCollectionCell.size(for: category).height * 2 + 16.scale)
         case .comics:
-            return CGSize(width: 163.scale, height: 339.scale)
+            return CGSize(width: 179.scale, height: 339.scale)
         }
     }
 }

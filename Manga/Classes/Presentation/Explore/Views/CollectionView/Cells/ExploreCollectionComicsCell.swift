@@ -106,7 +106,7 @@ private extension ExploreCollectionComicsCell {
 private extension ExploreCollectionComicsCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            comicsImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            comicsImageView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             comicsImageView.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             comicsImageView.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16.scale),
             comicsImageView.heightAnchor.constraint(equalToConstant: 236.scale)
@@ -120,13 +120,13 @@ private extension ExploreCollectionComicsCell {
         ])
         
         NSLayoutConstraint.activate([
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             nameLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             nameLabel.topAnchor.constraint(equalTo: comicsImageView.bottomAnchor, constant: 16.scale)
         ])
         
         NSLayoutConstraint.activate([
-            categoriesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
+            categoriesLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 16.scale),
             categoriesLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor),
             categoriesLabel.topAnchor.constraint(equalTo: nameLabel.bottomAnchor, constant: 5.scale)
         ])

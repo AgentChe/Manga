@@ -33,6 +33,7 @@ final class SearchView: UIView {
         makeConstraints()
         initialize()
         textEditing()
+        changed(state: state.value, animated: false)
     }
     
     required init?(coder: NSCoder) {
@@ -49,7 +50,7 @@ extension SearchView {
     var changedText: Signal<String> {
         text
             .asSignal(onErrorSignalWith: .never())
-            .filter { $0.count >= 5 }
+            .filter { $0.count >= 3 }
     }
 }
 
@@ -68,6 +69,7 @@ extension SearchView: UITextFieldDelegate {
 private extension SearchView {
     func initialize() {
         changedState
+            .skip(1)
             .emit(to: Binder(self) { base, state in
                 base.changed(state: state, animated: true)
             })

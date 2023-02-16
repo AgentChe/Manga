@@ -56,11 +56,11 @@ private extension ExploreCollectionCategoriesCell {
 // MARK: Lazy initialization
 private extension ExploreCollectionCategoriesCell {
     func makeCollectionView() -> HomeCategoriesCollectionView {
-        let layout = UICollectionViewFlowLayout()
+        let layout = HomeCategoriesCollectionLayout()
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 16.scale
-        layout.minimumInteritemSpacing = 16.scale
-        layout.sectionInset = UIEdgeInsets.zero
+        layout.minimumInteritemSpacing = 8.scale
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 16.scale, bottom: 0, right: 16.scale)
         
         let view = HomeCategoriesCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear

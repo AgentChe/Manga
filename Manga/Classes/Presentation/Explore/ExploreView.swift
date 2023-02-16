@@ -83,7 +83,7 @@ private extension ExploreView {
         addSubview(view)
         return view
     }
-
+    
     func makeSearchView() -> SearchView {
         let view = SearchView()
         view.backgroundColor = UIColor.clear
@@ -93,11 +93,11 @@ private extension ExploreView {
     }
     
     func makeCollectionView() -> ExploreCollectionView {
-        let layout = UICollectionViewFlowLayout()
+        let layout = ExploreCollectionLayout()
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 0
-        layout.minimumInteritemSpacing = 16.scale
-        layout.sectionInset = UIEdgeInsets(top: 30.scale, left: 16, bottom: 30.scale, right: 16)
+        layout.minimumInteritemSpacing = 0
+        layout.sectionInset = UIEdgeInsets(top: 30.scale, left: 0, bottom: 30.scale, right: 0)
         
         let view = ExploreCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear
