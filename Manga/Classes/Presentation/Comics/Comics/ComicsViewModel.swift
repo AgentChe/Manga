@@ -18,6 +18,7 @@ final class ComicsViewModel {
     lazy var didTapStartDownload = PublishRelay<Void>()
     lazy var didTapSort = PublishRelay<Void>()
     
+    lazy var seeAll = makeSeeAll()
     lazy var downloadState = makeDownloadState()
     lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
@@ -26,7 +27,6 @@ final class ComicsViewModel {
     lazy var elements = makeElements()
     lazy var activity = RxActivityIndicator()
     
-    private lazy var isShowingAll = makeIsShowingAll()
     private lazy var sort = makeSort()
     private lazy var readingProgress = makeReadingProgress()
     private lazy var categories = makeCategories()
@@ -47,6 +47,13 @@ final class ComicsViewModel {
 
 // MARK: Private
 private extension ComicsViewModel {
+    func makeSeeAll() -> Driver<[ComicsChapter]> {
+        didTapSeeAll
+            .withLatestFrom(comicsKit)
+            .map { $0.comics.chapters }
+            .asDriver(onErrorJustReturn: [])
+    }
+    
     func makeDownloadState() -> Driver<ComicsDownloadButton.State> {
         let initial = Observable
             .combineLatest(downloadComics.asObservable().take(1), comicsId)
@@ -167,8 +174,8 @@ private extension ComicsViewModel {
     
     func makeElements() -> Driver<[ComicsTableElement]> {
         Driver
-            .combineLatest(categories, comicsKit, isShowingAll, sort, readingProgress)
-            .map { [weak self] categories, comicsKit, isShowingAll, sort, readingProgress -> [ComicsTableElement] in
+            .combineLatest(categories, comicsKit, sort, readingProgress)
+            .map { [weak self] categories, comicsKit, sort, readingProgress -> [ComicsTableElement] in
                 guard let self = self else {
                     return []
                 }
@@ -217,7 +224,7 @@ private extension ComicsViewModel {
                 ])
                 
                 let sortedChapters = self.sortChapters(comics.chapters, sortBy: sort)
-                let chapters = isShowingAll ? sortedChapters : Array(sortedChapters.prefix(5))
+                let chapters = Array(sortedChapters.prefix(5))
                 chapters.enumerated().forEach { index, chapter in
                     result.append(.offset(19.scale))
                     
@@ -232,13 +239,10 @@ private extension ComicsViewModel {
                     }
                 }
                 
-                let needShowSeeAll = sortedChapters.count > 5 && !isShowingAll
-                if needShowSeeAll {
-                    result.append(contentsOf: [
-                        .offset(26.scale),
-                        .seeAll
-                    ])
-                }
+                result.append(contentsOf: [
+                    .offset(26.scale),
+                    .seeAll
+                ])
                 
                 result.append(contentsOf: [
                     .offset(30.scale),
@@ -277,13 +281,6 @@ private extension ComicsViewModel {
                 
                 return result
             }
-    }
-    
-    func makeIsShowingAll() -> Driver<Bool> {
-        didTapSeeAll
-            .map { true }
-            .startWith(false)
-            .asDriver(onErrorDriveWith: .never())
     }
     
     func makeSort() -> Driver<Sort> {

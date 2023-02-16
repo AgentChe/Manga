@@ -64,6 +64,12 @@ final class ComicsViewController: UIViewController {
             .bind(to: viewModel.didTapRead)
             .disposed(by: disposeBag)
         
+        viewModel.seeAll
+            .drive(Binder(self) { base, chapters in
+                base.seeAll(chapters: chapters)
+            })
+            .disposed(by: disposeBag)
+        
         viewModel.inReading
             .drive(Binder(mainView) { base, inReading in
                 base.updateButton(at: inReading)
@@ -176,6 +182,13 @@ extension ComicsViewController: ComicsTableDelegate {
 
 // MARK: Private
 private extension ComicsViewController {
+    func seeAll(chapters: [ComicsChapter]) {
+        let vc = ChaptersViewController.make(chapters: chapters, selectedChapter: nil) { [weak self] chapter in
+            self?.viewModel.didTapChapter.accept(chapter)
+        }
+        present(vc, animated: true)
+    }
+    
     func update(favorite: Bool) {
         let image = UIImage(named: favorite ? "Comics.Mark.Check" : "Comics.Mark.Uncheck")
         mainView.favoriteButton.iconView.image = image

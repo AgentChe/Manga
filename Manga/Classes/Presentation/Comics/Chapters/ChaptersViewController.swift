@@ -16,7 +16,7 @@ final class ChaptersViewController: UIViewController {
     private let viewModel: ChaptersViewModel
     private let selected: ((ComicsChapter) -> Void)
     
-    private init(chapters: [ComicsChapter], selectedChapter: ComicsChapter, selected: @escaping ((ComicsChapter) -> Void)) {
+    private init(chapters: [ComicsChapter], selectedChapter: ComicsChapter?, selected: @escaping ((ComicsChapter) -> Void)) {
         viewModel = ChaptersViewModel(chapters: chapters, selectedChapter: selectedChapter)
         self.selected = selected
         
@@ -59,7 +59,7 @@ final class ChaptersViewController: UIViewController {
 
 // MARK: Make
 extension ChaptersViewController {
-    static func make(chapters: [ComicsChapter], selectedChapter: ComicsChapter, selected: @escaping ((ComicsChapter) -> Void)) -> ChaptersViewController {
+    static func make(chapters: [ComicsChapter], selectedChapter: ComicsChapter?, selected: @escaping ((ComicsChapter) -> Void)) -> ChaptersViewController {
         let vc = ChaptersViewController(chapters: chapters, selectedChapter: selectedChapter, selected: selected)
         vc.modalPresentationStyle = .popover
         return vc

@@ -9,7 +9,7 @@ import RxSwift
 import RxCocoa
 
 final class ChaptersViewModel {
-    let selectChapter: BehaviorRelay<ComicsChapter>
+    let selectChapter: BehaviorRelay<ComicsChapter?>
     lazy var didTapSort = PublishRelay<Void>()
     
     lazy var elements = makeElements()
@@ -18,7 +18,7 @@ final class ChaptersViewModel {
     
     private lazy var sort = makeSort()
     
-    init(chapters: [ComicsChapter], selectedChapter: ComicsChapter) {
+    init(chapters: [ComicsChapter], selectedChapter: ComicsChapter?) {
         self.chapters = BehaviorRelay(value: chapters)
         self.selectChapter = BehaviorRelay(value: selectedChapter)
     }
