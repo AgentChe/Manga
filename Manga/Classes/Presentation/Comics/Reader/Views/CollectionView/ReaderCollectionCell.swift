@@ -22,13 +22,6 @@ final class ReaderCollectionCell: UICollectionViewCell {
     }
 }
 
-// MARK: Public
-extension ReaderCollectionCell {
-    func setup(elements: [ComicsChapterContentBlock]) {
-        tableView.setup(elements: elements)
-    }
-}
-
 // MARK: Private
 private extension ReaderCollectionCell {
     func initialize() {

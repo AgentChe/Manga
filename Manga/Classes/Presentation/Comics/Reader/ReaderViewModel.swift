@@ -14,7 +14,6 @@ final class ReaderViewModel {
     
     lazy var title = makeTitle()
     lazy var shareLink = makeShareLink()
-    lazy var isLastChapter = makeIsLastChapter()
     lazy var progress = makeProgress()
     lazy var currentChapter = makeCurrentChapter()
     lazy var elements = makeElements()
@@ -80,23 +79,6 @@ private extension ReaderViewModel {
             }
             .map { readingComics -> Float in
                 readingComics.progress
-            }
-    }
-    
-    func makeIsLastChapter() -> Driver<Bool> {
-        Driver
-            .combineLatest(
-                comics.asDriver(),
-                currentChapter.asDriver()
-            )
-            .map { comics, chapter -> Bool in
-                let chapters = comics.chapters.sorted(by: { $0.sort < $1.sort })
-                
-                guard let index = chapters.firstIndex(of: chapter) else {
-                    return true
-                }
-                
-                return (chapters.count - 1) == index
             }
     }
     

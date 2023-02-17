@@ -32,22 +32,25 @@ extension ReaderCollectionView {
     func setup(elements: [ReaderCollectionElement], scrollTo: ComicsChapter) {
         self.elements = elements
         
-        CATransaction.setCompletionBlock { [weak self] in
+        reloadData()
+        
+        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 0.1) { [weak self] in
             self?.scroll(to: scrollTo)
         }
-        CATransaction.begin()
-        reloadData()
-        CATransaction.commit()
     }
     
     func scroll(to chapter: ComicsChapter) {
         guard let index = elements.firstIndex(where: { $0.chapter == chapter }) else {
             return
         }
-        
+
         let indexPath = IndexPath(row: index, section: 0)
         
-        scrollToItem(at: indexPath, at: .left, animated: false)
+        guard let frame = layoutAttributesForItem(at: indexPath)?.frame else {
+            return
+        }
+        
+        scrollRectToVisible(frame, animated: false)
     }
 }
 
@@ -59,7 +62,7 @@ extension ReaderCollectionView: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = dequeueReusableCell(withReuseIdentifier: String(describing: ReaderCollectionCell.self), for: indexPath) as! ReaderCollectionCell
-        cell.setup(elements: elements[indexPath.row].elements)
+        cell.tableView.setup(elements: elements[indexPath.row].elements)
         return cell
     }
 }
@@ -77,7 +80,7 @@ extension ReaderCollectionView: UICollectionViewDelegateFlowLayout {
         else {
             return
         }
-        
+
         mainDelegate?.readerCollectionDidChanged(chapter: elements[index].chapter)
     }
 }

@@ -10,10 +10,7 @@ import UIKit
 final class ReaderView: UIView {
     lazy var navView = makeNavView()
     lazy var collectionView = makeCollectionView()
-    lazy var bottomView = makeBottomView()
     lazy var progressView = makeProgressView()
-    
-    private lazy var collectionViewBottomConstraint = NSLayoutConstraint()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,16 +35,6 @@ extension ReaderView {
             .textAlignment(.center)
         navView.titleLabel.attributedText = title.attributed(with: attrs)
     }
-    
-    func bottomView(hidden: Bool) {
-        bottomView.isHidden = hidden
-
-        collectionViewBottomConstraint.isActive = false
-        collectionViewBottomConstraint = collectionView.bottomAnchor.constraint(equalTo: hidden ? progressView.topAnchor : bottomView.topAnchor)
-        collectionViewBottomConstraint.isActive = true
-
-        layoutIfNeeded()
-    }
 }
 
 // MARK: Private
@@ -67,19 +54,11 @@ private extension ReaderView {
             navView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 99.scale : 69.scale)
         ])
         
-        collectionViewBottomConstraint = collectionView.bottomAnchor.constraint(equalTo: bottomView.topAnchor)
         NSLayoutConstraint.activate([
             collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
             collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
             collectionView.topAnchor.constraint(equalTo: navView.bottomAnchor),
-            collectionViewBottomConstraint
-        ])
-        
-        NSLayoutConstraint.activate([
-            bottomView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            bottomView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            bottomView.bottomAnchor.constraint(equalTo: progressView.topAnchor),
-            bottomView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 123.scale : 93.scale)
+            collectionView.bottomAnchor.constraint(equalTo: progressView.topAnchor)
         ])
         
         NSLayoutConstraint.activate([
@@ -110,20 +89,9 @@ private extension ReaderView {
         
         let view = ReaderCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear
+        view.contentInset = UIEdgeInsets.zero
         view.isPagingEnabled = true
         view.showsHorizontalScrollIndicator = false
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
-    func makeBottomView() -> ReaderBottomView {
-        let view = ReaderBottomView()
-        view.backgroundColor = Appearance.background
-        view.layer.shadowColor = UIColor.black.cgColor
-        view.layer.shadowOpacity = 0.06
-        view.layer.shadowOffset = .zero
-        view.layer.shadowRadius = 10.scale
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

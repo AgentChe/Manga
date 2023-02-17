@@ -26,6 +26,7 @@ final class ReaderTableView: UITableView {
 // MARK: Public
 extension ReaderTableView {
     func setup(elements: [ComicsChapterContentBlock]) {
+        rowsHeight = [:]
         self.elements = elements
         
         reloadData()

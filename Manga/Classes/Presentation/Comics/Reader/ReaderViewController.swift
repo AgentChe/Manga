@@ -62,22 +62,13 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        mainView.bottomView.shareButton.rx.tap
+        mainView.navView.shareButton.rx.tap
             .withLatestFrom(viewModel.shareLink)
             .bind(to: Binder(self) { base, url in
                 AmplitudeManager.shared
                     .logEvent(name: "Read Tap", parameters: ["what": "share"])
-                
+
                 base.share(url: url)
-            })
-            .disposed(by: disposeBag)
-        
-        mainView.bottomView.markFinishButton.rx.tap
-            .bind(to: Binder(self) { base, void in
-                AmplitudeManager.shared
-                    .logEvent(name: "Read Tap", parameters: ["what": "mark as finished"])
-                
-                base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
         
@@ -90,18 +81,6 @@ final class ReaderViewController: UIViewController {
         viewModel.progress
             .drive(Binder(mainView.progressView) { base, progress in
                 base.setProgress(progress, animated: true)
-            })
-            .disposed(by: disposeBag)
-        
-        viewModel.isLastChapter
-            .drive(Binder(mainView) { base, isLastChapter in
-                base.bottomView(hidden: !isLastChapter)
-            })
-            .disposed(by: disposeBag)
-        
-        viewModel.currentChapter
-            .drive(Binder(mainView.collectionView) { base, step in
-                base.scroll(to: step)
             })
             .disposed(by: disposeBag)
         
@@ -135,6 +114,7 @@ private extension ReaderViewController {
     func open(chapters: [ComicsChapter], currentChapter: ComicsChapter) {
         let vc = ChaptersViewController.make(chapters: chapters, selectedChapter: currentChapter) { [weak self] chapter in
             self?.viewModel.didSelectChapter.accept(chapter)
+            self?.mainView.collectionView.scroll(to: chapter)
         }
         present(vc, animated: true)
     }

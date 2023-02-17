@@ -232,7 +232,6 @@
 		DE8A31E32951C53B00B2E228 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D82951C53B00B2E228 /* ReaderView.swift */; };
 		DE8A31E42951C53B00B2E228 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */; };
 		DE8A31EB2951DE8F00B2E228 /* ReaderNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */; };
-		DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */; };
 		DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */; };
 		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
 		DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9002296F02F20093658A /* AppsFlyerManager.swift */; };
@@ -491,7 +490,6 @@
 		DE8A31D82951C53B00B2E228 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
 		DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderNavView.swift; sourceTree = "<group>"; };
-		DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderBottomView.swift; sourceTree = "<group>"; };
 		DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableView.swift; sourceTree = "<group>"; };
 		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
 		DEAD9002296F02F20093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
@@ -1509,7 +1507,6 @@
 				DEC9FFEC299F5A9C001B24A3 /* CollectionView */,
 				DE8A31EE2951EEA600B2E228 /* TableView */,
 				DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */,
-				DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1944,7 +1941,6 @@
 				DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */,
 				DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */,
 				DE2CB78C293A731800AC2372 /* GetExploreKitRequest.swift in Sources */,
-				DE8A31ED2951E0C800B2E228 /* ReaderBottomView.swift in Sources */,
 				DE2CB7DF2940B4A300AC2372 /* OGoalButton.swift in Sources */,
 				DE2CB83A2943651100AC2372 /* HomeCategoriesCollectionView.swift in Sources */,
 				DE2CB7EC2940B4A300AC2372 /* OnboardingView.swift in Sources */,

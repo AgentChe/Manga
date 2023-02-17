@@ -10,6 +10,7 @@ import UIKit
 final class ReaderNavView: UIView {
     lazy var closeButton = makeCloseButon()
     lazy var titleLabel = makeTitleLabel()
+    lazy var shareButton = makeShareButon()
     lazy var chaptersButton = makeChaptersButon()
     
     override init(frame: CGRect) {
@@ -39,9 +40,16 @@ private extension ReaderNavView {
         ])
         
         NSLayoutConstraint.activate([
+            shareButton.widthAnchor.constraint(equalToConstant: 24.scale),
+            shareButton.heightAnchor.constraint(equalToConstant: 24.scale),
+            shareButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -62.scale),
+            shareButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor)
+        ])
+        
+        NSLayoutConstraint.activate([
             chaptersButton.widthAnchor.constraint(equalToConstant: 24.scale),
             chaptersButton.heightAnchor.constraint(equalToConstant: 24.scale),
-            chaptersButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -25.scale),
+            chaptersButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             chaptersButton.centerYAnchor.constraint(equalTo: titleLabel.centerYAnchor)
         ])
     }
@@ -59,6 +67,14 @@ private extension ReaderNavView {
     
     func makeTitleLabel() -> UILabel {
         let view = UILabel()
+        view.translatesAutoresizingMaskIntoConstraints = false
+        addSubview(view)
+        return view
+    }
+    
+    func makeShareButon() -> TapAreaButton {
+        let view = TapAreaButton()
+        view.setImage(UIImage(named: "Reader.Share"), for: .normal)
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
