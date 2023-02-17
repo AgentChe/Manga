@@ -9,11 +9,11 @@ import UIKit
 
 final class ReaderView: UIView {
     lazy var navView = makeNavView()
-    lazy var tableView = makeTableView()
+    lazy var collectionView = makeCollectionView()
     lazy var bottomView = makeBottomView()
     lazy var progressView = makeProgressView()
     
-    private lazy var tableViewBottomConstraint = NSLayoutConstraint()
+    private lazy var collectionViewBottomConstraint = NSLayoutConstraint()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -42,9 +42,9 @@ extension ReaderView {
     func bottomView(hidden: Bool) {
         bottomView.isHidden = hidden
 
-        tableViewBottomConstraint.isActive = false
-        tableViewBottomConstraint = tableView.bottomAnchor.constraint(equalTo: hidden ? progressView.topAnchor : bottomView.topAnchor)
-        tableViewBottomConstraint.isActive = true
+        collectionViewBottomConstraint.isActive = false
+        collectionViewBottomConstraint = collectionView.bottomAnchor.constraint(equalTo: hidden ? progressView.topAnchor : bottomView.topAnchor)
+        collectionViewBottomConstraint.isActive = true
 
         layoutIfNeeded()
     }
@@ -67,12 +67,12 @@ private extension ReaderView {
             navView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 99.scale : 69.scale)
         ])
         
-        tableViewBottomConstraint = tableView.bottomAnchor.constraint(equalTo: bottomView.topAnchor)
+        collectionViewBottomConstraint = collectionView.bottomAnchor.constraint(equalTo: bottomView.topAnchor)
         NSLayoutConstraint.activate([
-            tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
-            tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: navView.bottomAnchor),
-            tableViewBottomConstraint
+            collectionView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            collectionView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            collectionView.topAnchor.constraint(equalTo: navView.bottomAnchor),
+            collectionViewBottomConstraint
         ])
         
         NSLayoutConstraint.activate([
@@ -101,13 +101,17 @@ private extension ReaderView {
         return view
     }
     
-    func makeTableView() -> ReaderTableView {
-        let view = ReaderTableView()
-        view.contentInset = UIEdgeInsets.zero
-        view.separatorStyle = .none
-        view.showsVerticalScrollIndicator = false
-        view.contentInsetAdjustmentBehavior = .never
+    func makeCollectionView() -> ReaderCollectionView {
+        let layout = UICollectionViewFlowLayout()
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 0
+        layout.minimumInteritemSpacing = 0
+        layout.sectionInset = UIEdgeInsets.zero
+        
+        let view = ReaderCollectionView(frame: .zero, collectionViewLayout: layout)
         view.backgroundColor = UIColor.clear
+        view.isPagingEnabled = true
+        view.showsHorizontalScrollIndicator = false
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

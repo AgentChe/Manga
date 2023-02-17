@@ -44,15 +44,6 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        mainView.bottomView.markFinishButton.rx.tap
-            .bind(to: Binder(self) { base, void in
-                AmplitudeManager.shared
-                    .logEvent(name: "Read Tap", parameters: ["what": "mark as finished"])
-                
-                base.dismiss(animated: true)
-            })
-            .disposed(by: disposeBag)
-        
         mainView.navView.chaptersButton.rx.tap
             .withLatestFrom(viewModel.comics)
             .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
@@ -61,6 +52,13 @@ final class ReaderViewController: UIViewController {
                     .logEvent(name: "Read Tap", parameters: ["what": "chapters"])
                 
                 base.open(chapters: args.0.chapters, currentChapter: args.1)
+            })
+            .disposed(by: disposeBag)
+        
+        viewModel.elements
+            .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
+            .drive(Binder(mainView.collectionView) { base, args in
+                base.setup(elements: args.0, scrollTo: args.1)
             })
             .disposed(by: disposeBag)
         
@@ -74,15 +72,18 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.title
-            .drive(Binder(mainView) { base, title in
-                base.setup(title: title)
+        mainView.bottomView.markFinishButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                AmplitudeManager.shared
+                    .logEvent(name: "Read Tap", parameters: ["what": "mark as finished"])
+                
+                base.dismiss(animated: true)
             })
             .disposed(by: disposeBag)
         
-        viewModel.elements
-            .drive(Binder(mainView.tableView) { base, elements in
-                base.setup(elements: elements)
+        viewModel.title
+            .drive(Binder(mainView) { base, title in
+                base.setup(title: title)
             })
             .disposed(by: disposeBag)
         
@@ -97,6 +98,14 @@ final class ReaderViewController: UIViewController {
                 base.bottomView(hidden: !isLastChapter)
             })
             .disposed(by: disposeBag)
+        
+        viewModel.currentChapter
+            .drive(Binder(mainView.collectionView) { base, step in
+                base.scroll(to: step)
+            })
+            .disposed(by: disposeBag)
+        
+        mainView.collectionView.mainDelegate = self
     }
 }
 
@@ -109,6 +118,13 @@ extension ReaderViewController {
     }
 }
 
+// MARK: ReaderCollectionDelegate
+extension ReaderViewController: ReaderCollectionDelegate {
+    func readerCollectionDidChanged(chapter: ComicsChapter) {
+        viewModel.didSelectChapter.accept(chapter)
+    }
+}
+
 // MARK: Private
 private extension ReaderViewController {
     func share(url: URL) {
@@ -118,7 +134,7 @@ private extension ReaderViewController {
     
     func open(chapters: [ComicsChapter], currentChapter: ComicsChapter) {
         let vc = ChaptersViewController.make(chapters: chapters, selectedChapter: currentChapter) { [weak self] chapter in
-            self?.viewModel.currentChapter.accept(chapter)
+            self?.viewModel.didSelectChapter.accept(chapter)
         }
         present(vc, animated: true)
     }

@@ -10,19 +10,22 @@ import RxCocoa
 
 final class ReaderViewModel {
     let comics: BehaviorRelay<Comics>
-    let currentChapter: BehaviorRelay<ComicsChapter>
+    let didSelectChapter = PublishRelay<ComicsChapter>()
     
     lazy var title = makeTitle()
-    lazy var elements = makeElements()
     lazy var shareLink = makeShareLink()
-    lazy var progress = makeProgress()
     lazy var isLastChapter = makeIsLastChapter()
+    lazy var progress = makeProgress()
+    lazy var currentChapter = makeCurrentChapter()
+    lazy var elements = makeElements()
+    
+    private let startChapter: BehaviorRelay<ComicsChapter>
     
     private lazy var contentManager = ContentManager()
     
     init(comics: Comics, startChapter: ComicsChapter) {
         self.comics = BehaviorRelay(value: comics)
-        self.currentChapter = BehaviorRelay(value: startChapter)
+        self.startChapter = BehaviorRelay(value: startChapter)
     }
 }
 
@@ -43,12 +46,6 @@ private extension ReaderViewModel {
                 
                 return String(format: "Reader.ChapterNumber".localized, index + 1)
             }
-    }
-    
-    func makeElements() -> Driver<[ComicsChapterContentBlock]> {
-        currentChapter
-            .asDriver()
-            .map { $0.content }
     }
     
     func makeShareLink() -> Driver<URL> {
@@ -100,6 +97,27 @@ private extension ReaderViewModel {
                 }
                 
                 return (chapters.count - 1) == index
+            }
+    }
+    
+    func makeCurrentChapter() -> Driver<ComicsChapter> {
+        Driver
+            .merge(
+                startChapter.asDriver(),
+                didSelectChapter.asDriver(onErrorDriveWith: .never())
+            )
+            .distinctUntilChanged()
+    }
+    
+    func makeElements() -> Driver<[ReaderCollectionElement]> {
+        comics.asDriver()
+            .map { comics -> [ReaderCollectionElement] in
+                comics.chapters
+                    .sorted(by: { $0.sort < $1.sort })
+                    .map { chapter -> ReaderCollectionElement in
+                        ReaderCollectionElement(chapter: chapter,
+                                                elements: chapter.content)
+                    }
             }
     }
 }

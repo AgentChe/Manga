@@ -237,6 +237,9 @@
 		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
 		DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9002296F02F20093658A /* AppsFlyerManager.swift */; };
 		DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */; };
+		DEC9FFEE299F5AAC001B24A3 /* ReaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */; };
+		DEC9FFF0299F5AB4001B24A3 /* ReaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */; };
+		DEC9FFF2299F5AC6001B24A3 /* ReaderCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */; };
 		DED89D36299CC69D00325104 /* PaygateOptionLineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D2E299CC69D00325104 /* PaygateOptionLineComponent.swift */; };
 		DED89D37299CC69D00325104 /* PaygateOptionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D2F299CC69D00325104 /* PaygateOptionConfig.swift */; };
 		DED89D38299CC69D00325104 /* Paygate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D30299CC69D00325104 /* Paygate.swift */; };
@@ -493,6 +496,9 @@
 		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
 		DEAD9002296F02F20093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionView.swift; sourceTree = "<group>"; };
+		DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionCell.swift; sourceTree = "<group>"; };
+		DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionElement.swift; sourceTree = "<group>"; };
 		DED89D2E299CC69D00325104 /* PaygateOptionLineComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionLineComponent.swift; sourceTree = "<group>"; };
 		DED89D2F299CC69D00325104 /* PaygateOptionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionConfig.swift; sourceTree = "<group>"; };
 		DED89D30299CC69D00325104 /* Paygate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paygate.swift; sourceTree = "<group>"; };
@@ -1500,6 +1506,7 @@
 		DE8A31E92951DE8400B2E228 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				DEC9FFEC299F5A9C001B24A3 /* CollectionView */,
 				DE8A31EE2951EEA600B2E228 /* TableView */,
 				DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */,
 				DE8A31EC2951E0C800B2E228 /* ReaderBottomView.swift */,
@@ -1514,6 +1521,16 @@
 				DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */,
 			);
 			path = TableView;
+			sourceTree = "<group>";
+		};
+		DEC9FFEC299F5A9C001B24A3 /* CollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */,
+				DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */,
+				DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */,
+			);
+			path = CollectionView;
 			sourceTree = "<group>";
 		};
 		DED89D2C299CC69D00325104 /* Paygate */ = {
@@ -1788,6 +1805,7 @@
 				DE8A313629486F3A00B2E228 /* ComicsByCollectionCell.swift in Sources */,
 				DE8A316D294B68BF00B2E228 /* DownloadComicsOperation.swift in Sources */,
 				DE8A314B2948A1F900B2E228 /* SettingsTableView.swift in Sources */,
+				DEC9FFF2299F5AC6001B24A3 /* ReaderCollectionElement.swift in Sources */,
 				DE8A31AF294DEB7E00B2E228 /* ComicsProgressCell.swift in Sources */,
 				DE2CB795293A731800AC2372 /* GetSavedComicsRequest.swift in Sources */,
 				DE2CB5FD293A0C8900AC2372 /* SplashReceiptValidationObserver.swift in Sources */,
@@ -1832,6 +1850,7 @@
 				DE8A31B8294DEB7E00B2E228 /* ComicsCoverCell.swift in Sources */,
 				DE2CB8322943651100AC2372 /* HomeViewModel.swift in Sources */,
 				DE2CB7DC2940B4A300AC2372 /* OCategoriesCollectionCell.swift in Sources */,
+				DEC9FFEE299F5AAC001B24A3 /* ReaderCollectionView.swift in Sources */,
 				DE2CB556293A0B6200AC2372 /* Toast.swift in Sources */,
 				DE2CB550293A0B6200AC2372 /* NetworkError.swift in Sources */,
 				DE2CB581293A0C3E00AC2372 /* Session.swift in Sources */,
@@ -1920,6 +1939,7 @@
 				DE8A31BC294DEB7E00B2E228 /* ComicsTableElement.swift in Sources */,
 				DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */,
 				DE2CB8362943651100AC2372 /* HomeTitleCell.swift in Sources */,
+				DEC9FFF0299F5AB4001B24A3 /* ReaderCollectionCell.swift in Sources */,
 				DE2CB8382943651100AC2372 /* HomeFreeComicsCell.swift in Sources */,
 				DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */,
 				DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */,
