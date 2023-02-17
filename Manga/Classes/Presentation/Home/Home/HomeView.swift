@@ -9,9 +9,11 @@ import UIKit
 import RxSwift
 
 final class HomeView: UIView {
-    lazy var titleLabel = makeTitleLabel()
+    lazy var headerView = makeHeaderView()
     lazy var tableView = makeTableView()
     lazy var preloader = makePreloader()
+    
+    private lazy var headerHeightConstraint = NSLayoutConstraint()
     
     private lazy var disposeBag = DisposeBag()
     
@@ -31,22 +33,39 @@ final class HomeView: UIView {
 private extension HomeView {
     func initialize() {
         backgroundColor = Appearance.background
+        
+        tableView.rx.contentOffset
+            .bind(to: Binder(self) { base, offset in
+                let max = ScreenSize.isIphoneXFamily ? 354.scale : 324.scale
+                let min = ScreenSize.isIphoneXFamily ? 88.scale : 68.scale
+                let bias = (max - offset.y - base.tableView.contentInset.top)
+                let height = bias < min ? min : (bias > max ? max : bias)
+                base.headerHeightConstraint.constant = height
+                
+                let labelHiddenY = base.tableView.contentInset.top + offset.y
+                let labelMode: HomeHeaderView.Mode = labelHiddenY > 15.scale ? .navTitle : .leadingTitle
+                base.headerView.updateTitle(by: labelMode)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
 // MARK: Make constraints
 private extension HomeView {
     func makeConstraints() {
+        headerHeightConstraint = headerView.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 354.scale : 324)
         NSLayoutConstraint.activate([
-            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
-            titleLabel.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor)
+            headerView.leadingAnchor.constraint(equalTo: leadingAnchor),
+            headerView.trailingAnchor.constraint(equalTo: trailingAnchor),
+            headerView.topAnchor.constraint(equalTo: topAnchor),
+            headerHeightConstraint
         ])
         
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
             tableView.bottomAnchor.constraint(equalTo: bottomAnchor),
-            tableView.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 2.scale)
+            tableView.topAnchor.constraint(equalTo: topAnchor, constant: ScreenSize.isIphoneXFamily ? 88.scale : 68.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -58,15 +77,9 @@ private extension HomeView {
 
 // MARK: Lazy initialization
 private extension HomeView {
-    func makeTitleLabel() -> UILabel {
-        let attrs = TextAttributes()
-            .textColor(Appearance.white)
-            .font(Fonts.PlusJakartaSans.extraBold(size: 34.scale))
-            .lineHeight(40.8.scale)
-            .letterSpacing(-1.scale)
-        
-        let view = UILabel()
-        view.attributedText = "Home.Title".localized.attributed(with: attrs)
+    func makeHeaderView() -> HomeHeaderView {
+        let view = HomeHeaderView()
+        view.backgroundColor = Appearance.background
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view
@@ -74,7 +87,7 @@ private extension HomeView {
     
     func makeTableView() -> HomeTableView {
         let view = HomeTableView()
-        view.contentInset = UIEdgeInsets(top: 28.scale, left: 0, bottom: 28.scale, right: 0)
+        view.contentInset = UIEdgeInsets(top: 72.scale, left: 0, bottom: 28.scale, right: 0)
         view.separatorStyle = .none
         view.showsVerticalScrollIndicator = false
         view.contentInsetAdjustmentBehavior = .never

@@ -254,6 +254,7 @@
 		DED89D52299CC6FB00325104 /* PaygateInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D48299CC6FB00325104 /* PaygateInfoCell.swift */; };
 		DED89D56299D17F000325104 /* HomeCategoriesCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D55299D17F000325104 /* HomeCategoriesCollectionLayout.swift */; };
 		DED89D6C299E321400325104 /* ExploreCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D6B299E321400325104 /* ExploreCollectionLayout.swift */; };
+		DED89D70299F419000325104 /* HomeHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D6F299F419000325104 /* HomeHeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -509,6 +510,7 @@
 		DED89D48299CC6FB00325104 /* PaygateInfoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateInfoCell.swift; sourceTree = "<group>"; };
 		DED89D55299D17F000325104 /* HomeCategoriesCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCategoriesCollectionLayout.swift; sourceTree = "<group>"; };
 		DED89D6B299E321400325104 /* ExploreCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreCollectionLayout.swift; sourceTree = "<group>"; };
+		DED89D6F299F419000325104 /* HomeHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeHeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -1145,6 +1147,7 @@
 			isa = PBXGroup;
 			children = (
 				DE2CB8112943651000AC2372 /* TableView */,
+				DED89D6F299F419000325104 /* HomeHeaderView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1806,6 +1809,7 @@
 				DE2CB78B293A731800AC2372 /* GetExploreKitResponse.swift in Sources */,
 				DE8A31482948A1F900B2E228 /* SettingsLinkCell.swift in Sources */,
 				DE2CB565293A0B6200AC2372 /* Appearance.swift in Sources */,
+				DED89D70299F419000325104 /* HomeHeaderView.swift in Sources */,
 				DE2CB54F293A0B6200AC2372 /* SignError.swift in Sources */,
 				DE2CB603293A0C8900AC2372 /* TryAgainViewController.swift in Sources */,
 				DE2CB778293A731800AC2372 /* Comics.swift in Sources */,

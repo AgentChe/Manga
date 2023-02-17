@@ -57,8 +57,26 @@ final class HomeViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        addSettingsButton()
+        mainView.headerView.settingsButton.rx.tap
+            .bind(to: Binder(self) { base, void in
+                let vc = SettingsViewController.make()
+                base.navigationController?.pushViewController(vc, animated: true)
+            })
+            .disposed(by: disposeBag)
+        
         mainView.tableView.mainDelegate = self
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.navigationBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        navigationController?.navigationBar.isHidden = false
     }
 }
 
@@ -103,26 +121,6 @@ extension HomeViewController: HomeTableDelegate {
 
 // MARK: Private
 private extension HomeViewController {
-    func addSettingsButton() {
-        let button = UIButton(type: .system)
-        button.setImage(UIImage(named: "Home.Settings"), for: .normal)
-        
-        let item = UIBarButtonItem(customView: button)
-        item.customView?.translatesAutoresizingMaskIntoConstraints = false
-        
-        item.customView?.widthAnchor.constraint(equalToConstant: 24.scale).isActive = true
-        item.customView?.heightAnchor.constraint(equalToConstant: 24.scale).isActive = true
-        
-        navigationItem.rightBarButtonItem = item
-        
-        button.rx.tap
-            .bind(to: Binder(self) { base, void in
-                let vc = SettingsViewController.make()
-                base.navigationController?.pushViewController(vc, animated: true)
-            })
-            .disposed(by: disposeBag)
-    }
-    
     func openError() -> Observable<Void> {
         Observable<Void>
             .create { [weak self] observe in

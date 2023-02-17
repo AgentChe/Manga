@@ -24,8 +24,8 @@ final class ExploreCollectionLayout: UICollectionViewFlowLayout {
 
         let itemsCount = collectionView.numberOfItems(inSection: 0)
         
-        var x = sectionInset.left
-        var y = sectionInset.top
+        var x = collectionView.contentInset.left
+        var y = CGFloat(0)
         
         let contentWidth = collectionView.bounds.width
         
@@ -42,7 +42,7 @@ final class ExploreCollectionLayout: UICollectionViewFlowLayout {
             let newLine = (x + itemSize.width) > contentWidth
             
             if newLine {
-                x = sectionInset.left
+                x = collectionView.contentInset.left
                 
                 y += lastHeight + minimumLineSpacing
             }
@@ -57,7 +57,7 @@ final class ExploreCollectionLayout: UICollectionViewFlowLayout {
             lastHeight = itemSize.height
         }
         
-        contentHeight = y + sectionInset.bottom + lastHeight - minimumLineSpacing
+        contentHeight = y + collectionView.contentInset.bottom + lastHeight - minimumLineSpacing
     }
     
     override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
