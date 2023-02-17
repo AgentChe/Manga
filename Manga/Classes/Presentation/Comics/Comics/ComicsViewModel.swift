@@ -68,18 +68,11 @@ private extension ComicsViewModel {
             }
             .asDriver(onErrorDriveWith: .never())
         
-        let downloaded = ContentMediator.shared.comicsDidDownloaded
-            .withLatestFrom(comicsId.asSignal(onErrorSignalWith: .never())) { ($0, $1) }
-            .flatMap { downloadedComics, comicsId -> Driver<ComicsDownloadButton.State> in
-                guard downloadedComics.id == comicsId else {
-                    return .never()
-                }
-                
-                return .just(.downloaded)
-            }
+        let startDownload = didTapStartDownload
+            .map { ComicsDownloadButton.State.downloading }
             .asDriver(onErrorDriveWith: .never())
         
-        let startDownload = didTapStartDownload
+        let downloadedAfterStart = didTapStartDownload
             .withLatestFrom(comicsKit)
             .flatMapLatest { [weak self] comicsKit -> Observable<ComicsDownloadButton.State> in
                 guard let self = self else {
@@ -89,11 +82,27 @@ private extension ComicsViewModel {
                 return self.contentManager
                     .download(comics: comicsKit.comics)
                     .asObservable()
-                    .map { ComicsDownloadButton.State.downloading }
+                    .map { ComicsDownloadButton.State.downloaded }
             }
             .asDriver(onErrorDriveWith: .never())
         
-        return Driver.merge(initial, downloaded, startDownload)
+        let downloadedFromMediator = ContentMediator.shared.comicsDidDownloaded
+            .withLatestFrom(comicsId.asSignal(onErrorSignalWith: .never())) { ($0, $1) }
+            .flatMap { downloadedComics, comicsId -> Driver<ComicsDownloadButton.State> in
+                guard downloadedComics.id == comicsId else {
+                    return .never()
+                }
+
+                return .just(.downloaded)
+            }
+            .asDriver(onErrorDriveWith: .never())
+        
+        return Driver.merge(
+            initial,
+            startDownload,
+            downloadedAfterStart,
+            downloadedFromMediator
+        )
     }
     
     func makeReader() -> Driver<(Comics, ComicsChapter)> {
