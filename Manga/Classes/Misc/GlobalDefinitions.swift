@@ -6,7 +6,7 @@
 //
 
 final class GlobalDefinitions {
-    static let domain = "https://manga.mustname.com"
+    static let domain = "https://manga.awesum-apps.com"
     static let apiKey = "b8Z3e66Yi0k99k6JBZUT"
     
     static let otterScaleHost = "https://api.korrekted.com"
@@ -18,9 +18,9 @@ final class GlobalDefinitions {
     static let amplitudeApiKey = "1336d08d429ceb343970fd360e3253f6"
     static let appsFlyerApiKey = "DCciCfYXjMQ8QnkdCg8qzk"
     
-    static let termsOfServiceUrl = "https://mustname.com/terms"
-    static let privacyPolicyUrl = "https://mustname.com/policy"
-    static let contactUsUrl = "https://mustname.com/contact"
+    static let termsOfServiceUrl = "https://awesum-apps.com/terms"
+    static let privacyPolicyUrl = "https://awesum-apps.com/policy"
+    static let contactUsUrl = "https://awesum-apps.com/contact"
     
     enum Paygate {
         static let defaultLifetime = "mobile.manga.4ever"
