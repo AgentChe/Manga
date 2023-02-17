@@ -34,7 +34,6 @@ final class ReaderTableCell: UITableViewCell {
 // MARK: Public
 extension ReaderTableCell {
     func setup(imageUrl: URL, calculated: @escaping ((CGFloat) -> Void)) {
-        // TODO: загружать и самому вставлять картинку в imageView
         pictureView.kf.setImage(with: imageUrl, completionHandler: { [weak self] result in
             guard let self = self, case let .success(image) = result else {
                 return
