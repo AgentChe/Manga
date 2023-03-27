@@ -12,7 +12,7 @@ struct GetRankingComicsRequest: APIRequestBody {
     let rankingId: Int
     
     var url: String {
-        GlobalDefinitions.domain + "/api/ranking/comics"
+        GlobalDefinitions.domain + "/api/v2/ranking/comics"
     }
     
     var method: HTTPMethod {

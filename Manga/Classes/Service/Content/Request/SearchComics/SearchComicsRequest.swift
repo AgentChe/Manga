@@ -12,7 +12,7 @@ struct SearchComicsRequest: APIRequestBody {
     let search: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/search"
+        GlobalDefinitions.domain + "/api/v2/search"
     }
     
     var method: HTTPMethod {

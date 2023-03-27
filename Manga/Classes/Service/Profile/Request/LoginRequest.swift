@@ -11,7 +11,7 @@ struct LoginRequest: APIRequestBody {
     let userToken: String
 
     var url: String {
-        GlobalDefinitions.domain + "/api/users/login"
+        GlobalDefinitions.domain + "/api/v2/users/login"
     }
     
     var method: HTTPMethod {

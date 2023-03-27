@@ -12,7 +12,7 @@ struct GetCategoryComicsRequest: APIRequestBody {
     let categoryId: Int
     
     var url: String {
-        GlobalDefinitions.domain + "/api/category/comics"
+        GlobalDefinitions.domain + "/api/v2/category/comics"
     }
     
     var method: HTTPMethod {

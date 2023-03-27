@@ -11,7 +11,7 @@ struct GetRankingRequest: APIRequestBody {
     let userToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/ranking"
+        GlobalDefinitions.domain + "/api/v2/ranking"
     }
     
     var method: HTTPMethod {

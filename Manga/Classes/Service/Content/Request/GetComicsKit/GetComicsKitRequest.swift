@@ -12,7 +12,7 @@ struct GetComicsKitRequest: APIRequestBody {
     let comicsId: Int
     
     var url: String {
-        GlobalDefinitions.domain + "/api/comics"
+        GlobalDefinitions.domain + "/api/v2/comics"
     }
     
     var method: HTTPMethod {

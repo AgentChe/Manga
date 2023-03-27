@@ -11,7 +11,7 @@ struct GetCategoriesRequest: APIRequestBody {
     let userToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/categories"
+        GlobalDefinitions.domain + "/api/v2/categories"
     }
     
     var method: HTTPMethod {

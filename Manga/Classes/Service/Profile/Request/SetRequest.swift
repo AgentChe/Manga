@@ -17,7 +17,7 @@ struct SetRequest: APIRequestBody {
     let notificationsOptions: [Int]?
     
     var url: String {
-        GlobalDefinitions.domain + "/api/users/set"
+        GlobalDefinitions.domain + "/api/v2/users/set"
     }
     
     var method: HTTPMethod {

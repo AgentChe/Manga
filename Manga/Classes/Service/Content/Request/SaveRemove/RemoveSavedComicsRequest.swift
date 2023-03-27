@@ -12,7 +12,7 @@ struct RemoveSavedComicsRequest: APIRequestBody {
     let comicsId: Int
     
     var url: String {
-        GlobalDefinitions.domain + "/api/comics/remove"
+        GlobalDefinitions.domain + "/api/v2/comics/remove"
     }
     
     var method: HTTPMethod {

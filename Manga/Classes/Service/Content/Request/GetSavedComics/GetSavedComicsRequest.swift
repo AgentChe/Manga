@@ -11,7 +11,7 @@ struct GetSavedComicsRequest: APIRequestBody {
     let userToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/comics/saved"
+        GlobalDefinitions.domain + "/api/v2/comics/saved"
     }
     
     var method: HTTPMethod {

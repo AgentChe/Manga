@@ -12,7 +12,7 @@ struct SyncTokensRequest: APIRequestBody {
     let newToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/users/set"
+        GlobalDefinitions.domain + "/api/v2/users/set"
     }
     
     var method: HTTPMethod {

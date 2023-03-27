@@ -11,7 +11,7 @@ struct GetHomeKitRequest: APIRequestBody {
     let userToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/home"
+        GlobalDefinitions.domain + "/api/v2/home"
     }
     
     var method: HTTPMethod {

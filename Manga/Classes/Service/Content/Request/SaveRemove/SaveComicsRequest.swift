@@ -12,7 +12,7 @@ struct SaveComicsRequest: APIRequestBody {
     let comicsId: Int
     
     var url: String {
-        GlobalDefinitions.domain + "/api/comics/save"
+        GlobalDefinitions.domain + "/api/v2/comics/save"
     }
     
     var method: HTTPMethod {

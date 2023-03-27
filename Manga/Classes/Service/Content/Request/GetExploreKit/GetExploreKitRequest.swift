@@ -11,7 +11,7 @@ struct GetExploreKitRequest: APIRequestBody {
     let userToken: String
     
     var url: String {
-        GlobalDefinitions.domain + "/api/explore"
+        GlobalDefinitions.domain + "/api/v2/explore"
     }
     
     var method: HTTPMethod {
