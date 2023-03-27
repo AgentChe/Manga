@@ -47,20 +47,9 @@ final class GetComicsKitResponse {
                 let date = dateFormatter.date(from: dateString),
                 let up = chapterJSON["up"] as? Bool,
                 let sort = chapterJSON["sort"] as? Int,
-                let contentArray = chapterJSON["content"] as? [[String: Any]]
+                let content = Self.content(chapterJSON: chapterJSON)
             else {
                 return nil
-            }
-            
-            let content = contentArray.compactMap { contentJSON -> ComicsChapterContentBlock? in
-                guard
-                    let imageOriginalPath = contentJSON["image_original"] as? String,
-                    let imageOriginalUrl = URL(string: imageOriginalPath)
-                else {
-                    return nil
-                }
-                
-                return ComicsChapterContentBlock(originalImageUrl: imageOriginalUrl)
             }
             
             return ComicsChapter(date: date,
@@ -136,5 +125,42 @@ private extension GetComicsKitResponse {
                            paid: paid,
                            status: status,
                            isTop5: isTop5)
+    }
+    
+    static func content(chapterJSON: [String: Any]) -> ComicsChapterContent? {
+        guard let type = chapterJSON["type"] as? Int else {
+            return nil
+        }
+        
+        switch type {
+        case 0:
+            guard let array = chapterJSON["content"] as? [[String: Any]] else {
+                return nil
+            }
+            
+            let urls = array.compactMap { json -> URL? in
+                guard
+                    let path = json["image_original"] as? String,
+                    let url = URL(string: path)
+                else {
+                    return nil
+                }
+                
+                return url
+            }
+            
+            return .images(urls)
+        case 1:
+            guard
+                let path = chapterJSON["content"] as? String,
+                let url = URL(string: path)
+            else {
+                return nil
+            }
+            
+            return .pdf(url)
+        default:
+            return nil
+        }
     }
 }

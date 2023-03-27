@@ -42,10 +42,11 @@ private extension DownloadComicsOperation {
     func urls(from comics: Comics) -> [URL] {
         var urls = [comics.imageUrl]
         
+        // TODO
         comics.chapters.forEach { chapter in
-            chapter.content.forEach { block in
-                urls.append(block.originalImageUrl)
-            }
+//            chapter.content.forEach { block in
+//                urls.append(block.originalImageUrl)
+//            }
         }
         
         return urls

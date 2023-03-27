@@ -10,7 +10,7 @@ import UIKit
 final class ReaderTableView: UITableView {
     private var rowsHeight = [Int: CGFloat]()
     
-    private lazy var elements = [ComicsChapterContentBlock]()
+    private lazy var elements = [URL]()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
@@ -25,7 +25,7 @@ final class ReaderTableView: UITableView {
 
 // MARK: Public
 extension ReaderTableView {
-    func setup(elements: [ComicsChapterContentBlock]) {
+    func setup(elements: [URL]) {
         rowsHeight = [:]
         self.elements = elements
         
@@ -42,7 +42,7 @@ extension ReaderTableView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let element = elements[indexPath.row]
         let cell = dequeueReusableCell(withIdentifier: String(describing: ReaderTableCell.self)) as! ReaderTableCell
-        cell.setup(imageUrl: element.originalImageUrl) { [weak self] height in
+        cell.setup(imageUrl: element) { [weak self] height in
             guard let self = self, !self.rowsHeight.contains(where: { $0.key == indexPath.row }) else {
                 return
             }

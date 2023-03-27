@@ -11,5 +11,5 @@ struct ComicsChapter: Codable, Hashable {
     let date: Date
     let up: Bool
     let sort: Int
-    let content: [ComicsChapterContentBlock]
+    let content: ComicsChapterContent
 }

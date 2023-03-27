@@ -97,8 +97,16 @@ private extension ReaderViewModel {
                 comics.chapters
                     .sorted(by: { $0.sort < $1.sort })
                     .map { chapter -> ReaderCollectionElement in
-                        ReaderCollectionElement(chapter: chapter,
-                                                elements: chapter.content)
+                        let elements: [URL]
+                        switch chapter.content {
+                        case .images(let urls):
+                            elements = urls
+                        case .pdf(let url):
+                            elements = [url]
+                        }
+                        
+                        return ReaderCollectionElement(chapter: chapter,
+                                                elements: elements)
                     }
             }
     }
