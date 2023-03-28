@@ -122,6 +122,10 @@
 "Settings.TermsOfUse" = "Terms of Use";
 "Settings.GetAccess.Title" = "Get access to the full library";
 "Settings.GetAccess.Button" = "Start free trial";
+"Settings.ReadingMode.Title" = "Reading mode";
+"Settings.ReadingMode.Vertical" = "Vertical";
+"Settings.ReadingMode.RTL" = "Right to Left";
+"Settings.ReadingMode.LTR" = "Left to Right";
 
 // MARK: ComicsBY
 "ComicsBY.ComicsStatus.Ongoing" = "Ongoing";

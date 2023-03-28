@@ -14,4 +14,5 @@ enum SettingsTableElement {
     case termsOfUser(String)
     case separator
     case getAccess
+    case readingMode(ReadingMode)
 }

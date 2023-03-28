@@ -37,13 +37,13 @@ final class ProfileManager: ProfileManagerProtocol {
 
 // MARK: Public
 extension ProfileManager {
-    func set(goal: Int?,
-             categories: [Int]?,
-             pace: Int?,
-             time: Int?,
-             pushToken: String?,
-             notificationsOptions: [Int]?,
-             readingMode: String?) -> Single<Void> {
+    func set(goal: Int? = nil,
+             categories: [Int]? = nil,
+             pace: Int? = nil,
+             time: Int? = nil,
+             pushToken: String? = nil,
+             notificationsOptions: [Int]? = nil,
+             readingMode: String? = nil) -> Single<Void> {
         guard let userToken = sessionManager.getSession()?.userToken else {
             return .error(SignError.tokenNotFound)
         }

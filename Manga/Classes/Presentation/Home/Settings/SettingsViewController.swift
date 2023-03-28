@@ -25,6 +25,14 @@ final class SettingsViewController: UIViewController {
         AmplitudeManager.shared
             .logEvent(name: "Settings Screen")
         
+        viewModel.tryAgain = { [weak self] error -> Observable<Void> in
+            guard let self = self else {
+                return .never()
+            }
+            
+            return self.openError()
+        }
+        
         viewModel.elements
             .drive(Binder(mainView.tableView) { base, elements in
                 base.setup(elements: elements)
@@ -82,5 +90,28 @@ extension SettingsViewController: SettingsTableDelegate {
     func settingsTableDidTappedGetAccess() {
         let vc = PaygateViewController.make()
         present(vc, animated: true)
+    }
+    
+    func settingsTableDidSelect(readingMode: ReadingMode) {
+        viewModel.didSelectReadingMode.accept(readingMode)
+    }
+}
+
+// MARK: Private
+private extension SettingsViewController {
+    func openError() -> Observable<Void> {
+        Observable<Void>
+            .create { [weak self] observe in
+                guard let self = self else {
+                    return Disposables.create()
+                }
+                
+                let vc = TryAgainViewController.make {
+                    observe.onNext(())
+                }
+                self.present(vc, animated: true)
+                
+                return Disposables.create()
+            }
     }
 }

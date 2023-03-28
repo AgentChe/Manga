@@ -12,6 +12,7 @@ protocol SettingsTableDelegate: AnyObject {
     func settingsTableDidTappedPrivacyPolicy()
     func settingsTableDidTappedTermsOfUse()
     func settingsTableDidTappedGetAccess()
+    func settingsTableDidSelect(readingMode: ReadingMode)
 }
 
 final class SettingsTableView: UITableView {
@@ -61,6 +62,13 @@ extension SettingsTableView: UITableViewDataSource {
             return dequeueReusableCell(withIdentifier: String(describing: SettingsSeparatorCell.self))!
         case .getAccess:
             return dequeueReusableCell(withIdentifier: String(describing: SettingsGetAccessCell.self))!
+        case .readingMode(let element):
+            let cell = dequeueReusableCell(withIdentifier: String(describing: SettingsReaingModeCell.self)) as! SettingsReaingModeCell
+            cell.setup(element: element)
+            cell.didSelect = { [weak self] readingMode in
+                self?.mainDelegate?.settingsTableDidSelect(readingMode: readingMode)
+            }
+            return cell
         }
     }
 }
@@ -77,6 +85,8 @@ extension SettingsTableView: UITableViewDelegate {
             return 1.scale
         case .getAccess:
             return 168.scale
+        default:
+            return UITableView.automaticDimension
         }
     }
     
@@ -103,6 +113,7 @@ private extension SettingsTableView {
         register(SettingsLinkCell.self, forCellReuseIdentifier: String(describing: SettingsLinkCell.self))
         register(SettingsSeparatorCell.self, forCellReuseIdentifier: String(describing: SettingsSeparatorCell.self))
         register(SettingsGetAccessCell.self, forCellReuseIdentifier: String(describing: SettingsGetAccessCell.self))
+        register(SettingsReaingModeCell.self, forCellReuseIdentifier: String(describing: SettingsReaingModeCell.self))
         
         dataSource = self
         delegate = self
