@@ -165,6 +165,11 @@
 		DE2CB8402943651100AC2372 /* HomeTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8262943651000AC2372 /* HomeTableView.swift */; };
 		DE2CB8412943651100AC2372 /* HomeTableElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB8272943651000AC2372 /* HomeTableElement.swift */; };
 		DE8027C029D20B68003C9993 /* ComicsChapterContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027BF29D20B68003C9993 /* ComicsChapterContent.swift */; };
+		DE8027C329D2D180003C9993 /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C229D2D180003C9993 /* Profile.swift */; };
+		DE8027C629D2D1A5003C9993 /* GetProfileRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C529D2D1A5003C9993 /* GetProfileRequest.swift */; };
+		DE8027C829D2D1AD003C9993 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C729D2D1AD003C9993 /* GetProfileResponse.swift */; };
+		DE8027CA29D2D2AF003C9993 /* ReadingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C929D2D2AF003C9993 /* ReadingMode.swift */; };
+		DE8027CC29D2D787003C9993 /* ProfileMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027CB29D2D787003C9993 /* ProfileMediator.swift */; };
 		DE8A313329486F3A00B2E228 /* ComicsByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312C29486F3A00B2E228 /* ComicsByView.swift */; };
 		DE8A313429486F3A00B2E228 /* ComicsByViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */; };
 		DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */; };
@@ -423,6 +428,11 @@
 		DE2CB8262943651000AC2372 /* HomeTableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableView.swift; sourceTree = "<group>"; };
 		DE2CB8272943651000AC2372 /* HomeTableElement.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTableElement.swift; sourceTree = "<group>"; };
 		DE8027BF29D20B68003C9993 /* ComicsChapterContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComicsChapterContent.swift; sourceTree = "<group>"; };
+		DE8027C229D2D180003C9993 /* Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
+		DE8027C529D2D1A5003C9993 /* GetProfileRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileRequest.swift; sourceTree = "<group>"; };
+		DE8027C729D2D1AD003C9993 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
+		DE8027C929D2D2AF003C9993 /* ReadingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingMode.swift; sourceTree = "<group>"; };
+		DE8027CB29D2D787003C9993 /* ProfileMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMediator.swift; sourceTree = "<group>"; };
 		DE8A312C29486F3A00B2E228 /* ComicsByView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByView.swift; sourceTree = "<group>"; };
 		DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewModel.swift; sourceTree = "<group>"; };
 		DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewController.swift; sourceTree = "<group>"; };
@@ -892,8 +902,10 @@
 		DE2CB604293A0D1900AC2372 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027C129D2D178003C9993 /* Model */,
 				DE2CB608293A0D1900AC2372 /* Request */,
 				DE2CB607293A0D1900AC2372 /* ProfileManager.swift */,
+				DE8027CB29D2D787003C9993 /* ProfileMediator.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -901,6 +913,7 @@
 		DE2CB608293A0D1900AC2372 /* Request */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027C429D2D19C003C9993 /* GetProfile */,
 				DE2CB609293A0D1900AC2372 /* LoginRequest.swift */,
 				DE2CB60A293A0D1900AC2372 /* SyncTokensRequest.swift */,
 				DE2CB60B293A0D1900AC2372 /* SetRequest.swift */,
@@ -1214,6 +1227,24 @@
 				DE2CB8252943651000AC2372 /* HomeCollectionComicsCell.swift */,
 			);
 			path = Collection;
+			sourceTree = "<group>";
+		};
+		DE8027C129D2D178003C9993 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027C229D2D180003C9993 /* Profile.swift */,
+				DE8027C929D2D2AF003C9993 /* ReadingMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		DE8027C429D2D19C003C9993 /* GetProfile */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027C529D2D1A5003C9993 /* GetProfileRequest.swift */,
+				DE8027C729D2D1AD003C9993 /* GetProfileResponse.swift */,
+			);
+			path = GetProfile;
 			sourceTree = "<group>";
 		};
 		DE8A312B29486F3A00B2E228 /* ComicsBy */ = {
@@ -1764,6 +1795,7 @@
 				DE2CB57E293A0C3E00AC2372 /* IAPProduct.swift in Sources */,
 				DE2CB77F293A731800AC2372 /* GetComicsKitResponse.swift in Sources */,
 				DED89D4A299CC6FB00325104 /* DefaultPaygate.swift in Sources */,
+				DE8027C629D2D1A5003C9993 /* GetProfileRequest.swift in Sources */,
 				DE8A31B5294DEB7E00B2E228 /* ComicsCreatorCell.swift in Sources */,
 				DE8A315C294A153C00B2E228 /* ExploreViewModel.swift in Sources */,
 				DE8A31BA294DEB7E00B2E228 /* ComicsWhatAboutCell.swift in Sources */,
@@ -1807,12 +1839,14 @@
 				DE2CB5FD293A0C8900AC2372 /* SplashReceiptValidationObserver.swift in Sources */,
 				DE2CB77D293A731800AC2372 /* ComicsChapter.swift in Sources */,
 				DE2CB610293A0D1900AC2372 /* SetRequest.swift in Sources */,
+				DE8027C829D2D1AD003C9993 /* GetProfileResponse.swift in Sources */,
 				DE2CB78F293A731800AC2372 /* GetHomeKitRequest.swift in Sources */,
 				DE2CB562293A0B6200AC2372 /* PushNotificationsAuthorizationStatus.swift in Sources */,
 				DE2CB54C293A0B6200AC2372 /* ObservableRetrySingle.swift in Sources */,
 				DE2CB792293A731800AC2372 /* SaveComicsRequest.swift in Sources */,
 				DE2CB785293A731800AC2372 /* GetCategoryComicsRequest.swift in Sources */,
 				DE2CB546293A0B6200AC2372 /* APIRequestBody.swift in Sources */,
+				DE8027CC29D2D787003C9993 /* ProfileMediator.swift in Sources */,
 				DE2CB559293A0B6200AC2372 /* TapAreaButton.swift in Sources */,
 				DE8A313329486F3A00B2E228 /* ComicsByView.swift in Sources */,
 				DE8A313429486F3A00B2E228 /* ComicsByViewModel.swift in Sources */,
@@ -1842,6 +1876,7 @@
 				DE8A31492948A1F900B2E228 /* SettingsGetAccessCell.swift in Sources */,
 				DE2CB7D12940B4A300AC2372 /* OBottomProgressView.swift in Sources */,
 				DE2CB7E42940B4A300AC2372 /* OSlideView.swift in Sources */,
+				DE8027C329D2D180003C9993 /* Profile.swift in Sources */,
 				DE2CB7E02940B4A300AC2372 /* OBriefView.swift in Sources */,
 				DE8A31B8294DEB7E00B2E228 /* ComicsCoverCell.swift in Sources */,
 				DE2CB8322943651100AC2372 /* HomeViewModel.swift in Sources */,
@@ -1949,6 +1984,7 @@
 				DED89D4F299CC6FB00325104 /* PaygateView.swift in Sources */,
 				DE2CB569293A0B6200AC2372 /* FacebookManager.swift in Sources */,
 				DE2CB53F293A0B6200AC2372 /* Collection+Extension.swift in Sources */,
+				DE8027CA29D2D2AF003C9993 /* ReadingMode.swift in Sources */,
 				DE2CB7E62940B4A300AC2372 /* OInfoLibraryView.swift in Sources */,
 				DE8A318B294B838400B2E228 /* LibraryFilterButton.swift in Sources */,
 				DE2CB8302943651100AC2372 /* HomeView.swift in Sources */,

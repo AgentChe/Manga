@@ -107,12 +107,15 @@ private extension SplashViewModel {
                 .obtainRankings(forceUpdate: true)
             let paygate = paygateManager
                 .obtainPaygate(forceUpdate: true)
+            let profile = profileManager
+                .obtainProfile(forceUpdate: true)
 
             return Single
                 .zip(
                     categories,
                     ranking,
-                    paygate
+                    paygate,
+                    profile
                 )
                 .mapToVoid()
         }
