@@ -21,7 +21,6 @@ final class LibraryViewModel {
     private lazy var comicsElements = makeComicsElements()
     private lazy var savedComicsElements = makeSavedComicsElements()
     private lazy var historyComicsElements = makeHistoryComicsElements()
-    private lazy var downloadedComicsElements = makeDownloadedComicsElements()
     private lazy var readingComics = makeReadingComics()
     private lazy var categories = makeCategories()
     
@@ -45,8 +44,6 @@ private extension LibraryViewModel {
                     return .saved
                 case .history:
                     return .history
-                case .downloaded:
-                    return .downloaded
                 }
             }
             .startWith(nil)
@@ -85,8 +82,6 @@ private extension LibraryViewModel {
                     return self.savedComicsElements
                 case .history:
                     return self.historyComicsElements
-                case .downloaded:
-                    return self.downloadedComicsElements
                 }
             }
     }
@@ -156,60 +151,6 @@ private extension LibraryViewModel {
                                               categories: categories,
                                               progress: reading.progress)
                 }
-            }
-    }
-    
-    func makeDownloadedComicsElements() -> Driver<[LibraryTableComicsElement]> {
-        let downloadedComics = contentManager
-            .obtainDownloadComics()
-            .asDriver(onErrorJustReturn: [])
-            .flatMapLatest { [weak self] downloadedComics -> Driver<[Comics]> in
-                guard let self = self else {
-                    return .never()
-                }
-                
-                let download = ContentMediator.shared
-                    .comicsDidDownloaded
-                    .map { (1, $0) }
-                    .asDriver(onErrorDriveWith: .never())
-                
-                let libraryDelete = self.didTapRemove
-                    .flatMapLatest { comics -> Single<(Int, Comics)> in
-                        self.contentManager
-                            .removeDownload(comicsId: comics.id)
-                            .map { success in (2, Comics(id: comics.id)) }
-                    }
-                    .asDriver(onErrorDriveWith: .never())
-                
-                return Driver
-                    .merge(download, libraryDelete)
-                    .scan(downloadedComics) { array, args -> [Comics] in
-                        let (action, comics) = args
-                        
-                        var copy = array
-                        
-                        if action == 1 {
-                            if let index = copy.firstIndex(where: { $0.id == comics.id }) {
-                                copy[index] = comics
-                            } else {
-                                copy.append(comics)
-                            }
-                        } else if action == 2 {
-                            if let index = copy.firstIndex(where: { $0.id == comics.id }) {
-                                copy.remove(at: index)
-                            }
-                        }
-                        
-                        return copy
-                    }
-                    .startWith(downloadedComics)
-            }
-        
-        return Driver
-            .combineLatest(downloadedComics, readingComics, categories)
-            .map { downloadedComics, readingComics, categories -> [LibraryTableComicsElement] in
-                let covers = downloadedComics.map { ComicsCover(comics: $0) }
-                return Self.combine(comicsCovers: covers, readingComics: readingComics, categories: categories)
             }
     }
     

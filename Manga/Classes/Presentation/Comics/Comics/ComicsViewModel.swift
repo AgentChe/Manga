@@ -15,11 +15,9 @@ final class ComicsViewModel {
     lazy var didTapMark = PublishRelay<Bool>()
     lazy var didTapChapter = PublishRelay<ComicsChapter>()
     lazy var didTapRead = PublishRelay<Void>()
-    lazy var didTapStartDownload = PublishRelay<Void>()
     lazy var didTapSort = PublishRelay<Void>()
     
     lazy var seeAll = makeSeeAll()
-    lazy var downloadState = makeDownloadState()
     lazy var reader = makeReader()
     lazy var shareLink = makeShareLink()
     lazy var inReading = makeInReading()
@@ -32,7 +30,6 @@ final class ComicsViewModel {
     private lazy var categories = makeCategories()
     private lazy var comicsKit = makeComicsKit()
     private lazy var readingComics = makeReadingComics()
-    private lazy var downloadComics = makeDownloadComics()
     
     private lazy var contentManager = ContentManager()
     
@@ -52,57 +49,6 @@ private extension ComicsViewModel {
             .withLatestFrom(comicsKit)
             .map { $0.comics.chapters }
             .asDriver(onErrorJustReturn: [])
-    }
-    
-    func makeDownloadState() -> Driver<ComicsDownloadButton.State> {
-        let initial = Observable
-            .combineLatest(downloadComics.asObservable().take(1), comicsId)
-            .map { downloadComics, comicsId -> ComicsDownloadButton.State in
-                if downloadComics.contains(where: { $0.id == comicsId }) {
-                    return .downloaded
-                } else if DownloadComicsQueue.shared.containsOperation(with: comicsId) {
-                    return .downloading
-                } else {
-                    return .download
-                }
-            }
-            .asDriver(onErrorDriveWith: .never())
-        
-        let startDownload = didTapStartDownload
-            .map { ComicsDownloadButton.State.downloading }
-            .asDriver(onErrorDriveWith: .never())
-        
-        let downloadedAfterStart = didTapStartDownload
-            .withLatestFrom(comicsKit)
-            .flatMapLatest { [weak self] comicsKit -> Observable<ComicsDownloadButton.State> in
-                guard let self = self else {
-                    return .never()
-                }
-                
-                return self.contentManager
-                    .download(comics: comicsKit.comics)
-                    .asObservable()
-                    .map { ComicsDownloadButton.State.downloaded }
-            }
-            .asDriver(onErrorDriveWith: .never())
-        
-        let downloadedFromMediator = ContentMediator.shared.comicsDidDownloaded
-            .withLatestFrom(comicsId.asSignal(onErrorSignalWith: .never())) { ($0, $1) }
-            .flatMap { downloadedComics, comicsId -> Driver<ComicsDownloadButton.State> in
-                guard downloadedComics.id == comicsId else {
-                    return .never()
-                }
-
-                return .just(.downloaded)
-            }
-            .asDriver(onErrorDriveWith: .never())
-        
-        return Driver.merge(
-            initial,
-            startDownload,
-            downloadedAfterStart,
-            downloadedFromMediator
-        )
     }
     
     func makeReader() -> Driver<(Comics, ComicsChapter)> {
@@ -382,25 +328,6 @@ private extension ComicsViewModel {
             }
         
         return Driver.merge(initial, updated)
-    }
-    
-    func makeDownloadComics() -> Driver<[Comics]> {
-        let initial = contentManager
-            .obtainDownloadComics()
-            .asDriver(onErrorJustReturn: [])
-        
-        return initial
-            .flatMapLatest { comics -> Driver<[Comics]> in
-                ContentMediator.shared
-                    .comicsDidDownloaded
-                    .scan(comics) { result, comics -> [Comics] in
-                        var copy = result
-                        copy.append(comics)
-                        return copy
-                    }
-                    .startWith(comics)
-                    .asDriver(onErrorDriveWith: .never())
-            }
     }
 }
 

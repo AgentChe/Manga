@@ -9,7 +9,7 @@ import UIKit
 
 final class LibraryEmptyView: UIView {
     enum State {
-        case saved, history, downloaded
+        case saved, history
     }
     
     lazy var imageView = makeImageView()
@@ -54,10 +54,6 @@ extension LibraryEmptyView {
             imageView.image = UIImage(named: "Library.Empty.History")
             titleLabel.attributedText = "Library.Empty.History.Title".localized.attributed(with: titleAttrs)
             subTitleLabel.attributedText = "Library.Empty.History.SubTitle".localized.attributed(with: subTitleAttrs)
-        case .downloaded:
-            imageView.image = UIImage(named: "Library.Empty.Downloaded")
-            titleLabel.attributedText = "Library.Empty.Downloaded.Title".localized.attributed(with: titleAttrs)
-            subTitleLabel.attributedText = "Library.Empty.Downloaded.SubTitle".localized.attributed(with: subTitleAttrs)
         }
     }
 }

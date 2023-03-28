@@ -152,8 +152,6 @@
 "Library.Empty.Saved.SubTitle" = "Here will be comics that you\nsave";
 "Library.Empty.History.Title" = "Looks empty here";
 "Library.Empty.History.SubTitle" = "Here will be comics that you\nread";
-"Library.Empty.Downloaded.Title" = "No downloaded comics";
-"Library.Empty.Downloaded.SubTitle" = "Here will be comics that you\ndownload";
 "Library.Empty.Button" = "Discover comics";
 
 // MARK: Comics

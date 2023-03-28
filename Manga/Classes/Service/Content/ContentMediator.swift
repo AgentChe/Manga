@@ -13,8 +13,6 @@ protocol ContentMediatorDelegate: AnyObject {
     func contentMediatorDidRemovedSaved(comics: ComicsCover)
     func contentMediatorDidUpdated(comicsReadingProgress: ComicsReadingProgress)
     func contentMediatorDidRemovedProgress(comicsId: Int)
-    func contentMediatorDidDownloaded(comics: Comics)
-    func contentMediatorDidRemovedDownload(comicsId: Int)
 }
 
 final class ContentMediator {
@@ -26,8 +24,6 @@ final class ContentMediator {
     private lazy var comicsDidRemoveFromSavedTrigger = PublishRelay<ComicsCover>()
     private lazy var comicsReadingProgressUpdatedTrigger = PublishRelay<ComicsReadingProgress>()
     private lazy var comicsDidRemovedProgressTrigger = PublishRelay<Int>()
-    private lazy var comicsDidDownloadedTrigger = PublishRelay<Comics>()
-    private lazy var comicsDidRemovedDownloadTrigger = PublishRelay<Int>()
     
     private init() {}
 }
@@ -73,26 +69,6 @@ extension ContentMediator {
             self?.comicsDidRemovedProgressTrigger.accept(comicsId)
         }
     }
-    
-    func notifyAboutDownloaded(comics: Comics) {
-        DispatchQueue.main.async { [weak self] in
-            self?.delegates.forEach {
-                $0.weak?.contentMediatorDidDownloaded(comics: comics)
-            }
-            
-            self?.comicsDidDownloadedTrigger.accept(comics)
-        }
-    }
-    
-    func notifyAboutRemoveDownload(comicsId: Int) {
-        DispatchQueue.main.async { [weak self] in
-            self?.delegates.forEach {
-                $0.weak?.contentMediatorDidRemovedDownload(comicsId: comicsId)
-            }
-            
-            self?.comicsDidRemovedDownloadTrigger.accept(comicsId)
-        }
-    }
 }
 
 // MARK: Public (Triggers)
@@ -111,14 +87,6 @@ extension ContentMediator {
     
     var comicsDidRemovedProgress: Signal<Int> {
         comicsDidRemovedProgressTrigger.asSignal()
-    }
-    
-    var comicsDidDownloaded: Signal<Comics> {
-        comicsDidDownloadedTrigger.asSignal()
-    }
-    
-    var comicsDidRemoveDownload: Signal<Int> {
-        comicsDidRemoveDownload.asSignal()
     }
 }
 

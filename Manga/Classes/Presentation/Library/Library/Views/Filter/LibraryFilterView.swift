@@ -9,7 +9,7 @@ import UIKit
 
 final class LibraryFilterView: UIView {
     enum Filter {
-        case saved, history, downloaded
+        case saved, history
     }
     
     lazy var filter: Filter = .saved {
@@ -20,7 +20,6 @@ final class LibraryFilterView: UIView {
     
     lazy var savedButton = makeButton(title: "Library.Saved".localized)
     lazy var historyButton = makeButton(title: "Library.History".localized)
-    lazy var downloadedButton = makeButton(title: "Library.Downloaded".localized)
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,7 +37,6 @@ private extension LibraryFilterView {
     func update() {
         savedButton.marked = filter == .saved
         historyButton.marked = filter == .history
-        downloadedButton.marked = filter == .downloaded
     }
 }
 
@@ -57,13 +55,6 @@ private extension LibraryFilterView {
             historyButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 84.scale),
             historyButton.topAnchor.constraint(equalTo: topAnchor),
             historyButton.bottomAnchor.constraint(equalTo: bottomAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
-            downloadedButton.widthAnchor.constraint(equalToConstant: 79.scale),
-            downloadedButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 182.scale),
-            downloadedButton.topAnchor.constraint(equalTo: topAnchor),
-            downloadedButton.bottomAnchor.constraint(equalTo: bottomAnchor)
         ])
     }
 }

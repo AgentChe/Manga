@@ -23,9 +23,6 @@ protocol ContentManagerProtocol: AnyObject {
     func obtainReadingComics() -> Single<[ComicsReadingProgress]>
     func set(comicsReadingProgress: ComicsReadingProgress) -> Single<Void>
     func removeComicsProgress(comicsId: Int) -> Single<Void>
-    func obtainDownloadComics() -> Single<[Comics]>
-    func download(comics: Comics) -> Single<Void>
-    func removeDownload(comicsId: Int) -> Single<Void>
 }
 
 final class ContentManager: ContentManagerProtocol {
@@ -33,7 +30,6 @@ final class ContentManager: ContentManagerProtocol {
         static let categoriesKey = "content_manager_categories_key"
         static let rankingKey = "content_manager_ranking_key"
         static let readingComicsKey = "content_manager_reading_comics_key"
-        static let downloadComicsKey = "content_manager_download_comics_key"
     }
     
     private lazy var defaultRequestWrapper = DefaultRequestWrapper()
@@ -230,76 +226,6 @@ extension ContentManager {
                     
                     return Disposables.create()
                 }
-            }
-    }
-    
-    func obtainDownloadComics() -> Single<[Comics]> {
-        Single<[Comics]>.create { event in
-            guard
-                let data = UserDefaults.standard.data(forKey: Constants.downloadComicsKey),
-                let comics = try? JSONDecoder().decode([Comics].self, from: data)
-            else {
-                event(.success([]))
-                return Disposables.create()
-            }
-            
-            event(.success(comics))
-            
-            return Disposables.create()
-        }
-    }
-    
-    func download(comics: Comics) -> Single<Void> {
-        Single<Void>
-            .create { event in
-                DownloadComicsQueue.shared.download(comics: comics) {
-                    var result = [Comics]()
-                    
-                    if let data = UserDefaults.standard.data(forKey: Constants.downloadComicsKey) {
-                        let decoded = try? JSONDecoder().decode([Comics].self, from: data)
-                        result = decoded ?? []
-                    }
-                    
-                    if let index = result.firstIndex(of: comics) {
-                        result[index] = comics
-                    } else {
-                        result.append(comics)
-                    }
-                    
-                    if let data = try? JSONEncoder().encode(result) {
-                        UserDefaults.standard.set(data, forKey: Constants.downloadComicsKey)
-                    }
-                    
-                    ContentMediator.shared.notifyAboutDownloaded(comics: comics)
-                    
-                    event(.success(Void()))
-                }
-                
-                return Disposables.create()
-            }
-    }
-    
-    func removeDownload(comicsId: Int) -> Single<Void> {
-        obtainDownloadComics()
-            .flatMap { downloadedComics -> Single<Void> in
-                Single<Void>
-                    .create { event in
-                        var result = downloadedComics
-                        
-                        if let index = result.firstIndex(where: { $0.id == comicsId }) {
-                            result.remove(at: index)
-                            
-                            if let data = try? JSONEncoder().encode(result) {
-                                UserDefaults.standard.set(data, forKey: Constants.downloadComicsKey)
-                                
-                                ContentMediator.shared.notifyAboutRemoveDownload(comicsId: comicsId)
-                            }
-                        }
-                        
-                        event(.success(Void()))
-                        
-                        return Disposables.create()
-                    }
             }
     }
 }

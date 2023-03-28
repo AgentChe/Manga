@@ -9,7 +9,6 @@ import UIKit
 
 final class ComicsView: UIView {
     lazy var closeButton = makeCloseButton()
-    lazy var downloadButton = makeDownloadButton()
     lazy var shareButton = makeShareButton()
     lazy var favoriteButton = makeFavoriteButton()
     lazy var tableView = makeTableView()
@@ -60,13 +59,6 @@ private extension ComicsView {
         ])
         
         NSLayoutConstraint.activate([
-            downloadButton.widthAnchor.constraint(equalToConstant: 41.scale),
-            downloadButton.heightAnchor.constraint(equalToConstant: 41.scale),
-            downloadButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 212.scale),
-            downloadButton.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor)
-        ])
-        
-        NSLayoutConstraint.activate([
             shareButton.widthAnchor.constraint(equalToConstant: 41.scale),
             shareButton.heightAnchor.constraint(equalToConstant: 41.scale),
             shareButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 265.scale),
@@ -83,7 +75,7 @@ private extension ComicsView {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            tableView.topAnchor.constraint(equalTo: downloadButton.bottomAnchor, constant: 2.scale),
+            tableView.topAnchor.constraint(equalTo: shareButton.bottomAnchor, constant: 2.scale),
             tableView.bottomAnchor.constraint(equalTo: readButton.topAnchor, constant: -2.scale)
         ])
         
@@ -106,14 +98,6 @@ private extension ComicsView {
     func makeCloseButton() -> TapAreaButton {
         let view = TapAreaButton()
         view.setImage(UIImage(named: "Comics.Close"), for: .normal)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(view)
-        return view
-    }
-    
-    func makeDownloadButton() -> ComicsDownloadButton {
-        let view = ComicsDownloadButton()
-        view.backgroundColor = Appearance.black
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

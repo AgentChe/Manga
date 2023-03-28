@@ -130,12 +130,8 @@ private extension LibraryViewController {
             .merge(
                 mainView.filterView.savedButton.rx.tap
                     .map { LibraryFilterView.Filter.saved },
-                
                 mainView.filterView.historyButton.rx.tap
-                    .map { LibraryFilterView.Filter.history },
-                
-                mainView.filterView.downloadedButton.rx.tap
-                    .map { LibraryFilterView.Filter.downloaded }
+                    .map { LibraryFilterView.Filter.history }
             )
             .startWith(.saved)
             .bind(to: Binder(self) { base, filter in
@@ -149,12 +145,8 @@ private extension LibraryViewController {
             .merge(
                 mainView.filterView.savedButton.rx.tap
                     .map { LibraryEmptyView.State.saved },
-                
                 mainView.filterView.historyButton.rx.tap
-                    .map { LibraryEmptyView.State.history },
-                
-                mainView.filterView.downloadedButton.rx.tap
-                    .map { LibraryEmptyView.State.downloaded }
+                    .map { LibraryEmptyView.State.history }
             )
             .startWith(.saved)
             .bind(to: Binder(self) { base, state in
@@ -207,9 +199,6 @@ private extension LibraryViewController {
         case .saved:
             AmplitudeManager.shared
                 .logEvent(name: "Library Tap", parameters: ["what": "saved"])
-        case .downloaded:
-            AmplitudeManager.shared
-                .logEvent(name: "Library Tap", parameters: ["what": "downloads"])
         case .history:
             AmplitudeManager.shared
                 .logEvent(name: "Library Tap", parameters: ["what": "my history"])
