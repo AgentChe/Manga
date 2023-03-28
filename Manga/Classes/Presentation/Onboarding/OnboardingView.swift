@@ -9,7 +9,7 @@ import UIKit
 
 final class OnboardingView: UIView {
     enum Step: Int {
-        case welcome, info, goal, age, brief, categories, pace, time, notifications, infoLibrary, comics, progress
+        case welcome, info, goal, age, brief, categories, pace, time, readingMode, notifications, infoLibrary, comics, progress
     }
     
     var didFinish: (() -> Void)?
@@ -18,6 +18,7 @@ final class OnboardingView: UIView {
     private lazy var categoriesView = OCategoriesView(step: .categories)
     private lazy var paceView = OPaceView(step: .pace)
     private lazy var timeView = OTimeView(step: .time)
+    private lazy var readingModeView = OReadingModeView(step: .readingMode)
     private lazy var notificationsView = ONotificationsView(step: .notifications)
     private lazy var comicsView = OComicsView(step: .comics)
     private lazy var progressView = OProgressView(step: .progress, combineData: combineData)
@@ -32,6 +33,7 @@ final class OnboardingView: UIView {
             categoriesView,
             paceView,
             timeView,
+            readingModeView,
             notificationsView,
             OInfoLibraryView(step: .infoLibrary),
             comicsView,
@@ -106,6 +108,7 @@ private extension OnboardingView {
         categoriesView.add(observer: comicsView)
         paceView.paceDelegate = combineData
         timeView.timeDelegate = combineData
+        readingModeView.readingModeDelegate = combineData
         notificationsView.notificationsDelegate = combineData
         comicsView.vc = vc
         progressView.vc = vc

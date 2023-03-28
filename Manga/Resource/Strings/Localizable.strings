@@ -84,6 +84,11 @@
 "Onboarding.Time.Cell2" = "At noon";
 "Onboarding.Time.Cell3" = "In the evening";
 "Onboarding.Time.Cell5" = "No particular preference";
+"Onboarding.ReadingMode.Title" = "Which reading mode\ndo you prefer?";
+"Onboarding.ReadingMode.SubTitle" = "Choose the mode you need and switch to\nthe other later on";
+"Onboarding.ReadingMode.Vertical" = "Vertical";
+"Onboarding.ReadingMode.RTL" = "Right to Left";
+"Onboarding.ReadingMode.LTR" = "Left to Right";
 "Onboarding.Notifications.Title" = "Just one last thing, what\nwould you like us to keep\nyou up to date on?";
 "Onboarding.Notifications.Cell1.Title" = "Stay motivated";
 "Onboarding.Notifications.Cell1.SubTitle" = "\nSupportive reminders to keep your\nadventures going";

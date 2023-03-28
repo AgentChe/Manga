@@ -73,7 +73,7 @@ private extension OProgressView {
                      time: data.time,
                      pushToken: data.pushToken,
                      notificationsOptions: data.notificationsOptions,
-                     readingMode: nil) // TODO
+                     readingMode: data.readingMode)
         }
         
         func error(err: Error) -> Observable<Void> {

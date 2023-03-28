@@ -170,6 +170,8 @@
 		DE8027C829D2D1AD003C9993 /* GetProfileResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C729D2D1AD003C9993 /* GetProfileResponse.swift */; };
 		DE8027CA29D2D2AF003C9993 /* ReadingMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027C929D2D2AF003C9993 /* ReadingMode.swift */; };
 		DE8027CC29D2D787003C9993 /* ProfileMediator.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027CB29D2D787003C9993 /* ProfileMediator.swift */; };
+		DE8027CE29D2DABD003C9993 /* OReadingModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027CD29D2DABD003C9993 /* OReadingModeButton.swift */; };
+		DE8027D029D2DB92003C9993 /* OReadingModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027CF29D2DB92003C9993 /* OReadingModeView.swift */; };
 		DE8A313329486F3A00B2E228 /* ComicsByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312C29486F3A00B2E228 /* ComicsByView.swift */; };
 		DE8A313429486F3A00B2E228 /* ComicsByViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */; };
 		DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */; };
@@ -433,6 +435,8 @@
 		DE8027C729D2D1AD003C9993 /* GetProfileResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetProfileResponse.swift; sourceTree = "<group>"; };
 		DE8027C929D2D2AF003C9993 /* ReadingMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingMode.swift; sourceTree = "<group>"; };
 		DE8027CB29D2D787003C9993 /* ProfileMediator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMediator.swift; sourceTree = "<group>"; };
+		DE8027CD29D2DABD003C9993 /* OReadingModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OReadingModeButton.swift; sourceTree = "<group>"; };
+		DE8027CF29D2DB92003C9993 /* OReadingModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OReadingModeView.swift; sourceTree = "<group>"; };
 		DE8A312C29486F3A00B2E228 /* ComicsByView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByView.swift; sourceTree = "<group>"; };
 		DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewModel.swift; sourceTree = "<group>"; };
 		DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewController.swift; sourceTree = "<group>"; };
@@ -1104,6 +1108,7 @@
 				DE2CB7C52940B4A300AC2372 /* OCategoriesView.swift */,
 				DE2CB7C22940B4A300AC2372 /* OPaceView.swift */,
 				DE2CB7C62940B4A300AC2372 /* OTimeView.swift */,
+				DE8027CF29D2DB92003C9993 /* OReadingModeView.swift */,
 				DE2CB7A82940B4A300AC2372 /* ONotificationsView.swift */,
 				DE2CB7C32940B4A300AC2372 /* OInfoLibraryView.swift */,
 				DE2CB7C42940B4A300AC2372 /* OComicsView.swift */,
@@ -1124,6 +1129,7 @@
 				DE2CB7B52940B4A300AC2372 /* OComicsImageCollectionView.swift */,
 				DE2CB7B62940B4A300AC2372 /* OAgeButton.swift */,
 				DE2CB7BC2940B4A300AC2372 /* OGoalButton.swift */,
+				DE8027CD29D2DABD003C9993 /* OReadingModeButton.swift */,
 			);
 			path = Atoms;
 			sourceTree = "<group>";
@@ -1760,6 +1766,7 @@
 				DE8A3189294B838400B2E228 /* LibraryTableView.swift in Sources */,
 				DE2CB567293A0B6200AC2372 /* AmplitudeManager.swift in Sources */,
 				DE8A31AB294DEB7E00B2E228 /* ComicsViewModel.swift in Sources */,
+				DE8027D029D2DB92003C9993 /* OReadingModeView.swift in Sources */,
 				DED89D36299CC69D00325104 /* PaygateOptionLineComponent.swift in Sources */,
 				DE8A31E02951C53B00B2E228 /* ChaptersTableView.swift in Sources */,
 				DE8A3186294B838400B2E228 /* LibraryTableComicsCell.swift in Sources */,
@@ -1874,6 +1881,7 @@
 				DE2CB83D2943651100AC2372 /* HomeComicsBlockCell.swift in Sources */,
 				DE2CB78D293A731800AC2372 /* SearchComicsResponse.swift in Sources */,
 				DE8A31492948A1F900B2E228 /* SettingsGetAccessCell.swift in Sources */,
+				DE8027CE29D2DABD003C9993 /* OReadingModeButton.swift in Sources */,
 				DE2CB7D12940B4A300AC2372 /* OBottomProgressView.swift in Sources */,
 				DE2CB7E42940B4A300AC2372 /* OSlideView.swift in Sources */,
 				DE8027C329D2D180003C9993 /* Profile.swift in Sources */,
