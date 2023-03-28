@@ -1,5 +1,5 @@
 //
-//  ReaderCollectionCell.swift
+//  ReaderImagesCell.swift
 //  Manga
 //
 //  Created by Андрей Чернышев on 17.02.2023.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ReaderCollectionCell: UICollectionViewCell {
+final class ReaderImagesCell: UICollectionViewCell {
     lazy var tableView = makeTableView()
     
     override init(frame: CGRect) {
@@ -23,7 +23,7 @@ final class ReaderCollectionCell: UICollectionViewCell {
 }
 
 // MARK: Private
-private extension ReaderCollectionCell {
+private extension ReaderImagesCell {
     func initialize() {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
@@ -35,7 +35,7 @@ private extension ReaderCollectionCell {
 }
 
 // MARK: Make constraints
-private extension ReaderCollectionCell {
+private extension ReaderImagesCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             tableView.leadingAnchor.constraint(equalTo: contentView.leadingAnchor),
@@ -47,9 +47,9 @@ private extension ReaderCollectionCell {
 }
 
 // MARK: Lazy initialization
-private extension ReaderCollectionCell {
-    func makeTableView() -> ReaderTableView {
-        let view = ReaderTableView()
+private extension ReaderImagesCell {
+    func makeTableView() -> ReaderTableImagesView {
+        let view = ReaderTableImagesView()
         view.contentInset = UIEdgeInsets.zero
         view.separatorStyle = .none
         view.showsVerticalScrollIndicator = false

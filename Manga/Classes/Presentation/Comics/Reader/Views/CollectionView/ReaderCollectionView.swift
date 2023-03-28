@@ -14,7 +14,7 @@ protocol ReaderCollectionDelegate: AnyObject {
 final class ReaderCollectionView: UICollectionView {
     weak var mainDelegate: ReaderCollectionDelegate?
     
-    private lazy var elements = [ReaderCollectionElement]()
+    private lazy var elements = [ComicsChapter]()
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -29,7 +29,7 @@ final class ReaderCollectionView: UICollectionView {
 
 // MARK: Public
 extension ReaderCollectionView {
-    func setup(elements: [ReaderCollectionElement], scrollTo: ComicsChapter) {
+    func setup(elements: [ComicsChapter], scrollTo: ComicsChapter) {
         self.elements = elements
         
         reloadData()
@@ -40,7 +40,7 @@ extension ReaderCollectionView {
     }
     
     func scroll(to chapter: ComicsChapter) {
-        guard let index = elements.firstIndex(where: { $0.chapter == chapter }) else {
+        guard let index = elements.firstIndex(where: { $0 == chapter }) else {
             return
         }
 
@@ -61,9 +61,14 @@ extension ReaderCollectionView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = dequeueReusableCell(withReuseIdentifier: String(describing: ReaderCollectionCell.self), for: indexPath) as! ReaderCollectionCell
-        cell.tableView.setup(elements: elements[indexPath.row].elements)
-        return cell
+        switch elements[indexPath.row].content {
+        case .images(let urls):
+            let cell = dequeueReusableCell(withReuseIdentifier: String(describing: ReaderImagesCell.self), for: indexPath) as! ReaderImagesCell
+            cell.tableView.setup(elements: urls)
+            return cell
+        case .pdf(let url):
+            return UICollectionViewCell()
+        }
     }
 }
 
@@ -81,14 +86,14 @@ extension ReaderCollectionView: UICollectionViewDelegateFlowLayout {
             return
         }
 
-        mainDelegate?.readerCollectionDidChanged(chapter: elements[index].chapter)
+        mainDelegate?.readerCollectionDidChanged(chapter: elements[index])
     }
 }
 
 // MARK: Private
 private extension ReaderCollectionView {
     func initialize() {
-        register(ReaderCollectionCell.self, forCellWithReuseIdentifier: String(describing: ReaderCollectionCell.self))
+        register(ReaderImagesCell.self, forCellWithReuseIdentifier: String(describing: ReaderImagesCell.self))
         
         dataSource = self
         delegate = self

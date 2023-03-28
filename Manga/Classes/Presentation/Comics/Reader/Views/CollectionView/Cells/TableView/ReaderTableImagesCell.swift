@@ -1,5 +1,5 @@
 //
-//  ReaderTableCell.swift
+//  ReaderTableImagesCell.swift
 //  Manga
 //
 //  Created by Андрей Чернышев on 20.12.2022.
@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-final class ReaderTableCell: UITableViewCell {
+final class ReaderTableImagesCell: UITableViewCell {
     lazy var placeholerView = makePlaceholderView()
     lazy var pictureView = makeImageView()
     
@@ -32,7 +32,7 @@ final class ReaderTableCell: UITableViewCell {
 }
 
 // MARK: Public
-extension ReaderTableCell {
+extension ReaderTableImagesCell {
     func setup(imageUrl: URL, calculated: @escaping ((CGFloat) -> Void)) {
         pictureView.kf.setImage(with: imageUrl, completionHandler: { [weak self] result in
             guard let self = self, case let .success(image) = result else {
@@ -51,7 +51,7 @@ extension ReaderTableCell {
 }
 
 // MARK: Private
-private extension ReaderTableCell {
+private extension ReaderTableImagesCell {
     func initialize() {
         backgroundColor = UIColor.clear
         contentView.backgroundColor = UIColor.clear
@@ -61,7 +61,7 @@ private extension ReaderTableCell {
 }
 
 // MARK: Make constraints
-private extension ReaderTableCell {
+private extension ReaderTableImagesCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
             placeholerView.widthAnchor.constraint(equalToConstant: 85.scale),
@@ -80,7 +80,7 @@ private extension ReaderTableCell {
 }
 
 // MARK: Lazy initialization
-private extension ReaderTableCell {
+private extension ReaderTableImagesCell {
     func makePlaceholderView() -> UIImageView {
         let view = UIImageView()
         view.image = UIImage(named: "Reader.Placeholder")

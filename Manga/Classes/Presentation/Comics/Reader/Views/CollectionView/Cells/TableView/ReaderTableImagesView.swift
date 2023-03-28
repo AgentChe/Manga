@@ -1,5 +1,5 @@
 //
-//  ReaderTableView.swift
+//  ReaderTableImagesView.swift
 //  Manga
 //
 //  Created by Андрей Чернышев on 20.12.2022.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-final class ReaderTableView: UITableView {
+final class ReaderTableImagesView: UITableView {
     private var rowsHeight = [Int: CGFloat]()
     
     private lazy var elements = [URL]()
@@ -24,7 +24,7 @@ final class ReaderTableView: UITableView {
 }
 
 // MARK: Public
-extension ReaderTableView {
+extension ReaderTableImagesView {
     func setup(elements: [URL]) {
         rowsHeight = [:]
         self.elements = elements
@@ -34,14 +34,14 @@ extension ReaderTableView {
 }
 
 // MARK: UITableViewDataSource
-extension ReaderTableView: UITableViewDataSource {
+extension ReaderTableImagesView: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         elements.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let element = elements[indexPath.row]
-        let cell = dequeueReusableCell(withIdentifier: String(describing: ReaderTableCell.self)) as! ReaderTableCell
+        let cell = dequeueReusableCell(withIdentifier: String(describing: ReaderTableImagesCell.self)) as! ReaderTableImagesCell
         cell.setup(imageUrl: element) { [weak self] height in
             guard let self = self, !self.rowsHeight.contains(where: { $0.key == indexPath.row }) else {
                 return
@@ -58,7 +58,7 @@ extension ReaderTableView: UITableViewDataSource {
 }
 
 // MARK: UITableViewDelegate
-extension ReaderTableView: UITableViewDelegate {
+extension ReaderTableImagesView: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if let height = rowsHeight[indexPath.row] {
             return height
@@ -69,9 +69,9 @@ extension ReaderTableView: UITableViewDelegate {
 }
 
 // MARK: Private
-private extension ReaderTableView {
+private extension ReaderTableImagesView {
     func initialize() {
-        register(ReaderTableCell.self, forCellReuseIdentifier: String(describing: ReaderTableCell.self))
+        register(ReaderTableImagesCell.self, forCellReuseIdentifier: String(describing: ReaderTableImagesCell.self))
         
         dataSource = self
         delegate = self

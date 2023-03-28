@@ -239,13 +239,12 @@
 		DE8A31E32951C53B00B2E228 /* ReaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D82951C53B00B2E228 /* ReaderView.swift */; };
 		DE8A31E42951C53B00B2E228 /* ReaderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */; };
 		DE8A31EB2951DE8F00B2E228 /* ReaderNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */; };
-		DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */; };
-		DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */; };
+		DE8A31F02951EEB200B2E228 /* ReaderTableImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableImagesView.swift */; };
+		DE8A31F22951EEB900B2E228 /* ReaderTableImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableImagesCell.swift */; };
 		DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9002296F02F20093658A /* AppsFlyerManager.swift */; };
 		DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */; };
 		DEC9FFEE299F5AAC001B24A3 /* ReaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */; };
-		DEC9FFF0299F5AB4001B24A3 /* ReaderCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */; };
-		DEC9FFF2299F5AC6001B24A3 /* ReaderCollectionElement.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */; };
+		DEC9FFF0299F5AB4001B24A3 /* ReaderImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFEF299F5AB4001B24A3 /* ReaderImagesCell.swift */; };
 		DED89D36299CC69D00325104 /* PaygateOptionLineComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D2E299CC69D00325104 /* PaygateOptionLineComponent.swift */; };
 		DED89D37299CC69D00325104 /* PaygateOptionConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D2F299CC69D00325104 /* PaygateOptionConfig.swift */; };
 		DED89D38299CC69D00325104 /* Paygate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DED89D30299CC69D00325104 /* Paygate.swift */; };
@@ -504,13 +503,12 @@
 		DE8A31D82951C53B00B2E228 /* ReaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderView.swift; sourceTree = "<group>"; };
 		DE8A31D92951C53B00B2E228 /* ReaderViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReaderViewModel.swift; sourceTree = "<group>"; };
 		DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderNavView.swift; sourceTree = "<group>"; };
-		DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableView.swift; sourceTree = "<group>"; };
-		DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableCell.swift; sourceTree = "<group>"; };
+		DE8A31EF2951EEB200B2E228 /* ReaderTableImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableImagesView.swift; sourceTree = "<group>"; };
+		DE8A31F12951EEB900B2E228 /* ReaderTableImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableImagesCell.swift; sourceTree = "<group>"; };
 		DEAD9002296F02F20093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionView.swift; sourceTree = "<group>"; };
-		DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionCell.swift; sourceTree = "<group>"; };
-		DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionElement.swift; sourceTree = "<group>"; };
+		DEC9FFEF299F5AB4001B24A3 /* ReaderImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderImagesCell.swift; sourceTree = "<group>"; };
 		DED89D2E299CC69D00325104 /* PaygateOptionLineComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionLineComponent.swift; sourceTree = "<group>"; };
 		DED89D2F299CC69D00325104 /* PaygateOptionConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaygateOptionConfig.swift; sourceTree = "<group>"; };
 		DED89D30299CC69D00325104 /* Paygate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Paygate.swift; sourceTree = "<group>"; };
@@ -1261,6 +1259,15 @@
 			path = ReadingMode;
 			sourceTree = "<group>";
 		};
+		DE8027DB29D2F3CB003C9993 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				DE8A31EE2951EEA600B2E228 /* TableView */,
+				DEC9FFEF299F5AB4001B24A3 /* ReaderImagesCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		DE8A312B29486F3A00B2E228 /* ComicsBy */ = {
 			isa = PBXGroup;
 			children = (
@@ -1542,7 +1549,6 @@
 			isa = PBXGroup;
 			children = (
 				DEC9FFEC299F5A9C001B24A3 /* CollectionView */,
-				DE8A31EE2951EEA600B2E228 /* TableView */,
 				DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */,
 			);
 			path = Views;
@@ -1551,8 +1557,8 @@
 		DE8A31EE2951EEA600B2E228 /* TableView */ = {
 			isa = PBXGroup;
 			children = (
-				DE8A31EF2951EEB200B2E228 /* ReaderTableView.swift */,
-				DE8A31F12951EEB900B2E228 /* ReaderTableCell.swift */,
+				DE8A31EF2951EEB200B2E228 /* ReaderTableImagesView.swift */,
+				DE8A31F12951EEB900B2E228 /* ReaderTableImagesCell.swift */,
 			);
 			path = TableView;
 			sourceTree = "<group>";
@@ -1560,9 +1566,8 @@
 		DEC9FFEC299F5A9C001B24A3 /* CollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027DB29D2F3CB003C9993 /* Cells */,
 				DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */,
-				DEC9FFEF299F5AB4001B24A3 /* ReaderCollectionCell.swift */,
-				DEC9FFF1299F5AC6001B24A3 /* ReaderCollectionElement.swift */,
 			);
 			path = CollectionView;
 			sourceTree = "<group>";
@@ -1808,7 +1813,7 @@
 				DE8A315C294A153C00B2E228 /* ExploreViewModel.swift in Sources */,
 				DE8A31BA294DEB7E00B2E228 /* ComicsWhatAboutCell.swift in Sources */,
 				DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */,
-				DE8A31F02951EEB200B2E228 /* ReaderTableView.swift in Sources */,
+				DE8A31F02951EEB200B2E228 /* ReaderTableImagesView.swift in Sources */,
 				DE2CB55B293A0B6200AC2372 /* PaddingTextField.swift in Sources */,
 				DE8A3168294AFE2200B2E228 /* RequestReview.swift in Sources */,
 				DE8A3188294B838400B2E228 /* LibraryTableElement.swift in Sources */,
@@ -1840,7 +1845,6 @@
 				DE2CB552293A0B6200AC2372 /* Weak.swift in Sources */,
 				DE8A313629486F3A00B2E228 /* ComicsByCollectionCell.swift in Sources */,
 				DE8A314B2948A1F900B2E228 /* SettingsTableView.swift in Sources */,
-				DEC9FFF2299F5AC6001B24A3 /* ReaderCollectionElement.swift in Sources */,
 				DE8A31AF294DEB7E00B2E228 /* ComicsProgressCell.swift in Sources */,
 				DE2CB795293A731800AC2372 /* GetSavedComicsRequest.swift in Sources */,
 				DE2CB5FD293A0C8900AC2372 /* SplashReceiptValidationObserver.swift in Sources */,
@@ -1915,7 +1919,7 @@
 				DE2CB7E12940B4A300AC2372 /* OWelcomeView.swift in Sources */,
 				DE2CB7CC2940B4A300AC2372 /* OnboardingViewController.swift in Sources */,
 				DE2CB5CC293A0C8900AC2372 /* MainViewController.swift in Sources */,
-				DE8A31F22951EEB900B2E228 /* ReaderTableCell.swift in Sources */,
+				DE8A31F22951EEB900B2E228 /* ReaderTableImagesCell.swift in Sources */,
 				DED89D4D299CC6FB00325104 /* PaygateViewControllerDelegate.swift in Sources */,
 				DE2CB83F2943651100AC2372 /* HomeCollectionComicsCell.swift in Sources */,
 				DED89D37299CC69D00325104 /* PaygateOptionConfig.swift in Sources */,
@@ -1979,7 +1983,7 @@
 				DE8A31BC294DEB7E00B2E228 /* ComicsTableElement.swift in Sources */,
 				DE2CB783293A731800AC2372 /* GetRankingResponse.swift in Sources */,
 				DE2CB8362943651100AC2372 /* HomeTitleCell.swift in Sources */,
-				DEC9FFF0299F5AB4001B24A3 /* ReaderCollectionCell.swift in Sources */,
+				DEC9FFF0299F5AB4001B24A3 /* ReaderImagesCell.swift in Sources */,
 				DE2CB8382943651100AC2372 /* HomeFreeComicsCell.swift in Sources */,
 				DE2CB7E82940B4A300AC2372 /* OCategoriesView.swift in Sources */,
 				DE2CB83C2943651100AC2372 /* HomeCategoriesCell.swift in Sources */,

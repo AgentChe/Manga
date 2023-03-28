@@ -91,23 +91,11 @@ private extension ReaderViewModel {
             .distinctUntilChanged()
     }
     
-    func makeElements() -> Driver<[ReaderCollectionElement]> {
+    func makeElements() -> Driver<[ComicsChapter]> {
         comics.asDriver()
-            .map { comics -> [ReaderCollectionElement] in
+            .map { comics -> [ComicsChapter] in
                 comics.chapters
                     .sorted(by: { $0.sort < $1.sort })
-                    .map { chapter -> ReaderCollectionElement in
-                        let elements: [URL]
-                        switch chapter.content {
-                        case .images(let urls):
-                            elements = urls
-                        case .pdf(let url):
-                            elements = [url]
-                        }
-                        
-                        return ReaderCollectionElement(chapter: chapter,
-                                                elements: elements)
-                    }
             }
     }
 }
