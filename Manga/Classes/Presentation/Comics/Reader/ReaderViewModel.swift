@@ -17,9 +17,11 @@ final class ReaderViewModel {
     lazy var progress = makeProgress()
     lazy var currentChapter = makeCurrentChapter()
     lazy var elements = makeElements()
+    lazy var readingMode = makeReadingMode()
     
     private let startChapter: BehaviorRelay<ComicsChapter>
     
+    private lazy var profileManager = ProfileManager()
     private lazy var contentManager = ContentManager()
     
     init(comics: Comics, startChapter: ComicsChapter) {
@@ -97,5 +99,19 @@ private extension ReaderViewModel {
                 comics.chapters
                     .sorted(by: { $0.sort < $1.sort })
             }
+    }
+    
+    func makeReadingMode() -> Driver<ReadingMode> {
+        let initial = profileManager
+            .obtainProfile(forceUpdate: false)
+            .map { $0?.readingMode ?? .vertical }
+            .asDriver(onErrorJustReturn: .vertical)
+        
+        let updated = ProfileMediator.shared
+            .didChangeReadingMode
+            .asDriver(onErrorJustReturn: .vertical)
+        
+        return Driver
+            .merge(initial, updated)
     }
 }

@@ -7,6 +7,7 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
 
 final class ReaderViewController: UIViewController {
     lazy var mainView = ReaderView()
@@ -55,10 +56,14 @@ final class ReaderViewController: UIViewController {
             })
             .disposed(by: disposeBag)
         
-        viewModel.elements
-            .withLatestFrom(viewModel.currentChapter) { ($0, $1) }
+        Driver
+            .combineLatest(
+                viewModel.elements
+                    .withLatestFrom(viewModel.currentChapter) { ($0, $1) },
+                viewModel.readingMode
+            )
             .drive(Binder(mainView.collectionView) { base, args in
-                base.setup(elements: args.0, scrollTo: args.1)
+                base.setup(elements: args.0.0, scrollTo: args.0.1, readingMode: args.1)
             })
             .disposed(by: disposeBag)
         

@@ -174,6 +174,8 @@
 		DE8027D029D2DB92003C9993 /* OReadingModeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027CF29D2DB92003C9993 /* OReadingModeView.swift */; };
 		DE8027D229D2E0F2003C9993 /* SettingsReaingModeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027D129D2E0F2003C9993 /* SettingsReaingModeCell.swift */; };
 		DE8027D529D2E2D7003C9993 /* SettingsReadingModeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027D429D2E2D7003C9993 /* SettingsReadingModeButton.swift */; };
+		DE8027DE29D2F90C003C9993 /* PDFDownloadOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027DD29D2F90C003C9993 /* PDFDownloadOperation.swift */; };
+		DE8027E029D301E8003C9993 /* ReaderPDFCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8027DF29D301E8003C9993 /* ReaderPDFCell.swift */; };
 		DE8A313329486F3A00B2E228 /* ComicsByView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312C29486F3A00B2E228 /* ComicsByView.swift */; };
 		DE8A313429486F3A00B2E228 /* ComicsByViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */; };
 		DE8A313529486F3A00B2E228 /* ComicsByViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */; };
@@ -438,6 +440,8 @@
 		DE8027CF29D2DB92003C9993 /* OReadingModeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OReadingModeView.swift; sourceTree = "<group>"; };
 		DE8027D129D2E0F2003C9993 /* SettingsReaingModeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReaingModeCell.swift; sourceTree = "<group>"; };
 		DE8027D429D2E2D7003C9993 /* SettingsReadingModeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsReadingModeButton.swift; sourceTree = "<group>"; };
+		DE8027DD29D2F90C003C9993 /* PDFDownloadOperation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PDFDownloadOperation.swift; sourceTree = "<group>"; };
+		DE8027DF29D301E8003C9993 /* ReaderPDFCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderPDFCell.swift; sourceTree = "<group>"; };
 		DE8A312C29486F3A00B2E228 /* ComicsByView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByView.swift; sourceTree = "<group>"; };
 		DE8A312D29486F3A00B2E228 /* ComicsByViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewModel.swift; sourceTree = "<group>"; };
 		DE8A312E29486F3A00B2E228 /* ComicsByViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComicsByViewController.swift; sourceTree = "<group>"; };
@@ -770,6 +774,7 @@
 		DE2CB56A293A0C2700AC2372 /* Service */ = {
 			isa = PBXGroup;
 			children = (
+				DE8027DC29D2F6B3003C9993 /* PDFManagement */,
 				DED89D2C299CC69D00325104 /* Paygate */,
 				DE2CB734293A731800AC2372 /* Content */,
 				DE2CB604293A0D1900AC2372 /* Profile */,
@@ -1264,8 +1269,17 @@
 			children = (
 				DE8A31EE2951EEA600B2E228 /* TableView */,
 				DEC9FFEF299F5AB4001B24A3 /* ReaderImagesCell.swift */,
+				DE8027DF29D301E8003C9993 /* ReaderPDFCell.swift */,
 			);
 			path = Cells;
+			sourceTree = "<group>";
+		};
+		DE8027DC29D2F6B3003C9993 /* PDFManagement */ = {
+			isa = PBXGroup;
+			children = (
+				DE8027DD29D2F90C003C9993 /* PDFDownloadOperation.swift */,
+			);
+			path = PDFManagement;
 			sourceTree = "<group>";
 		};
 		DE8A312B29486F3A00B2E228 /* ComicsBy */ = {
@@ -1878,6 +1892,7 @@
 				DE2CB775293A731800AC2372 /* RankingBooksGroup.swift in Sources */,
 				DE2CB568293A0B6200AC2372 /* FirebaseManager.swift in Sources */,
 				DE2CB77E293A731800AC2372 /* ComicsReadingProgress.swift in Sources */,
+				DE8027E029D301E8003C9993 /* ReaderPDFCell.swift in Sources */,
 				DE2CB544293A0B6200AC2372 /* DefaultRequestWrapper.swift in Sources */,
 				DE2CB551293A0B6200AC2372 /* ContentError.swift in Sources */,
 				DE2CB8412943651100AC2372 /* HomeTableElement.swift in Sources */,
@@ -1961,6 +1976,7 @@
 				DE2CB5D2293A0C8900AC2372 /* MainViewCoordinator.swift in Sources */,
 				DE2CB83E2943651100AC2372 /* HomeCollectionComicsView.swift in Sources */,
 				DE2CB784293A731800AC2372 /* GetRankingRequest.swift in Sources */,
+				DE8027DE29D2F90C003C9993 /* PDFDownloadOperation.swift in Sources */,
 				DED89D56299D17F000325104 /* HomeCategoriesCollectionLayout.swift in Sources */,
 				DE2CB55D293A0B6200AC2372 /* CircleView.swift in Sources */,
 				DE2CB57B293A0C3E00AC2372 /* PurchaseValidationObserver.swift in Sources */,

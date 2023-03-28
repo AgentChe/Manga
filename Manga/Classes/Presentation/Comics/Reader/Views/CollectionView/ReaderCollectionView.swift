@@ -15,6 +15,7 @@ final class ReaderCollectionView: UICollectionView {
     weak var mainDelegate: ReaderCollectionDelegate?
     
     private lazy var elements = [ComicsChapter]()
+    private var readingMode: ReadingMode!
     
     override init(frame: CGRect, collectionViewLayout layout: UICollectionViewLayout) {
         super.init(frame: frame, collectionViewLayout: layout)
@@ -29,8 +30,9 @@ final class ReaderCollectionView: UICollectionView {
 
 // MARK: Public
 extension ReaderCollectionView {
-    func setup(elements: [ComicsChapter], scrollTo: ComicsChapter) {
+    func setup(elements: [ComicsChapter], scrollTo: ComicsChapter, readingMode: ReadingMode) {
         self.elements = elements
+        self.readingMode = readingMode
         
         reloadData()
         
@@ -67,7 +69,9 @@ extension ReaderCollectionView: UICollectionViewDataSource {
             cell.tableView.setup(elements: urls)
             return cell
         case .pdf(let url):
-            return UICollectionViewCell()
+            let cell = dequeueReusableCell(withReuseIdentifier: String(describing: ReaderPDFCell.self), for: indexPath) as! ReaderPDFCell
+            cell.setup(element: url, readingMode: readingMode)
+            return cell
         }
     }
 }
@@ -94,6 +98,7 @@ extension ReaderCollectionView: UICollectionViewDelegateFlowLayout {
 private extension ReaderCollectionView {
     func initialize() {
         register(ReaderImagesCell.self, forCellWithReuseIdentifier: String(describing: ReaderImagesCell.self))
+        register(ReaderPDFCell.self, forCellWithReuseIdentifier: String(describing: ReaderPDFCell.self))
         
         dataSource = self
         delegate = self

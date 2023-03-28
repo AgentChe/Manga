@@ -69,7 +69,7 @@ final class GetComicsKitResponse {
                             isTop5: isTop5,
                             isSaved: isSaved,
                             whatAbout: whatAbout,
-                            chapters: chapters,
+                            chapters: chapters, 
                             creator: creator)
         
         let recommendationsJSON = data["recommendations"] as? [String: Any]

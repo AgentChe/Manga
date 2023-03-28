@@ -9,7 +9,7 @@ import UIKit
 import Kingfisher
 
 final class ReaderTableImagesCell: UITableViewCell {
-    lazy var placeholerView = makePlaceholderView()
+    lazy var placeholderView = makePlaceholderView()
     lazy var pictureView = makeImageView()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
@@ -39,7 +39,7 @@ extension ReaderTableImagesCell {
                 return
             }
             
-            self.placeholerView.isHidden = true
+            self.placeholderView.isHidden = true
             
             let size = image.image.size
             let aspectRatio = size.height / size.width
@@ -64,10 +64,10 @@ private extension ReaderTableImagesCell {
 private extension ReaderTableImagesCell {
     func makeConstraints() {
         NSLayoutConstraint.activate([
-            placeholerView.widthAnchor.constraint(equalToConstant: 85.scale),
-            placeholerView.heightAnchor.constraint(equalToConstant: 80.scale),
-            placeholerView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
-            placeholerView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
+            placeholderView.widthAnchor.constraint(equalToConstant: 85.scale),
+            placeholderView.heightAnchor.constraint(equalToConstant: 80.scale),
+            placeholderView.centerXAnchor.constraint(equalTo: contentView.centerXAnchor),
+            placeholderView.centerYAnchor.constraint(equalTo: contentView.centerYAnchor)
         ])
         
         NSLayoutConstraint.activate([
