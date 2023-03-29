@@ -27,9 +27,9 @@ extension PaygateInfoCell {
     func setup(text: String) {
         let attrs = TextAttributes()
             .textColor(Appearance.white)
-            .font(Fonts.PlusJakartaSans.regular(size: 17.scale))
-            .lineHeight(27.2.scale)
-            .letterSpacing(-0.41.scale)
+            .font(Fonts.PlusJakartaSans.regular(size: 16.scale))
+            .lineHeight(24.scale)
+            .letterSpacing(-0.17.scale)
         label.attributedText = text.attributed(with: attrs)
     }
 }
@@ -64,6 +64,7 @@ private extension PaygateInfoCell {
     
     func makeLabel() -> UILabel {
         let view = UILabel()
+        view.numberOfLines = 0
         view.translatesAutoresizingMaskIntoConstraints = false
         addSubview(view)
         return view

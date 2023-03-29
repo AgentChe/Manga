@@ -96,7 +96,7 @@ private extension PaygateView {
             cell2.leadingAnchor.constraint(equalTo: leadingAnchor),
             cell2.trailingAnchor.constraint(equalTo: trailingAnchor),
             cell2.topAnchor.constraint(equalTo: cell1.bottomAnchor, constant: 7.scale),
-            cell2.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 24.scale : 20.scale)
+            cell2.heightAnchor.constraint(equalToConstant: ScreenSize.isIphoneXFamily ? 48.scale : 40.scale)
         ])
         
         NSLayoutConstraint.activate([
@@ -110,21 +110,21 @@ private extension PaygateView {
             leftOptionButton.widthAnchor.constraint(equalToConstant: 161.scale),
             leftOptionButton.heightAnchor.constraint(equalToConstant: 185.scale),
             leftOptionButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20.scale),
-            leftOptionButton.topAnchor.constraint(equalTo: cell3.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 24.scale : 8.scale)
+            leftOptionButton.topAnchor.constraint(equalTo: cell3.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 19.scale : 8.scale)
         ])
         
         NSLayoutConstraint.activate([
             rightOptionButton.widthAnchor.constraint(equalToConstant: 161.scale),
             rightOptionButton.heightAnchor.constraint(equalToConstant: 185.scale),
             rightOptionButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20.scale),
-            rightOptionButton.topAnchor.constraint(equalTo: cell3.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 24.scale : 8.scale)
+            rightOptionButton.topAnchor.constraint(equalTo: cell3.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 19.scale : 8.scale)
         ])
         
         NSLayoutConstraint.activate([
             continueButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 35.scale),
             continueButton.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -35.scale),
             continueButton.heightAnchor.constraint(equalToConstant: 53.scale),
-            continueButton.topAnchor.constraint(equalTo: rightOptionButton.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 33.scale : 16.scale)
+            continueButton.topAnchor.constraint(equalTo: rightOptionButton.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 16.scale : 16.scale)
         ])
         
         NSLayoutConstraint.activate([
