@@ -10,7 +10,6 @@
 		698EFA01DD23D53B445D6321 /* Pods_Manga.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F9A9E0E62F5EA74D36A9E2B /* Pods_Manga.framework */; };
 		DE2CB4F1293A093700AC2372 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB4F0293A093700AC2372 /* Assets.xcassets */; };
 		DE2CB4F4293A093700AC2372 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB4F2293A093700AC2372 /* LaunchScreen.storyboard */; };
-		DE2CB4FF293A0AE500AC2372 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB4FE293A0AE500AC2372 /* Localizable.strings */; };
 		DE2CB501293A0B3500AC2372 /* API.json in Resources */ = {isa = PBXBuildFile; fileRef = DE2CB500293A0B3500AC2372 /* API.json */; };
 		DE2CB53D293A0B6200AC2372 /* UIDevice+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB506293A0B6200AC2372 /* UIDevice+Extension.swift */; };
 		DE2CB53E293A0B6200AC2372 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2CB507293A0B6200AC2372 /* UIColor+Extension.swift */; };
@@ -243,6 +242,7 @@
 		DE8A31EB2951DE8F00B2E228 /* ReaderNavView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */; };
 		DE8A31F02951EEB200B2E228 /* ReaderTableImagesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31EF2951EEB200B2E228 /* ReaderTableImagesView.swift */; };
 		DE8A31F22951EEB900B2E228 /* ReaderTableImagesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE8A31F12951EEB900B2E228 /* ReaderTableImagesCell.swift */; };
+		DEA2F67429DAF2EA00B899A3 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = DEA2F67629DAF2EA00B899A3 /* Localizable.strings */; };
 		DEAD9003296F02F20093658A /* AppsFlyerManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEAD9002296F02F20093658A /* AppsFlyerManager.swift */; };
 		DEC1F6EC2955C45300FBBA65 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */; };
 		DEC9FFEE299F5AAC001B24A3 /* ReaderCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */; };
@@ -276,7 +276,6 @@
 		DE2CB4F0293A093700AC2372 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DE2CB4F3293A093700AC2372 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		DE2CB4F5293A093700AC2372 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		DE2CB4FE293A0AE500AC2372 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
 		DE2CB500293A0B3500AC2372 /* API.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = API.json; sourceTree = "<group>"; };
 		DE2CB506293A0B6200AC2372 /* UIDevice+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIDevice+Extension.swift"; sourceTree = "<group>"; };
 		DE2CB507293A0B6200AC2372 /* UIColor+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
@@ -509,6 +508,9 @@
 		DE8A31EA2951DE8F00B2E228 /* ReaderNavView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderNavView.swift; sourceTree = "<group>"; };
 		DE8A31EF2951EEB200B2E228 /* ReaderTableImagesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableImagesView.swift; sourceTree = "<group>"; };
 		DE8A31F12951EEB900B2E228 /* ReaderTableImagesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderTableImagesCell.swift; sourceTree = "<group>"; };
+		DEA2F67329DAF2CE00B899A3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		DEA2F67529DAF2EA00B899A3 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		DEA2F67729DAF2ED00B899A3 /* ja */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ja; path = ja.lproj/Localizable.strings; sourceTree = "<group>"; };
 		DEAD9002296F02F20093658A /* AppsFlyerManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsFlyerManager.swift; sourceTree = "<group>"; };
 		DEC1F6EB2955C45300FBBA65 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		DEC9FFED299F5AAC001B24A3 /* ReaderCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReaderCollectionView.swift; sourceTree = "<group>"; };
@@ -615,7 +617,7 @@
 		DE2CB4FD293A0AD800AC2372 /* Strings */ = {
 			isa = PBXGroup;
 			children = (
-				DE2CB4FE293A0AE500AC2372 /* Localizable.strings */,
+				DEA2F67629DAF2EA00B899A3 /* Localizable.strings */,
 			);
 			path = Strings;
 			sourceTree = "<group>";
@@ -1699,6 +1701,7 @@
 			knownRegions = (
 				en,
 				Base,
+				ja,
 			);
 			mainGroup = DE2CB4DB293A093600AC2372;
 			productRefGroup = DE2CB4E5293A093600AC2372 /* Products */;
@@ -1718,7 +1721,7 @@
 				DE2CB61C293A103100AC2372 /* PlusJakartaSans-Bold.ttf in Resources */,
 				DE2CB4F4293A093700AC2372 /* LaunchScreen.storyboard in Resources */,
 				DE2CB619293A103100AC2372 /* PlusJakartaSans-Medium.ttf in Resources */,
-				DE2CB4FF293A0AE500AC2372 /* Localizable.strings in Resources */,
+				DEA2F67429DAF2EA00B899A3 /* Localizable.strings in Resources */,
 				DE2CB61A293A103100AC2372 /* PlusJakartaSans-SemiBold.ttf in Resources */,
 				DE2CB61D293A103100AC2372 /* PlusJakartaSans-ExtraBold.ttf in Resources */,
 				DE2CB61B293A103100AC2372 /* PlusJakartaSans-Regular.ttf in Resources */,
@@ -2034,8 +2037,18 @@
 			isa = PBXVariantGroup;
 			children = (
 				DE2CB4F3293A093700AC2372 /* Base */,
+				DEA2F67329DAF2CE00B899A3 /* ja */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		DEA2F67629DAF2EA00B899A3 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DEA2F67529DAF2EA00B899A3 /* en */,
+				DEA2F67729DAF2ED00B899A3 /* ja */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -2045,6 +2058,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -2106,6 +2120,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
@@ -2166,7 +2181,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2180,7 +2195,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";
@@ -2199,7 +2214,7 @@
 				CODE_SIGN_ENTITLEMENTS = Manga/Manga.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 10;
+				CURRENT_PROJECT_VERSION = 11;
 				DEVELOPMENT_TEAM = 7GYTR7VMKM;
 				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -2213,7 +2228,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.4.0;
+				MARKETING_VERSION = 1.4.1;
 				PRODUCT_BUNDLE_IDENTIFIER = mobile.manga;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "Manga AppStore";

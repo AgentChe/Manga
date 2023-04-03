@@ -1,0 +1,180 @@
+/*
+  Localizable.strings
+  Manga
+
+  Created by Андрей Чернышев on 02.12.2022.
+  
+*/
+
+// MARK: General
+"Cancel" = "キャンセル";
+"Continue" = "続ける";
+"Next" = "次";
+
+// MARK: ImagePicker
+"ImagePicker.TakePhoto" = "写真を撮る";
+"ImagePicker.CameraRoll" = "カメラロール";
+"ImagePicker.PhotoLibrary" = "フォトライブラリ";
+
+// MARK: TryAgain
+"TryAgain.Title" = "リクエストの実行に失敗しました";
+"TryAgain.SubTitle" = "もしデバイス上の接続に問題がある場合、もう一度お試しください。
+接続に問題がなく、エラーが繰り返される場合には、サポートへお問い合わせください。";
+"TryAgain.Button" = "もう一度試す";
+"TryAgain.Contact" = "サポートに問い合わせる";
+
+// MARK: Splash
+"Splash.Preloader1" = "アカウントを確認しています...";
+"Splash.Preloader2" = "漫画ライブラリを同期しています";
+"Splash.Preloader3" = "アカウントをセットアップしています...";
+
+// MARK: Main
+"Main.Home" = "ホーム";
+"Main.Library" = "ライブラリ";
+"Main.Explore" = "探す";
+
+// MARK: Paygate
+"Paygate.Title" = "プレミアムステータスの解除";
+"Paygate.Cell1" = "スムーズな読書体験";
+"Paygate.Cell2" = "厳選された最高のタイトルのコレクション";
+"Paygate.Cell3" = "最新話の漫画";
+"Paygate.Info" = "App Storeで保護されています。いつでもキャンセル可能です。";
+"Paygate.TermsOfUse" = "利用規約";
+"Paygate.PrivacyPolicy" = "プライバシーポリシー";
+"Paygate.RestorePurchases" = "購入履歴の復元";
+"Paygate.Failed" = "購入に失敗しました";
+"Paygate.Monthly.Name1" = "7日間無料";
+"Paygate.Monthly.Name2" = "迅速な準備";
+"Paygate.Monthly.Bottom1" = "7日間のトライアル後";
+"Paygate.Monthly.Bottom2" = "トライアルが終了しました";
+"Paygate.Lifetime.Name" = "ライフタイム";
+"Paygate.Lifetime.PriceDescription" = "\n年間";
+"Paygate.Lifetime.BottomDescription" = "一括";
+"Paygate.Discount" = "節約 %i%%";
+"Paygate.Price.Period" = "月額";
+
+// MARK: Onboarding
+"Onboarding.Welcome.Title" = "全てのお気に入りの漫画が、ポケット\nの中に全て入っています。";
+"Onboarding.Welcome.SubTitle" = "いつでもどこでも、最高の漫画\nを楽しもう。見つけたい全ての\n漫画がここで見つかります。";
+"Onboarding.Welcome.Button" = "今すぐ始める";
+"Onboarding.Info.Title" = "少し、あなたについて\n教えてください。";
+"Onboarding.Info.SubTitle" = "カスタム漫画ライブラリの作成に、少し\n情報が必要です。";
+"Onboarding.Goal.Title" = "目的は何ですか？";
+"Onboarding.Goal.1.Title" = "見つける ";
+"Onboarding.Goal.1.SubTitle" = "\n流行の漫画";
+"Onboarding.Goal.2.Title" = "読む";
+"Onboarding.Goal.2.SubTitle" = "\n毎日最新話を追加";
+"Onboarding.Goal.3.Title" = "保存";
+"Onboarding.Goal.3.SubTitle" = "\nお気に入りの漫画";
+"Onboarding.Age.Title" = "年齢はおいくつですか？";
+"Onboarding.Age.1" = "18-24";
+"Onboarding.Age.2" = "25-34";
+"Onboarding.Age.3" = "35-44";
+"Onboarding.Age.4" = "45-60";
+"Onboarding.Age.5" = "60+";
+"Onboarding.Brief.Title" = "毎日、忘れられない冒険\nを楽しもう！";
+"Onboarding.Brief.SubTitle" = "ありとあらゆるジャンルの漫画・コミック\nを探せる
+外出先で読んだり、お気に入り\nの作品の更新をフォローしたりできる";
+"Onboarding.Categories.Title" = "何が一番興味を\n惹かれますか？";
+"Onboarding.Pace.Title" = "どのくらいのペースで読書を\nしたいですか？";
+"Onboarding.Pace1" = "ゆっくり、\n着実に";
+"Onboarding.Pace2" = "普通のペースで";
+"Onboarding.Pace3" = "出来る\nだけ早く";
+"Onboarding.Pace.Button" = "続行";
+"Onboarding.Time.Title" = "いつ読書をしたい\nですか？";
+"Onboarding.Time.Cell1" = "早朝";
+"Onboarding.Time.Cell2" = "昼間";
+"Onboarding.Time.Cell3" = "夜";
+"Onboarding.Time.Cell5" = "特にない";
+"Onboarding.ReadingMode.Title" = "どちらの読書モード\nをご希望ですか？";
+"Onboarding.ReadingMode.SubTitle" = "必要なモードを選択して、後程切り替える\nこともできます。";
+"Onboarding.ReadingMode.Vertical" = "縦";
+"Onboarding.ReadingMode.RTL" = "右から左";
+"Onboarding.ReadingMode.LTR" = "左から右";
+"Onboarding.Notifications.Title" = "最後に、どのよう\nな内容のお知らせ\nをご希望ですか？";
+"Onboarding.Notifications.Cell1.Title" = "モチベーションを保つ";
+"Onboarding.Notifications.Cell1.SubTitle" = "\n冒険を続けるためのサポート\nとなるリマインダー";
+"Onboarding.Notifications.Cell2.Title" = "より深く探索";
+"Onboarding.Notifications.Cell2.SubTitle" = "\n他の漫画やカテゴリー\nを検索";
+"Onboarding.Notifications.SaveButton" = "保存";
+"Onboarding.Notifications.SkipButton" = "今はしない";
+"Onboarding.InfoLibrary.Title" = "完璧なライブラリを\n作成しましょう";
+"Onboarding.InfoLibrary.SubTitle" = "ご自身の興味に合わせて漫画を\n選んでください";
+"Onboarding.InfoLibrary.Button" = "了解しました";
+"Onboarding.Comics.Title" = "この漫画は面白\nそうですか？";
+"Onboarding.Progress.Title1" = "プロファイルを分析し\nています...";
+"Onboarding.Progress.Title2" = "好みを特定し\nています ...";
+"Onboarding.Progress.Title3" = "パーソナライズされた\nライブラリを作成しています...";
+"Onboarding.Progress.Bottom1" = "プロフィール %i%%";
+"Onboarding.Progress.Bottom2" = "漫画の好み %i%%";
+"Onboarding.Progress.Bottom3" = "プランを作成しています %i%%";
+
+// MARK: Home
+"Home.Title" = "あなたへのおすすめ";
+"Home.FreeButton.Free" = "無料の漫画";
+"Home.ContinueToRead" = "続きを読む";
+"Home.Categories" = "カテゴリーを探す";
+"Home.ComicsStatus.Ongoing" = "連載中";
+"Home.ComicsStatus.Completed" = "連載終了";
+
+// MARK: Settings
+"Settings.Title" = "設定";
+"Settings.ContactUs" = "お問い合わせ";
+"Settings.PrivacyPolicy" = "プライバシーポリシー";
+"Settings.TermsOfUse" = "利用規約";
+"Settings.GetAccess.Title" = "完全なライブラリへアクセスする";
+"Settings.GetAccess.Button" = "無料トライアルを始める";
+"Settings.ReadingMode.Title" = "閲覧モード";
+"Settings.ReadingMode.Vertical" = "縦";
+"Settings.ReadingMode.RTL" = "右から左";
+"Settings.ReadingMode.LTR" = "左から右";
+
+// MARK: ComicsBY
+"ComicsBY.ComicsStatus.Ongoing" = "連載中";
+"ComicsBY.ComicsStatus.Completed" = "連載終了";
+
+// MARK: Explore
+"Explore.Title" = "探す";
+"Explore.Search.Placeholder" = "題名または作者の検索";
+"Explore.ExploreCategories" = "カテゴリーを探す";
+"Explore.TrendingSearches" = "流行の検索";
+"Explore.ComicsStatus.Ongoing" = "連載中";
+"Explore.ComicsStatus.Completed" = "連載終了";
+"Explore.Empty.Title" = "連載終了";
+"Explore.Empty.Text" = "スペルを確認するが、別のキーワード\nをお試しください";
+
+// MARK: Library
+"Library.Title" = "ライブラリ";
+"Library.Saved" = "保存済み";
+"Library.History" = "履歴";
+"Library.Downloaded" = "ダウンロード";
+"Library.Delete" = "ライブラリから削除する";
+"Library.Share" = "共有する";
+"Library.Empty.Saved.Title" = "保存されていない漫画";
+"Library.Empty.Saved.SubTitle" = "保存された漫画がここに\n表示されます";
+"Library.Empty.History.Title" = "まだ漫画がありません";
+"Library.Empty.History.SubTitle" = "読んだ漫画がここに表示\nされます";
+"Library.Empty.Downloaded.Title" = "ダウンロードされていない漫画";
+"Library.Empty.Downloaded.SubTitle" = "ダウンロードした漫画がここに\n表示されます";
+"Library.Empty.Button" = "漫画を探す";
+
+// MARK: Comics
+"Comics.ComicsStatus.Ongoing" = "連載中";
+"Comics.ComicsStatus.Completed" = "連載終了";
+"Comics.ChaptersCount" = "%i 話";
+"Comics.WhatAbout?" = "あらすじ";
+"Comics.Chapters" = "話";
+"Comics.ChapterNumber" = "話 %i";
+"Comics.SeeAll" = "全て見る";
+"Comics.Creator" = "作者";
+"Comics.Recommendations" = "おすすめ";
+"Comics.ExploreCategories" = "カテゴリーを探す";
+"Comics.Button.ReadFirst" = "最初の話を読む";
+"Comics.Button.Read" = "読む";
+
+// MARK: Chapters
+"Chapters.Title" = "話";
+"Chapters.ChapterNumber" = "話 %i";
+
+// MARK: Reader
+"Reader.ChapterNumber" = "話 %i";

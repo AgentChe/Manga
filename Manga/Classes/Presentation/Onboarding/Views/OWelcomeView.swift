@@ -50,7 +50,8 @@ private extension OWelcomeView {
         ])
         
         NSLayoutConstraint.activate([
-            titleLabel.centerXAnchor.constraint(equalTo: centerXAnchor),
+            titleLabel.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 16.scale),
+            titleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16.scale),
             titleLabel.topAnchor.constraint(equalTo: imageView.bottomAnchor, constant: 32.scale)
         ])
         

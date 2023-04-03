@@ -140,19 +140,19 @@ private extension PaygateView {
         ])
         
         NSLayoutConstraint.activate([
-            termsOfServiceButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 27.scale),
+            termsOfServiceButton.trailingAnchor.constraint(equalTo: privacyPolicyButton.leadingAnchor, constant: -16.scale),
             termsOfServiceButton.heightAnchor.constraint(equalToConstant: 14.scale),
             termsOfServiceButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 40.scale : 26.scale)
         ])
         
         NSLayoutConstraint.activate([
-            privacyPolicyButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 141.scale),
+            privacyPolicyButton.centerXAnchor.constraint(equalTo: centerXAnchor),
             privacyPolicyButton.heightAnchor.constraint(equalToConstant: 14.scale),
             privacyPolicyButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 40.scale : 26.scale)
         ])
         
         NSLayoutConstraint.activate([
-            restoreButton.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 249.scale),
+            restoreButton.leadingAnchor.constraint(equalTo: privacyPolicyButton.trailingAnchor, constant: 16.scale),
             restoreButton.heightAnchor.constraint(equalToConstant: 14.scale),
             restoreButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: ScreenSize.isIphoneXFamily ? 40.scale : 26.scale)
         ])
